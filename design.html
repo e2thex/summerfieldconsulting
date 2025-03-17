@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E2theX Consulting - Design System</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&family=Inter:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+    <link href="./dist/output.css" rel="stylesheet">
+    <script>
+        function toggleTheme() {
+            const html = document.documentElement;
+            const currentTheme = html.classList.contains('dark') ? 'dark' : 'light';
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            html.classList.toggle('dark');
+            
+            const announcement = document.getElementById('theme-announcement');
+            announcement.textContent = `Theme changed to ${newTheme} mode`;
+        }
+    </script>
+</head>
+<body class="bg-off-white dark:bg-dark-bg text-off-black dark:text-off-white font-body transition-colors duration-200 min-h-screen">
+    <div id="theme-announcement" role="status" class="sr-only" aria-live="polite"></div>
+
+    <header class="py-8 px-6 border-b border-gray-200 dark:border-gray-700" role="banner">
+        <div class="flex items-center justify-between">
+            <div class="flex items-center gap-4">
+                <img src="logo.jpg" alt="E2theX Consulting Logo" class="h-12 w-auto">
+                <h1 class="text-4xl font-heading font-normal">Design System</h1>
+            </div>
+            <button 
+                onclick="toggleTheme()"
+                class="px-4 py-2 rounded-lg bg-off-black dark:bg-off-white text-off-white dark:text-off-black font-medium hover:bg-gray-800 dark:hover:bg-gray-200 transition-colors focus:outline-none focus:ring-2 focus:ring-accent-1 focus:ring-offset-2 dark:focus:ring-offset-dark-bg"
+                aria-label="Toggle theme"
+            >
+                <span class="dark:hidden">Switch to Dark Mode</span>
+                <span class="hidden dark:inline">Switch to Light Mode</span>
+            </button>
+        </div>
+    </header>
+
+    <main class="p-6 max-w-7xl mx-auto" role="main">
+        <!-- Colors -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-heading font-light mb-6 dark:text-off-white">Colors</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="p-6 bg-off-black text-white dark:bg-off-white dark:text-off-black rounded">Primary Dark</div>
+                <div class="p-6 bg-off-white dark:bg-dark-card border border-gray-200 dark:border-gray-700 text-off-black dark:text-off-white rounded">Primary Light</div>
+                <div class="p-6 bg-accent-1 text-white rounded">Accent 1</div>
+                <div class="p-6 bg-accent-2 text-white rounded">Accent 2</div>
+            </div>
+        </section>
+
+        <!-- Typography -->
+        <section class="mb-12" aria-labelledby="typography-heading">
+            <h2 id="typography-heading" class="text-2xl font-heading font-normal mb-6 dark:text-off-white">Typography</h2>
+            <div class="space-y-4">
+                <h1 class="text-4xl font-heading font-normal dark:text-off-white">Heading 1</h1>
+                <h2 class="text-3xl font-heading font-normal dark:text-off-white">Heading 2</h2>
+                <h3 class="text-2xl font-heading font-normal dark:text-off-white">Heading 3</h3>
+                <h4 class="text-xl font-heading font-normal dark:text-off-white">Heading 4</h4>
+                <p class="text-base font-body dark:text-gray-text">Body text with proper contrast ratio</p>
+            </div>
+        </section>
+
+        <!-- Cards -->
+        <section class="mb-12" aria-labelledby="cards-heading">
+            <h2 id="cards-heading" class="text-2xl font-heading font-normal mb-6">Cards</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Basic Card -->
+                <div class="p-6 border border-gray-200 dark:border-gray-700 dark:bg-dark-card rounded-lg hover:shadow-lg dark:hover:bg-dark-hover transition-all">
+                    <h3 class="text-xl font-bold mb-2">Basic Card</h3>
+                    <p class="text-gray-text dark:text-dark-gray-text">Simple card with text content only.</p>
+                </div>
+
+                <!-- Dark Card -->
+                <div class="p-6 bg-off-black dark:bg-dark-card text-white rounded-lg hover:shadow-lg transition-all">
+                    <h3 class="text-xl font-bold mb-2">Dark Card</h3>
+                    <p class="text-gray-300">Alternative dark themed card with light text.</p>
+                </div>
+
+                <!-- Image Card - Vertical -->
+                <div class="border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden hover:shadow-lg transition-all">
+                    <div class="aspect-w-16 aspect-h-9 relative">
+                        <img 
+                            src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80"
+                            alt="People collaborating at a desk" 
+                            class="object-cover w-full h-full"
+                        >
+                    </div>
+                    <div class="p-6 dark:bg-dark-card">
+                        <h3 class="text-xl font-bold mb-2">Vertical Image Card</h3>
+                        <p class="text-gray-text dark:text-dark-gray-text mb-4">Card with image above content, good for featured items or blog posts.</p>
+                        <a href="#" class="text-accent-1 hover:text-accent-2 font-medium inline-flex items-center gap-1 transition-colors">
+                            Learn More
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Image Card - Horizontal -->
+                <div class="border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden hover:shadow-lg transition-all">
+                    <div class="md:flex">
+                        <div class="md:w-1/3">
+                            <img 
+                                src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80" 
+                                alt="Team meeting in progress"
+                                class="w-full h-full object-cover"
+                            >
+                        </div>
+                        <div class="p-6 md:w-2/3 dark:bg-dark-card">
+                            <h3 class="text-xl font-bold mb-2">Horizontal Image Card</h3>
+                            <p class="text-gray-text dark:text-dark-gray-text mb-4">Card with side image, perfect for news items or product features.</p>
+                            <div class="flex items-center gap-4">
+                                <button class="px-4 py-2 bg-accent-1 text-white rounded hover:bg-accent-2 transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-accent-1">
+                                    Primary Action
+                                </button>
+                                <button class="px-4 py-2 border border-accent-1 text-accent-1 rounded hover:bg-accent-1 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-accent-1">
+                                    Secondary Action
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Lists -->
+        <section class="mb-12" aria-labelledby="lists-heading">
+            <h2 id="lists-heading" class="text-2xl font-heading font-normal mb-6 dark:text-off-white">Lists</h2>
+            <ul class="space-y-3" role="list">
+                <li class="flex items-start space-x-3 group p-2 rounded-lg transition-all hover:bg-gray-50 dark:hover:bg-dark-hover focus-within:ring-2 focus-within:ring-accent-1">
+                    <span class="inline-block w-2 h-2 mt-2 rounded-full bg-accent-1" aria-hidden="true"></span>
+                    <span class="text-off-black dark:text-off-white">List item with proper contrast</span>
+                </li>
+                <li class="flex items-start space-x-3 group p-2 rounded-lg transition-all hover:bg-gray-50 dark:hover:bg-dark-hover focus-within:ring-2 focus-within:ring-accent-1">
+                    <span class="inline-block w-2 h-2 mt-2 rounded-full bg-accent-1" aria-hidden="true"></span>
+                    <span class="text-off-black dark:text-off-white">Interactive list item with focus state</span>
+                </li>
+            </ul>
+        </section>
+
+        <!-- Buttons -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-heading font-light mb-6 dark:text-off-white">Buttons</h2>
+            <div class="space-x-4">
+                <button 
+                    class="px-6 py-2 bg-accent-1 text-white rounded hover:bg-accent-2 transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-accent-1 dark:focus:ring-offset-dark-bg"
+                    aria-label="Primary action button"
+                >
+                    Primary Button
+                </button>
+                <button 
+                    class="px-6 py-2 border-2 border-accent-1 text-accent-1 dark:text-off-white rounded hover:bg-accent-1 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-accent-1 dark:focus:ring-offset-dark-bg"
+                    aria-label="Secondary action button"
+                >
+                    Secondary Button
+                </button>
+            </div>
+        </section>
+
+        <!-- Form Elements -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-heading font-light mb-6 dark:text-off-white">Form Elements</h2>
+            <div class="space-y-4 max-w-md">
+                <div>
+                    <label for="sample-input" class="block text-sm font-medium mb-2 dark:text-off-white">Input Field</label>
+                    <input 
+                        type="text" 
+                        id="sample-input"
+                        class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded focus:border-accent-1 focus:ring-1 focus:ring-accent-1 outline-none dark:bg-dark-card dark:text-off-white"
+                        placeholder="Enter text..."
+                    >
+                </div>
+            </div>
+        </section>
+
+        <!-- Tables -->
+        <section class="mb-12" aria-labelledby="tables-heading">
+            <h2 id="tables-heading" class="text-2xl font-heading font-normal mb-6">Tables</h2>
+            <div class="overflow-x-auto rounded-lg border border-gray-200 dark:border-gray-700">
+                <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+                    <caption class="sr-only">Sample Data Table</caption>
+                    <thead class="bg-gray-50 dark:bg-dark-card">
+                        <tr>
+                            <th scope="col" class="px-6 py-3 text-left text-sm font-semibold text-gray-text dark:text-dark-gray-text">
+                                Column Header
+                            </th>
+                            <th scope="col" class="px-6 py-3 text-left text-sm font-semibold text-gray-text dark:text-dark-gray-text">
+                                Column Header
+                            </th>
+                            <th scope="col" class="px-6 py-3 text-right text-sm font-semibold text-gray-text dark:text-dark-gray-text">
+                                Numeric Column
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-200 dark:divide-gray-700 bg-white dark:bg-dark-bg">
+                        <tr class="hover:bg-gray-50 dark:hover:bg-dark-hover transition-colors">
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-text dark:text-dark-gray-text">
+                                Row 1, Cell 1
+                            </td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-text dark:text-dark-gray-text">
+                                Row 1, Cell 2
+                            </td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-right text-gray-text dark:text-dark-gray-text">
+                                100
+                            </td>
+                        </tr>
+                        <tr class="hover:bg-gray-50 dark:hover:bg-dark-hover transition-colors">
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-text dark:text-dark-gray-text">
+                                Row 2, Cell 1
+                            </td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-text dark:text-dark-gray-text">
+                                Row 2, Cell 2
+                            </td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-right text-gray-text dark:text-dark-gray-text">
+                                200
+                            </td>
+                        </tr>
+                    </tbody>
+                    <tfoot class="bg-gray-50 dark:bg-dark-card">
+                        <tr>
+                            <th scope="row" colspan="2" class="px-6 py-3 text-left text-sm font-semibold text-gray-text dark:text-dark-gray-text">
+                                Total
+                            </th>
+                            <td class="px-6 py-3 text-right text-sm font-semibold text-gray-text dark:text-dark-gray-text">
+                                300
+                            </td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </section>
+
+        <!-- Navigation -->
+        <section class="mb-12" aria-labelledby="navigation-heading">
+            <h2 id="navigation-heading" class="text-2xl font-heading font-normal mb-6">Navigation</h2>
+            
+            <!-- Primary Navigation -->
+            <div class="mb-8">
+                <h3 class="text-xl font-bold mb-4">Primary Navigation</h3>
+                <nav class="bg-white dark:bg-dark-card border border-gray-200 dark:border-gray-700 rounded-lg p-4" role="navigation" aria-label="Primary navigation example">
+                    <ul class="flex items-center gap-6">
+                        <li>
+                            <a href="#" class="text-accent-1 dark:text-accent-1 font-medium" aria-current="page">Home</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-gray-text dark:text-dark-gray-text hover:text-accent-1 dark:hover:text-accent-1 transition-colors">Services</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-gray-text dark:text-dark-gray-text hover:text-accent-1 dark:hover:text-accent-1 transition-colors">About</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-gray-text dark:text-dark-gray-text hover:text-accent-1 dark:hover:text-accent-1 transition-colors">Contact</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+            <!-- Centered Navigation with Underline -->
+            <div class="mb-8">
+                <h3 class="text-xl font-bold mb-4">Centered Navigation with Underline</h3>
+                <nav class="bg-white dark:bg-dark-card border border-gray-200 dark:border-gray-700 rounded-lg p-4" role="navigation" aria-label="Centered navigation example">
+                    <ul class="flex items-center justify-center gap-8">
+                        <li>
+                            <a href="#" class="relative py-2 text-accent-1 dark:text-accent-1 font-medium after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-accent-1" aria-current="page">Home</a>
+                        </li>
+                        <li>
+                            <a href="#" class="relative py-2 text-gray-text dark:text-dark-gray-text hover:text-accent-1 dark:hover:text-accent-1 transition-colors after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-accent-1 after:scale-x-0 hover:after:scale-x-100 after:transition-transform">Services</a>
+                        </li>
+                        <li>
+                            <a href="#" class="relative py-2 text-gray-text dark:text-dark-gray-text hover:text-accent-1 dark:hover:text-accent-1 transition-colors after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-accent-1 after:scale-x-0 hover:after:scale-x-100 after:transition-transform">About</a>
+                        </li>
+                        <li>
+                            <a href="#" class="relative py-2 text-gray-text dark:text-dark-gray-text hover:text-accent-1 dark:hover:text-accent-1 transition-colors after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-accent-1 after:scale-x-0 hover:after:scale-x-100 after:transition-transform">Contact</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+            <!-- Navigation with Buttons -->
+            <div class="mb-8">
+                <h3 class="text-xl font-bold mb-4">Navigation with Buttons</h3>
+                <nav class="bg-white dark:bg-dark-card border border-gray-200 dark:border-gray-700 rounded-lg p-4" role="navigation" aria-label="Navigation with buttons example">
+                    <ul class="flex items-center justify-between">
+                        <div class="flex items-center gap-6">
+                            <li>
+                                <a href="#" class="text-accent-1 dark:text-accent-1 font-medium" aria-current="page">Home</a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-gray-text dark:text-dark-gray-text hover:text-accent-1 dark:hover:text-accent-1 transition-colors">Services</a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-gray-text dark:text-dark-gray-text hover:text-accent-1 dark:hover:text-accent-1 transition-colors">About</a>
+                            </li>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <li>
+                                <a href="#" class="px-4 py-2 text-accent-1 border border-accent-1 rounded hover:bg-accent-1 hover:text-white transition-colors">Sign In</a>
+                            </li>
+                            <li>
+                                <a href="#" class="px-4 py-2 bg-accent-1 text-white rounded hover:bg-accent-2 transition-colors">Get Started</a>
+                            </li>
+                        </div>
+                    </ul>
+                </nav>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <div class="mb-8">
+                <h3 class="text-xl font-bold mb-4">Mobile Navigation</h3>
+                <nav class="bg-white dark:bg-dark-card border border-gray-200 dark:border-gray-700 rounded-lg p-4" role="navigation" aria-label="Mobile navigation example">
+                    <div class="flex items-center justify-between">
+                        <a href="#" class="text-xl font-bold text-accent-1">Logo</a>
+                        <button 
+                            class="p-2 hover:bg-gray-100 dark:hover:bg-dark-hover rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-accent-1"
+                            aria-label="Toggle menu"
+                        >
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <!-- Mobile Menu (shown for demonstration) -->
+                    <div class="mt-4 border-t border-gray-200 dark:border-gray-700 pt-4">
+                        <ul class="space-y-4">
+                            <li>
+                                <a href="#" class="block text-accent-1 dark:text-accent-1 font-medium" aria-current="page">Home</a>
+                            </li>
+                            <li>
+                                <a href="#" class="block text-gray-text dark:text-dark-gray-text hover:text-accent-1 dark:hover:text-accent-1 transition-colors">Services</a>
+                            </li>
+                            <li>
+                                <a href="#" class="block text-gray-text dark:text-dark-gray-text hover:text-accent-1 dark:hover:text-accent-1 transition-colors">About</a>
+                            </li>
+                            <li>
+                                <a href="#" class="block text-gray-text dark:text-dark-gray-text hover:text-accent-1 dark:hover:text-accent-1 transition-colors">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </section>
+    </main>
+
+    <footer class="py-8 px-6 border-t border-gray-200 dark:border-gray-700 mt-12" role="contentinfo">
+        <p class="text-center text-gray-text dark:text-dark-gray-text">© 2024 E2theX Consulting. All rights reserved.</p>
+    </footer>
+</body>
+</html>

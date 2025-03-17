@@ -1,0 +1,9 @@
+---
+description: Please ensure that all pages build, and any update to them follow the design set out in desgin.html
+globs: *.html
+---
+
+# Your rule content
+
+- Ensure that all html follows the design laid out in [design.html](mdc:design.html) 
+- If there is something need that is not in [design.html](mdc:design.html) please offer to update [design.html](mdc:design.html) to provide for it.

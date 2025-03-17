@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coaching Habit Course - E2TheX Consulting</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&family=Inter:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+    <link href="../../dist/output.css" rel="stylesheet">
+    <script>
+        function toggleTheme() {
+            const html = document.documentElement;
+            const currentTheme = html.classList.contains('dark') ? 'dark' : 'light';
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            html.classList.toggle('dark');
+            
+            const announcement = document.getElementById('theme-announcement');
+            announcement.textContent = `Theme changed to ${newTheme} mode`;
+        }
+    </script>
+</head>
+<body class="bg-off-white dark:bg-dark-bg text-off-black dark:text-off-white font-body transition-colors duration-200">
+    <div id="theme-announcement" role="status" class="sr-only" aria-live="polite"></div>
+
+    <header class="py-8 px-6 border-b border-gray-200 dark:border-gray-700" role="banner">
+        <div class="flex items-center justify-between max-w-4xl mx-auto">
+            <div class="flex items-center gap-4">
+                <img src="/logo.png" alt="E2TheX Consulting Logo" class="h-12 w-auto">
+                <h1 class="text-4xl font-heading font-normal">Coaching Habit Course</h1>
+            </div>
+            <nav class="hidden md:flex items-center gap-6 mr-6" role="navigation" aria-label="Main navigation">
+                <a href="/" class="text-gray-text dark:text-dark-gray-text hover:text-accent-1 dark:hover:text-accent-1 transition-colors">Home</a>
+                <a href="/services/CoachingHabitCourse" class="text-accent-1 dark:text-accent-1 font-medium" aria-current="page">Coaching Course</a>
+                <a href="/design.html" class="text-gray-text dark:text-dark-gray-text hover:text-accent-1 dark:hover:text-accent-1 transition-colors">Design System</a>
+            </nav>
+            <button 
+                onclick="toggleTheme()"
+                class="px-4 py-2 rounded-lg bg-off-black dark:bg-off-white text-off-white dark:text-off-black font-medium hover:bg-gray-800 dark:hover:bg-gray-200 transition-colors focus:outline-none focus:ring-2 focus:ring-accent-1 focus:ring-offset-2 dark:focus:ring-offset-dark-bg"
+                aria-label="Toggle theme"
+            >
+                <span class="dark:hidden">Switch to Dark Mode</span>
+                <span class="hidden dark:inline">Switch to Light Mode</span>
+            </button>
+        </div>
+    </header>
+
+    <main class="max-w-4xl mx-auto p-6" role="main">
+        <!-- Course Overview -->
+        <section class="mb-12" aria-labelledby="overview-heading">
+            <h2 id="overview-heading" class="text-xl font-semibold text-accent-1 mb-4">Build Best-in-Class Coaching Culture</h2>
+            <p class="text-lg text-gray-text dark:text-dark-gray-text mb-6">An 8-week course designed to develop strong coaching habits among your organization's leaders, combining book club discussions with practical training and accountability.</p>
+            
+            <div class="p-6 bg-off-black dark:bg-dark-card text-white rounded-lg mb-6">
+                <p>Perfect for mentors, managers, tech leads, and anyone committed to improving their coaching skills.</p>
+            </div>
+        </section>
+
+        <!-- Course Structure -->
+        <section class="mb-12" aria-labelledby="structure-heading">
+            <h2 id="structure-heading" class="text-2xl font-heading font-normal mb-6">Course Components</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <article class="p-6 border border-gray-200 dark:border-gray-700 dark:bg-dark-card rounded-lg hover:shadow-lg transition-all">
+                    <h3 class="text-xl font-bold mb-2">Weekly Workshops</h3>
+                    <p class="text-gray-text dark:text-dark-gray-text">One-hour synchronous sessions with your cohort for discussion and practice.</p>
+                </article>
+                <article class="p-6 border border-gray-200 dark:border-gray-700 dark:bg-dark-card rounded-lg hover:shadow-lg transition-all">
+                    <h3 class="text-xl font-bold mb-2">Dedicated Channel</h3>
+                    <p class="text-gray-text dark:text-dark-gray-text">Cohort-specific Slack channel for ongoing discussion and support.</p>
+                </article>
+                <article class="p-6 border border-gray-200 dark:border-gray-700 dark:bg-dark-card rounded-lg hover:shadow-lg transition-all">
+                    <h3 class="text-xl font-bold mb-2">Daily Practice</h3>
+                    <p class="text-gray-text dark:text-dark-gray-text">Apply learnings in your daily work with guided accountability.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Course Schedule -->
+        <section class="mb-12" aria-labelledby="schedule-heading">
+            <h2 id="schedule-heading" class="text-2xl font-heading font-normal mb-6">8-Week Schedule</h2>
+            <div class="overflow-x-auto rounded-lg border border-gray-200 dark:border-gray-700">
+                <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+                    <caption class="sr-only">Course Schedule and Topics</caption>
+                    <thead class="bg-gray-50 dark:bg-dark-card">
+                        <tr>
+                            <th scope="col" class="px-6 py-3 text-left text-sm font-semibold text-gray-text dark:text-dark-gray-text">Week</th>
+                            <th scope="col" class="px-6 py-3 text-left text-sm font-semibold text-gray-text dark:text-dark-gray-text">Topic</th>
+                            <th scope="col" class="px-6 py-3 text-left text-sm font-semibold text-gray-text dark:text-dark-gray-text">Master Class</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-200 dark:divide-gray-700 bg-white dark:bg-dark-bg">
+                        <tr class="hover:bg-gray-50 dark:hover:bg-dark-hover transition-colors">
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-text dark:text-dark-gray-text">Week 1</td>
+                            <td class="px-6 py-4 text-sm text-gray-text dark:text-dark-gray-text">Introduction</td>
+                            <td class="px-6 py-4 text-sm text-gray-text dark:text-dark-gray-text">Ask One Question at a Time</td>
+                        </tr>
+                        <tr class="hover:bg-gray-50 dark:hover:bg-dark-hover transition-colors">
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-text dark:text-dark-gray-text">Week 2</td>
+                            <td class="px-6 py-4 text-sm text-gray-text dark:text-dark-gray-text">"What's on your mind?"</td>
+                            <td class="px-6 py-4 text-sm text-gray-text dark:text-dark-gray-text">Cut the Intro and Ask the Question</td>
+                        </tr>
+                        <tr class="hover:bg-gray-50 dark:hover:bg-dark-hover transition-colors">
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-text dark:text-dark-gray-text">Week 3</td>
+                            <td class="px-6 py-4 text-sm text-gray-text dark:text-dark-gray-text">"And what else?"</td>
+                            <td class="px-6 py-4 text-sm text-gray-text dark:text-dark-gray-text">Get Comfortable with Silence</td>
+                        </tr>
+                        <tr class="hover:bg-gray-50 dark:hover:bg-dark-hover transition-colors">
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-text dark:text-dark-gray-text">Week 4</td>
+                            <td class="px-6 py-4 text-sm text-gray-text dark:text-dark-gray-text">"What's the real challenge here for you?"</td>
+                            <td class="px-6 py-4 text-sm text-gray-text dark:text-dark-gray-text">Acknowledge the Answer</td>
+                        </tr>
+                        <tr class="hover:bg-gray-50 dark:hover:bg-dark-hover transition-colors">
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-text dark:text-dark-gray-text">Week 5</td>
+                            <td class="px-6 py-4 text-sm text-gray-text dark:text-dark-gray-text">"What do you want?"</td>
+                            <td class="px-6 py-4 text-sm text-gray-text dark:text-dark-gray-text">Use "What" Instead of "Why"</td>
+                        </tr>
+                        <tr class="hover:bg-gray-50 dark:hover:bg-dark-hover transition-colors">
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-text dark:text-dark-gray-text">Week 6</td>
+                            <td class="px-6 py-4 text-sm text-gray-text dark:text-dark-gray-text">"How can I help?"</td>
+                            <td class="px-6 py-4 text-sm text-gray-text dark:text-dark-gray-text">Listen with Curiosity</td>
+                        </tr>
+                        <tr class="hover:bg-gray-50 dark:hover:bg-dark-hover transition-colors">
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-text dark:text-dark-gray-text">Week 7</td>
+                            <td class="px-6 py-4 text-sm text-gray-text dark:text-dark-gray-text">"What was most useful for you?"</td>
+                            <td class="px-6 py-4 text-sm text-gray-text dark:text-dark-gray-text">Get Specific with Follow-up</td>
+                        </tr>
+                        <tr class="hover:bg-gray-50 dark:hover:bg-dark-hover transition-colors">
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-text dark:text-dark-gray-text">Week 8</td>
+                            <td class="px-6 py-4 text-sm text-gray-text dark:text-dark-gray-text">Integration & Practice</td>
+                            <td class="px-6 py-4 text-sm text-gray-text dark:text-dark-gray-text">Building Lasting Habits</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Pricing -->
+        <section class="mb-12" aria-labelledby="pricing-heading">
+            <h2 id="pricing-heading" class="text-2xl font-heading font-normal mb-6">Cohort Pricing</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="p-6 border border-gray-200 dark:border-gray-700 dark:bg-dark-card rounded-lg hover:shadow-lg transition-all">
+                    <h3 class="text-xl font-bold mb-2">4-Person Cohort</h3>
+                    <p class="text-3xl font-bold text-accent-1 mb-4">$3,000</p>
+                    <ul class="space-y-2">
+                        <li class="flex items-start space-x-3">
+                            <span class="inline-block w-2 h-2 mt-2 rounded-full bg-accent-1"></span>
+                            <span class="text-gray-text dark:text-dark-gray-text">Intimate group setting</span>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <span class="inline-block w-2 h-2 mt-2 rounded-full bg-accent-1"></span>
+                            <span class="text-gray-text dark:text-dark-gray-text">Maximum participation</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="p-6 border-2 border-accent-1 rounded-lg hover:shadow-lg transition-all">
+                    <h3 class="text-xl font-bold mb-2">5-Person Cohort</h3>
+                    <p class="text-3xl font-bold text-accent-1 mb-4">$3,500</p>
+                    <ul class="space-y-2">
+                        <li class="flex items-start space-x-3">
+                            <span class="inline-block w-2 h-2 mt-2 rounded-full bg-accent-1"></span>
+                            <span class="text-gray-text dark:text-dark-gray-text">Balanced group size</span>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <span class="inline-block w-2 h-2 mt-2 rounded-full bg-accent-1"></span>
+                            <span class="text-gray-text dark:text-dark-gray-text">Diverse perspectives</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="p-6 border border-gray-200 dark:border-gray-700 dark:bg-dark-card rounded-lg hover:shadow-lg transition-all">
+                    <h3 class="text-xl font-bold mb-2">6-Person Cohort</h3>
+                    <p class="text-3xl font-bold text-accent-1 mb-4">$4,000</p>
+                    <ul class="space-y-2">
+                        <li class="flex items-start space-x-3">
+                            <span class="inline-block w-2 h-2 mt-2 rounded-full bg-accent-1"></span>
+                            <span class="text-gray-text dark:text-dark-gray-text">Rich discussions</span>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <span class="inline-block w-2 h-2 mt-2 rounded-full bg-accent-1"></span>
+                            <span class="text-gray-text dark:text-dark-gray-text">Broader networking</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="mb-12" aria-labelledby="cta-heading">
+            <h2 id="cta-heading" class="text-2xl font-heading font-normal mb-6">Ready to Transform Your Coaching Culture?</h2>
+            <div class="p-6 bg-off-black dark:bg-dark-card text-white rounded-lg">
+                <p class="mb-4">Start building a stronger coaching culture in your organization. Contact us to schedule your cohort's first session.</p>
+                <a 
+                    href="mailto:erik@e2thex.org" 
+                    class="inline-block px-6 py-2 bg-accent-1 text-white rounded hover:bg-accent-2 transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-accent-1 dark:focus:ring-offset-dark-bg"
+                >
+                    Contact us to get started
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="py-8 px-6 border-t border-gray-200 dark:border-gray-700" role="contentinfo">
+        <p class="text-center text-gray-text dark:text-dark-gray-text">© 2024 E2theX Consulting. All rights reserved.</p>
+    </footer>
+</body>
+</html>
