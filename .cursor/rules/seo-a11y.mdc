@@ -1,0 +1,63 @@
+---
+description: provide standard rules for seo and a11y
+globs: index.html
+---
+# SEO and Accessibility Requirements
+
+## Meta Tags
+Every page must include:
+- `description` meta tag with unique, relevant content (150-160 characters)
+- `keywords` meta tag with relevant keywords
+- Proper page title format: "[Page Name] - Summerfield Consulting"
+
+## Open Graph Tags
+All pages must have:
+- `og:title` - Format: "[Page Name] - Summerfield Consulting"
+- `og:description` - Unique description (different from meta description)
+- `og:image` - Path: "/logo.jpg"
+- `og:url` - Format: "https://summerfieldconsulting.com/[path]"
+- `og:type` - Value: "website"
+
+## Accessibility Requirements
+Every page must include:
+1. Skip to main content link:
+
+2. Proper ARIA attributes:
+- `role="main"` on main content
+- `role="banner"` on header
+- `role="contentinfo"` on footer
+- `role="navigation"` on nav elements
+- `aria-current="page"` on active navigation items
+- `aria-label` on interactive elements
+- `aria-live` regions for dynamic content
+
+3. Semantic HTML:
+- Use proper heading hierarchy (h1-h6)
+- Use semantic elements (main, header, footer, nav, etc.)
+- Use lists for navigation items
+
+## Content Guidelines
+1. Page Titles:
+- Home: "Summerfield Consulting"
+- Services: "[Service Name] - Summerfield Consulting"
+
+2. Meta Descriptions:
+- Should be unique for each page
+- Include main keywords naturally
+- Be compelling and action-oriented
+- Stay within 150-160 characters
+
+3. Keywords:
+- Include 5-8 relevant keywords
+- Focus on service-specific terms
+- Include variations of important terms
+
+## Implementation Checklist
+When creating new pages:
+1. Copy meta tag structure from existing page
+2. Update all meta content for new page
+3. Ensure all ARIA attributes are properly set
+4. Add skip-to-main-content link
+5. Verify proper heading hierarchy
+6. Test with screen reader
+7. Validate Open Graph tags
