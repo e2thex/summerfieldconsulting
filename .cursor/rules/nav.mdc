@@ -1,1 +1,41 @@
- 
+---
+description:  Manage the header
+globs: index.html
+---
+# Navigation and Header Consistency Rules
+
+## Header Requirements
+- Every page must use the exact same header structure
+- Headers must include:
+  - Logo linking to home (this serves as the home navigation)
+  - Main navigation
+  - Services dropdown
+  - Contact button
+  - Theme toggle
+  - Mobile responsive menu
+- Do NOT include a separate "Home" link in navigation (the logo serves this purpose)
+
+## Navigation Rules
+- The nav should be identical on all pages
+- The nav should come from the [design.html](mdc:dist/design.html) design
+- The nav should include all index.html pages (but by their folder name)
+- If there are folders with no index.html then they should still be in the nav but not clickable
+- Active states must be properly set for current page:
+  - Current page link should have `text-accent-1` class
+  - Current page link should have `aria-current="page"` attribute
+  - Parent "Services" button should have `aria-current="true"` if on a service page
+
+## When Adding New Pages
+1. Copy the complete header from an existing page
+2. Update the active states for the new page's navigation
+3. Add the new page to the navigation menu on ALL other pages
+4. Ensure mobile menu includes the new page
+5. Verify all paths (logo, CSS, etc.) are correct for the new page's directory level
+
+## File Structure Reference
+- Root pages: Use relative paths starting with `/`
+- Service pages: Use relative paths starting with `../../`
+- Ensure logo.png path is correct based on page depth
+
+## Required Classes and Attributes
+Header must maintain all accessibility attributes and styling classes as defined in design.html 
