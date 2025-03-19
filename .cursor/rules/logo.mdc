@@ -1,0 +1,9 @@
+---
+description: info about the logo
+globs: index.html, design.html
+---
+
+# Your rule content
+
+- the logo is always logo.jpg
+- it is always in the root of dist

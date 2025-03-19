@@ -1,0 +1,10 @@
+---
+description: How to create the nav
+globs: index.html
+---
+
+# Your rule content
+
+- The nav should be the same on all pages
+- the nav should come from the [design.html](mdc:dist/design.html) design
+- the nav should include all index.html pages (but by thier folder name) if there are folders with no index.html then it should still be in the nav but not clickable
