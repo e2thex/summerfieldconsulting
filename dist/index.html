@@ -143,24 +143,87 @@
 
         <!-- Services Section -->
         <section class="mb-12" aria-labelledby="services-heading">
-            <h2 id="services-heading" class="text-2xl font-heading font-normal mb-6">Services Offered</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <article class="p-6 border border-gray-200 dark:border-gray-700 dark:bg-dark-card rounded-lg hover:shadow-lg dark:hover:bg-dark-hover transition-all focus-within:ring-2 focus-within:ring-accent-1">
-                    <h3 class="text-xl font-bold mb-2">Engineering Leadership & Management</h3>
-                    <p class="text-gray-text dark:text-dark-gray-text">Coaching managers, structuring high-performing teams, and improving retention.</p>
-                </article>
-                <article class="p-6 border border-gray-200 dark:border-gray-700 dark:bg-dark-card rounded-lg hover:shadow-lg dark:hover:bg-dark-hover transition-all focus-within:ring-2 focus-within:ring-accent-1">
-                    <h3 class="text-xl font-bold mb-2">Process Optimization</h3>
-                    <p class="text-gray-text dark:text-dark-gray-text">Streamlining workflows, reducing friction, and improving collaboration across teams.</p>
-                </article>
-                <article class="p-6 border border-gray-200 dark:border-gray-700 dark:bg-dark-card rounded-lg hover:shadow-lg dark:hover:bg-dark-hover transition-all focus-within:ring-2 focus-within:ring-accent-1">
-                    <h3 class="text-xl font-bold mb-2">Remote & Distributed Team Best Practices</h3>
-                    <p class="text-gray-text dark:text-dark-gray-text">Creating alignment, improving async communication, and making remote work <em>actually</em> work.</p>
-                </article>
-                <article class="p-6 border border-gray-200 dark:border-gray-700 dark:bg-dark-card rounded-lg hover:shadow-lg dark:hover:bg-dark-hover transition-all focus-within:ring-2 focus-within:ring-accent-1">
-                    <h3 class="text-xl font-bold mb-2">Cross-Functional Collaboration</h3>
-                    <p class="text-gray-text dark:text-dark-gray-text">Strengthening the relationship between engineering, product, and leadership.</p>
-                </article>
+            <h2 id="services-heading" class="text-2xl font-heading font-normal mb-6">Featured Services</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Agile in Action -->
+                <div class="group relative p-6 bg-white dark:bg-dark-card rounded-xl shadow-lg hover:shadow-xl transition-all border border-gray-200 dark:border-gray-700">
+                    <div class="absolute top-0 right-0 w-32 h-32 opacity-10 dark:opacity-5">
+                        <svg viewBox="0 0 24 24" fill="currentColor" class="w-full h-full text-accent-1">
+                            <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10zm0-2V4m0 16l7-7m-7 7l-7-7"/>
+                        </svg>
+                    </div>
+                    <div class="relative">
+                        <h3 class="text-2xl font-bold mb-3 text-accent-1">Agile in Action</h3>
+                        <p class="text-gray-text dark:text-dark-gray-text mb-4">Transform your team's Agile practice from routine ceremonies into real, measurable improvements. Two-week embedded observation followed by guided implementation.</p>
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-center gap-2 text-gray-text dark:text-dark-gray-text">
+                                <svg class="w-5 h-5 text-accent-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                                Expert process observation
+                            </li>
+                            <li class="flex items-center gap-2 text-gray-text dark:text-dark-gray-text">
+                                <svg class="w-5 h-5 text-accent-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                                Guided retrospectives
+                            </li>
+                            <li class="flex items-center gap-2 text-gray-text dark:text-dark-gray-text">
+                                <svg class="w-5 h-5 text-accent-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                                Implementation support
+                            </li>
+                        </ul>
+                        <a href="/services/AgileInAction" 
+                           class="inline-flex items-center gap-2 text-accent-1 font-semibold group-hover:text-accent-2 transition-colors">
+                            Learn More
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Coaching Habit Course -->
+                <div class="group relative p-6 bg-white dark:bg-dark-card rounded-xl shadow-lg hover:shadow-xl transition-all border border-gray-200 dark:border-gray-700">
+                    <div class="absolute top-0 right-0 w-32 h-32 opacity-10 dark:opacity-5">
+                        <svg viewBox="0 0 24 24" fill="currentColor" class="w-full h-full text-accent-1">
+                            <path d="M12 2C6.477 2 2 6.477 2 12c0 5.523 4.477 10 10 10s10-4.477 10-10c0-5.523-4.477-10-10-10zm0 18v-2m0-12v2m-6 8l2-2m8 2l-2-2m-8-8l2 2m8-2l-2 2"/>
+                        </svg>
+                    </div>
+                    <div class="relative">
+                        <h3 class="text-2xl font-bold mb-3 text-accent-1">Coaching Habit Course</h3>
+                        <p class="text-gray-text dark:text-dark-gray-text mb-4">Learn the essential skills of effective coaching. Transform your leadership style with practical, proven techniques that create lasting change.</p>
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-center gap-2 text-gray-text dark:text-dark-gray-text">
+                                <svg class="w-5 h-5 text-accent-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                                Proven coaching framework
+                            </li>
+                            <li class="flex items-center gap-2 text-gray-text dark:text-dark-gray-text">
+                                <svg class="w-5 h-5 text-accent-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                                Interactive workshops
+                            </li>
+                            <li class="flex items-center gap-2 text-gray-text dark:text-dark-gray-text">
+                                <svg class="w-5 h-5 text-accent-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                                Practical application
+                            </li>
+                        </ul>
+                        <a href="/services/CoachingHabitCourse" 
+                           class="inline-flex items-center gap-2 text-accent-1 font-semibold group-hover:text-accent-2 transition-colors">
+                            Learn More
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
             </div>
         </section>
 
