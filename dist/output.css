@@ -3154,6 +3154,10 @@ video {
   opacity: 1;
 }
 
+.dark\:block:is(.dark *) {
+  display: block;
+}
+
 .dark\:inline:is(.dark *) {
   display: inline;
 }
