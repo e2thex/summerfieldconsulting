@@ -14,7 +14,7 @@ Every page must include:
 All pages must have:
 - `og:title` - Format: "[Page Name] - Summerfield Consulting"
 - `og:description` - Unique description (different from meta description)
-- `og:image` - Path: "/logo.jpg"
+- `og:image` - Path: "/logo.png"
 - `og:url` - Format: "https://summerfieldconsulting.com/[path]"
 - `og:type` - Value: "website"
 
