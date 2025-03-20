@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Theme initialization -->
+    <script>
+        if (localStorage.theme === 'dark') {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+    </script>
+    
+    <title>Scrum RACI Tool - Summerfield Consulting</title>
+    <meta name="description" content="Interactive RACI matrix mapped to the official Scrum Guide, helping teams understand role responsibilities in Scrum.">
+    <meta name="keywords" content="Scrum RACI, Scrum roles, Scrum responsibilities, Scrum Guide reference">
+    
+    <!-- Open Graph tags -->
+    <meta property="og:title" content="Scrum RACI Tool - Summerfield Consulting">
+    <meta property="og:description" content="Interactive tool mapping Scrum responsibilities to the official Scrum Guide using RACI matrix.">
+    <meta property="og:image" content="/logo.png">
+    <meta property="og:url" content="https://summerfieldconsulting.com/tools/ScrumRACI">
+    <meta property="og:type" content="website">
+    
+    <link rel="icon" type="image/png" href="../../logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&family=Inter:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+    <link href="../../output.css" rel="stylesheet">
+</head>
+<body class="bg-off-white dark:bg-dark-bg text-off-black dark:text-off-white font-body transition-colors duration-200">
+    // ... existing header ...
+
+    <main class="max-w-7xl mx-auto p-6" role="main">
+        <h1 class="text-4xl font-heading font-normal mb-4">Scrum RACI Matrix</h1>
+        
+        <p class="text-lg text-gray-text dark:text-dark-gray-text mb-8">
+            This interactive tool maps Scrum responsibilities using a RACI matrix. Click on any RACI indicator to see the corresponding section of the Scrum Guide.
+        </p>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <!-- RACI Matrix -->
+            <section class="bg-white dark:bg-dark-card rounded-lg border border-gray-200 dark:border-gray-700 p-6">
+                <h2 class="text-2xl font-heading font-normal mb-6">RACI Matrix</h2>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left border-collapse">
+                        <thead>
+                            <tr class="border-b-2 border-gray-200 dark:border-gray-700">
+                                <th class="py-3 px-4 font-bold">Task</th>
+                                <th class="py-3 px-4 font-bold">Developer</th>
+                                <th class="py-3 px-4 font-bold">PO</th>
+                                <th class="py-3 px-4 font-bold">SM</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-200 dark:divide-gray-700">
+                            <tr>
+                                <td class="py-3 px-4">Produce Definition of Done</td>
+                                <td class="py-3 px-4">
+                                    <button class="text-accent-1 hover:text-accent-2 transition-colors font-bold" data-section="definitionOfDone">A</button>
+                                </td>
+                                <td class="py-3 px-4">
+                                    <button class="text-accent-1 hover:text-accent-2 transition-colors font-bold" data-section="definitionOfDone">A</button>
+                                </td>
+                                <td class="py-3 px-4">
+                                    <button class="text-accent-1 hover:text-accent-2 transition-colors font-bold" data-section="definitionOfDone">A</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="py-3 px-4">Create an Increment</td>
+                                <td class="py-3 px-4">
+                                    <button class="text-accent-1 hover:text-accent-2 transition-colors font-bold" data-section="developerAccountablity">A</button>
+                                </td>
+                                <td class="py-3 px-4">I</td>
+                                <td class="py-3 px-4">I</td>
+                            </tr>
+                            <tr>
+                                <td class="py-3 px-4">Create a plan for the Sprint, the Sprint Backlog</td>
+                                <td class="py-3 px-4">
+                                    <button class="text-accent-1 hover:text-accent-2 transition-colors font-bold" data-section="developerAccountablity">A</button>
+                                </td>
+                                <td class="py-3 px-4">I</td>
+                                <td class="py-3 px-4">I</td>
+                            </tr>
+                            <tr>
+                                <td class="py-3 px-4">Instilling quality by adhering to a Definition of Done</td>
+                                <td class="py-3 px-4">
+                                    <button class="text-accent-1 hover:text-accent-2 transition-colors font-bold" data-section="developerAccountablity">A</button>
+                                </td>
+                                <td class="py-3 px-4">I</td>
+                                <td class="py-3 px-4">I</td>
+                            </tr>
+                            <tr>
+                                <td class="py-3 px-4">Adapting their plan each day toward the Sprint Goal</td>
+                                <td class="py-3 px-4">
+                                    <button class="text-accent-1 hover:text-accent-2 transition-colors font-bold" data-section="developerAccountablity">A</button>
+                                </td>
+                                <td class="py-3 px-4">I</td>
+                                <td class="py-3 px-4">I</td>
+                            </tr>
+                            <tr>
+                                <td class="py-3 px-4">Holding each other accountable as professionals</td>
+                                <td class="py-3 px-4">
+                                    <button class="text-accent-1 hover:text-accent-2 transition-colors font-bold" data-section="developerAccountablity">A</button>
+                                </td>
+                                <td class="py-3 px-4">-</td>
+                                <td class="py-3 px-4">-</td>
+                            </tr>
+                            <tr>
+                                <td class="py-3 px-4">Maximizing the value of the product</td>
+                                <td class="py-3 px-4">
+                                    <button class="text-accent-1 hover:text-accent-2 transition-colors font-bold" data-section="DeveloperConsultValue">C</button>
+                                </td>
+                                <td class="py-3 px-4">
+                                    <button class="text-accent-1 hover:text-accent-2 transition-colors font-bold" data-section="productOwnerValue">A</button>
+                                </td>
+                                <td class="py-3 px-4">I</td>
+                            </tr>
+                            <tr>
+                                <td class="py-3 px-4">Effective Product Backlog management</td>
+                                <td class="py-3 px-4">I</td>
+                                <td class="py-3 px-4">
+                                    <button class="text-accent-1 hover:text-accent-2 transition-colors font-bold" data-section="productOwnerBacklog">A</button>
+                                </td>
+                                <td class="py-3 px-4">I</td>
+                            </tr>
+                            <tr>
+                                <td class="py-3 px-4">Establishing Scrum as defined in the Scrum Guide</td>
+                                <td class="py-3 px-4">I</td>
+                                <td class="py-3 px-4">I</td>
+                                <td class="py-3 px-4">
+                                    <button class="text-accent-1 hover:text-accent-2 transition-colors font-bold" data-section="scrumMasterGuide">A</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="py-3 px-4">The Scrum Team's effectiveness</td>
+                                <td class="py-3 px-4">
+                                    <button class="text-accent-1 hover:text-accent-2 transition-colors font-bold" data-section="consultedEffectiveness">C</button>
+                                </td>
+                                <td class="py-3 px-4">
+                                    <button class="text-accent-1 hover:text-accent-2 transition-colors font-bold" data-section="consultedEffectiveness">C</button>
+                                </td>
+                                <td class="py-3 px-4">
+                                    <button class="text-accent-1 hover:text-accent-2 transition-colors font-bold" data-section="scrumMasterTeamEffectiveness">A</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div class="mt-6 p-4 bg-gray-50 dark:bg-dark-hover rounded-lg">
+                    <h3 class="text-lg font-bold mb-2">RACI Legend</h3>
+                    <ul class="space-y-2 text-gray-text dark:text-dark-gray-text">
+                        <li><strong>R</strong> - Responsible: Does the work</li>
+                        <li><strong>A</strong> - Accountable: Ensures completion</li>
+                        <li><strong>C</strong> - Consulted: Provides input</li>
+                        <li><strong>I</strong> - Informed: Kept up-to-date</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Scrum Guide Section -->
+            <section class="bg-white dark:bg-dark-card rounded-lg border border-gray-200 dark:border-gray-700 p-6">
+                <h2 class="text-2xl font-heading font-normal mb-6">Scrum Guide Reference</h2>
+                <div id="guide-content" class="prose dark:prose-invert max-w-none">
+                    <p class="text-gray-text dark:text-dark-gray-text">
+                        Click any RACI indicator in the matrix to see the corresponding Scrum Guide section.
+                    </p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    // ... existing footer ...
+
+    <!-- Scripts -->
+    <script src="script.js" defer></script>
+</body>
+</html> 
