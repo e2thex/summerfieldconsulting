@@ -29,7 +29,85 @@
     <link href="../../output.css" rel="stylesheet">
 </head>
 <body class="bg-off-white dark:bg-dark-bg text-off-black dark:text-off-white font-body transition-colors duration-200">
-    // ... existing header ...
+    <header class="bg-white dark:bg-dark-card border-b border-gray-200 dark:border-gray-700" role="banner">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+            <div class="flex justify-between items-center py-4">
+                <!-- Logo (home navigation) -->
+                <div class="flex justify-start">
+                    <a href="/" class="flex items-center">
+                        <img src="../../logo.png" alt="Summerfield Consulting Logo" class="h-12">
+                    </a>
+                </div>
+
+                <!-- Main Navigation -->
+                <nav class="hidden md:flex space-x-8" role="navigation">
+                    <a href="/about" class="text-gray-text dark:text-dark-gray-text hover:text-accent-1 dark:hover:text-accent-1">About</a>
+                    <a href="/tools" class="text-gray-text dark:text-dark-gray-text hover:text-accent-1 dark:hover:text-accent-1">Tools</a>
+                    
+                    <!-- Services Dropdown -->
+                    <div class="relative" x-data="{ open: false }">
+                        <button @click="open = !open" @keydown.escape="open = false" 
+                                class="text-accent-1 dark:text-accent-1 inline-flex items-center" 
+                                aria-current="true">
+                            <span>Services</span>
+                            <svg class="ml-1 h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                            </svg>
+                        </button>
+                        <div x-show="open" @click.away="open = false" 
+                             class="absolute z-10 mt-2 w-48 rounded-md shadow-lg bg-white dark:bg-dark-card ring-1 ring-black ring-opacity-5">
+                            <div class="py-1">
+                                <a href="/services/coaching" class="block px-4 py-2 text-gray-text dark:text-dark-gray-text hover:text-accent-1 dark:hover:text-accent-1">Coaching</a>
+                                <a href="/services/training" class="block px-4 py-2 text-gray-text dark:text-dark-gray-text hover:text-accent-1 dark:hover:text-accent-1">Training</a>
+                                <a href="/tools/ScrumRACI" class="block px-4 py-2 text-accent-1 dark:text-accent-1" aria-current="page">Scrum RACI</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="/blog" class="text-gray-text dark:text-dark-gray-text hover:text-accent-1 dark:hover:text-accent-1">Blog</a>
+                </nav>
+
+                <!-- Right side buttons -->
+                <div class="flex items-center space-x-4">
+                    <a href="/contact" class="hidden md:inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-accent-1 hover:bg-accent-2">
+                        Contact
+                    </a>
+                    
+                    <!-- Theme Toggle -->
+                    <button id="theme-toggle" type="button" aria-label="Toggle theme" 
+                            class="text-gray-text dark:text-dark-gray-text hover:text-accent-1 dark:hover:text-accent-1">
+                        <svg class="w-6 h-6 hidden dark:block" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"/>
+                        </svg>
+                        <svg class="w-6 h-6 dark:hidden" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"/>
+                        </svg>
+                    </button>
+
+                    <!-- Mobile menu button -->
+                    <button @click="mobileMenu = !mobileMenu" type="button" aria-label="Toggle mobile menu"
+                            class="md:hidden text-gray-text dark:text-dark-gray-text hover:text-accent-1 dark:hover:text-accent-1">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile menu -->
+        <div x-show="mobileMenu" class="md:hidden">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="/about" class="block px-3 py-2 text-gray-text dark:text-dark-gray-text hover:text-accent-1 dark:hover:text-accent-1">About</a>
+                <a href="/tools" class="block px-3 py-2 text-gray-text dark:text-dark-gray-text hover:text-accent-1 dark:hover:text-accent-1">Tools</a>
+                <a href="/services/coaching" class="block px-3 py-2 text-gray-text dark:text-dark-gray-text hover:text-accent-1 dark:hover:text-accent-1">Coaching</a>
+                <a href="/services/training" class="block px-3 py-2 text-gray-text dark:text-dark-gray-text hover:text-accent-1 dark:hover:text-accent-1">Training</a>
+                <a href="/tools/ScrumRACI" class="block px-3 py-2 text-accent-1 dark:text-accent-1" aria-current="page">Scrum RACI</a>
+                <a href="/blog" class="block px-3 py-2 text-gray-text dark:text-dark-gray-text hover:text-accent-1 dark:hover:text-accent-1">Blog</a>
+                <a href="/contact" class="block px-3 py-2 text-gray-text dark:text-dark-gray-text hover:text-accent-1 dark:hover:text-accent-1">Contact</a>
+            </div>
+        </div>
+    </header>
 
     <main class="max-w-7xl mx-auto p-6" role="main">
         <h1 class="text-4xl font-heading font-normal mb-4">Scrum RACI Matrix</h1>
@@ -169,8 +247,6 @@
             </section>
         </div>
     </main>
-
-    // ... existing footer ...
 
     <!-- Scripts -->
     <script src="script.js" defer></script>

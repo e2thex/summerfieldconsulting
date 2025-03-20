@@ -66,6 +66,34 @@
                                 aria-expanded="false"
                                 aria-haspopup="true"
                             >
+                                Tools
+                                <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                                </svg>
+                            </button>
+                            <div class="absolute left-0 mt-2 w-48 rounded-lg bg-white dark:bg-dark-card border border-gray-200 dark:border-gray-700 shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all">
+                                <ul class="py-2">
+                                    <li>
+                                        <a href="/tools/ScrumRACI" 
+                                           class="block px-4 py-2 text-gray-text dark:text-dark-gray-text hover:text-accent-1 dark:hover:text-accent-1 hover:bg-gray-50 dark:hover:bg-dark-hover transition-colors">
+                                            Scrum RACI
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/tools/RetroTool" 
+                                           class="block px-4 py-2 text-gray-text dark:text-dark-gray-text hover:text-accent-1 dark:hover:text-accent-1 hover:bg-gray-50 dark:hover:bg-dark-hover transition-colors">
+                                            Retro Tool
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="relative group">
+                            <button 
+                                class="flex items-center gap-1 text-gray-text dark:text-dark-gray-text hover:text-accent-1 dark:hover:text-accent-1 transition-colors"
+                                aria-expanded="false"
+                                aria-haspopup="true"
+                            >
                                 Services
                                 <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
@@ -131,7 +159,31 @@
             <ul class="space-y-4">
                 <li>
                     <button 
-                        onclick="toggleMobileSubmenu()"
+                        onclick="toggleMobileSubmenu('toolsSubmenu')"
+                        class="flex items-center justify-between w-full text-gray-text dark:text-dark-gray-text hover:text-accent-1 dark:hover:text-accent-1 transition-colors"
+                        aria-expanded="false"
+                    >
+                        Tools
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                        </svg>
+                    </button>
+                    <ul id="toolsSubmenu" class="hidden pl-4 mt-2 space-y-2">
+                        <li>
+                            <a href="/tools/ScrumRACI" class="block text-gray-text dark:text-dark-gray-text hover:text-accent-1 dark:hover:text-accent-1 transition-colors">
+                                Scrum RACI
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/tools/RetroTool" class="block text-gray-text dark:text-dark-gray-text hover:text-accent-1 dark:hover:text-accent-1 transition-colors">
+                                Retro Tool
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <button 
+                        onclick="toggleMobileSubmenu('servicesSubmenu')"
                         class="flex items-center justify-between w-full text-gray-text dark:text-dark-gray-text hover:text-accent-1 dark:hover:text-accent-1 transition-colors"
                         aria-expanded="false"
                     >
@@ -140,7 +192,7 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
                         </svg>
                     </button>
-                    <ul id="mobileSubmenu" class="hidden pl-4 mt-2 space-y-2">
+                    <ul id="servicesSubmenu" class="hidden pl-4 mt-2 space-y-2">
                         <li>
                             <a href="/services/AgileInAction" class="block text-gray-text dark:text-dark-gray-text hover:text-accent-1 dark:hover:text-accent-1 transition-colors">
                                 Agile in Action
@@ -491,9 +543,11 @@
             menu.classList.toggle('hidden');
         }
 
-        function toggleMobileSubmenu() {
-            const submenu = document.getElementById('mobileSubmenu');
-            submenu.classList.toggle('hidden');
+        function toggleMobileSubmenu(submenuId) {
+            const submenu = document.getElementById(submenuId);
+            if (submenu) {
+                submenu.classList.toggle('hidden');
+            }
         }
     </script>
 </body>
