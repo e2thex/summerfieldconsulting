@@ -38,8 +38,8 @@
         <div class="flex items-center justify-between max-w-4xl mx-auto">
             <div class="flex items-center gap-4">
                 <a href="/" class="flex items-center gap-4">
-                    <img src="/logo.png" alt="Summerfield Consulting Logo" class="h-12 w-auto block dark:hidden">
-                    <img src="/logo-dark.png" alt="Summerfield Consulting Logo" class="h-12 w-auto hidden dark:block">
+                    <img src="../../logo.png" alt="Summerfield Consulting Logo" class="h-12 w-auto block dark:hidden">
+                    <img src="../../logo-dark.png" alt="Summerfield Consulting Logo" class="h-12 w-auto hidden dark:block">
                     <span class="text-4xl font-heading font-normal">Summerfield Consulting</span>
                 </a>
             </div>
@@ -129,7 +129,7 @@
                 <ul class="space-y-4">
                     <li>
                         <button 
-                            onclick="toggleMobileSubmenu()"
+                            onclick="toggleMobileSubmenu('servicesSubmenu')"
                             class="flex items-center justify-between w-full text-gray-text dark:text-dark-gray-text"
                             aria-expanded="false"
                         >
@@ -138,7 +138,7 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
                             </svg>
                         </button>
-                        <ul id="mobileSubmenu" class="hidden mt-2 ml-4 space-y-2">
+                        <ul id="servicesSubmenu" class="hidden mt-2 ml-4 space-y-2">
                             <li>
                                 <a href="/services/AgileInAction" class="block text-gray-text dark:text-dark-gray-text">
                                     Agile in Action
@@ -372,7 +372,27 @@
     </footer>
 
     <script>
-        // ... existing scripts ...
+        function toggleMobileMenu() {
+            const mobileMenu = document.getElementById('mobileMenu');
+            mobileMenu.classList.toggle('hidden');
+        }
+
+        function toggleMobileSubmenu(submenuId) {
+            const submenu = document.getElementById(submenuId);
+            if (submenu) {
+                submenu.classList.toggle('hidden');
+            }
+        }
+
+        function toggleTheme() {
+            if (document.documentElement.classList.contains('dark')) {
+                document.documentElement.classList.remove('dark');
+                localStorage.theme = 'light';
+            } else {
+                document.documentElement.classList.add('dark');
+                localStorage.theme = 'dark';
+            }
+        }
     </script>
 </body>
 </html> 

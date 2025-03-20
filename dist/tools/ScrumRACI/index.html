@@ -29,83 +29,175 @@
     <link href="../../output.css" rel="stylesheet">
 </head>
 <body class="bg-off-white dark:bg-dark-bg text-off-black dark:text-off-white font-body transition-colors duration-200">
-    <header class="bg-white dark:bg-dark-card border-b border-gray-200 dark:border-gray-700" role="banner">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6">
-            <div class="flex justify-between items-center py-4">
-                <!-- Logo (home navigation) -->
-                <div class="flex justify-start">
-                    <a href="/" class="flex items-center">
-                        <img src="../../logo.png" alt="Summerfield Consulting Logo" class="h-12">
-                    </a>
-                </div>
-
-                <!-- Main Navigation -->
-                <nav class="hidden md:flex space-x-8" role="navigation">
-                    <a href="/about" class="text-gray-text dark:text-dark-gray-text hover:text-accent-1 dark:hover:text-accent-1">About</a>
-                    <a href="/tools" class="text-gray-text dark:text-dark-gray-text hover:text-accent-1 dark:hover:text-accent-1">Tools</a>
-                    
-                    <!-- Services Dropdown -->
-                    <div class="relative" x-data="{ open: false }">
-                        <button @click="open = !open" @keydown.escape="open = false" 
-                                class="text-accent-1 dark:text-accent-1 inline-flex items-center" 
-                                aria-current="true">
-                            <span>Services</span>
-                            <svg class="ml-1 h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
-                            </svg>
-                        </button>
-                        <div x-show="open" @click.away="open = false" 
-                             class="absolute z-10 mt-2 w-48 rounded-md shadow-lg bg-white dark:bg-dark-card ring-1 ring-black ring-opacity-5">
-                            <div class="py-1">
-                                <a href="/services/coaching" class="block px-4 py-2 text-gray-text dark:text-dark-gray-text hover:text-accent-1 dark:hover:text-accent-1">Coaching</a>
-                                <a href="/services/training" class="block px-4 py-2 text-gray-text dark:text-dark-gray-text hover:text-accent-1 dark:hover:text-accent-1">Training</a>
-                                <a href="/tools/ScrumRACI" class="block px-4 py-2 text-accent-1 dark:text-accent-1" aria-current="page">Scrum RACI</a>
+    <header class="py-8 px-6 border-b border-gray-200 dark:border-gray-700" role="banner">
+        <div class="flex items-center justify-between max-w-4xl mx-auto">
+            <div class="flex items-center gap-4">
+                <a href="/" class="flex items-center gap-4">
+                    <img src="../../logo.png" alt="Summerfield Consulting Logo" class="h-12 w-auto block dark:hidden">
+                    <img src="../../logo-dark.png" alt="Summerfield Consulting Logo" class="h-12 w-auto hidden dark:block">
+                    <span class="text-4xl font-heading font-normal">Summerfield Consulting</span>
+                </a>
+            </div>
+            <nav class="hidden md:block" role="navigation" aria-label="Main navigation">
+                <ul class="flex items-center justify-between">
+                    <div class="flex items-center gap-6">
+                        <li class="relative group">
+                            <button 
+                                class="flex items-center gap-1 text-accent-1 dark:text-accent-1 transition-colors"
+                                aria-expanded="false"
+                                aria-haspopup="true"
+                                aria-current="true"
+                            >
+                                Tools
+                                <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                                </svg>
+                            </button>
+                            <div class="absolute left-0 mt-2 w-48 rounded-lg bg-white dark:bg-dark-card border border-gray-200 dark:border-gray-700 shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all">
+                                <ul class="py-2">
+                                    <li>
+                                        <a href="/tools/ScrumRACI" 
+                                           class="block px-4 py-2 text-accent-1 dark:text-accent-1 hover:bg-gray-50 dark:hover:bg-dark-hover transition-colors"
+                                           aria-current="page">
+                                            Scrum RACI
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/tools/RetroTool" 
+                                           class="block px-4 py-2 text-gray-text dark:text-dark-gray-text hover:text-accent-1 dark:hover:text-accent-1 hover:bg-gray-50 dark:hover:bg-dark-hover transition-colors">
+                                            Retro Tool
+                                        </a>
+                                    </li>
+                                </ul>
                             </div>
-                        </div>
+                        </li>
+                        <li class="relative group">
+                            <button 
+                                class="flex items-center gap-1 text-gray-text dark:text-dark-gray-text hover:text-accent-1 dark:hover:text-accent-1 transition-colors"
+                                aria-expanded="false"
+                                aria-haspopup="true"
+                            >
+                                Services
+                                <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                                </svg>
+                            </button>
+                            <div class="absolute left-0 mt-2 w-48 rounded-lg bg-white dark:bg-dark-card border border-gray-200 dark:border-gray-700 shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all">
+                                <ul class="py-2">
+                                    <li>
+                                        <a href="/services/AgileInAction" 
+                                           class="block px-4 py-2 text-gray-text dark:text-dark-gray-text hover:text-accent-1 dark:hover:text-accent-1 hover:bg-gray-50 dark:hover:bg-dark-hover transition-colors">
+                                            Agile in Action
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/services/AdHocConsulting" 
+                                           class="block px-4 py-2 text-gray-text dark:text-dark-gray-text hover:text-accent-1 dark:hover:text-accent-1 hover:bg-gray-50 dark:hover:bg-dark-hover transition-colors">
+                                            Ad-hoc Consulting
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/services/CoachingHabitCourse" 
+                                           class="block px-4 py-2 text-gray-text dark:text-dark-gray-text hover:text-accent-1 dark:hover:text-accent-1 hover:bg-gray-50 dark:hover:bg-dark-hover transition-colors">
+                                            Coaching Habit Course
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
                     </div>
-                    
-                    <a href="/blog" class="text-gray-text dark:text-dark-gray-text hover:text-accent-1 dark:hover:text-accent-1">Blog</a>
-                </nav>
-
-                <!-- Right side buttons -->
-                <div class="flex items-center space-x-4">
-                    <a href="/contact" class="hidden md:inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-accent-1 hover:bg-accent-2">
-                        Contact
-                    </a>
-                    
-                    <!-- Theme Toggle -->
-                    <button id="theme-toggle" type="button" aria-label="Toggle theme" 
-                            class="text-gray-text dark:text-dark-gray-text hover:text-accent-1 dark:hover:text-accent-1">
-                        <svg class="w-6 h-6 hidden dark:block" fill="currentColor" viewBox="0 0 20 20">
-                            <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"/>
-                        </svg>
-                        <svg class="w-6 h-6 dark:hidden" fill="currentColor" viewBox="0 0 20 20">
-                            <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"/>
-                        </svg>
-                    </button>
-
-                    <!-- Mobile menu button -->
-                    <button @click="mobileMenu = !mobileMenu" type="button" aria-label="Toggle mobile menu"
-                            class="md:hidden text-gray-text dark:text-dark-gray-text hover:text-accent-1 dark:hover:text-accent-1">
-                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-                        </svg>
-                    </button>
-                </div>
-            </div>
+                    <div class="flex items-center gap-4 ml-6">
+                        <li>
+                            <a href="mailto:erik@summerfield.consulting" 
+                               class="px-4 py-2 text-accent-1 border border-accent-1 rounded hover:bg-accent-1 hover:text-white transition-colors">
+                                Contact
+                            </a>
+                        </li>
+                        <li>
+                            <button 
+                                onclick="toggleTheme()"
+                                class="px-4 py-2 bg-accent-1 text-white rounded hover:bg-accent-2 transition-colors focus:outline-none focus:ring-2 focus:ring-accent-1 focus:ring-offset-2 dark:focus:ring-offset-dark-bg"
+                                aria-label="Toggle theme"
+                            >
+                                <span class="dark:hidden">Dark Mode</span>
+                                <span class="hidden dark:inline">Light Mode</span>
+                            </button>
+                        </li>
+                    </div>
+                </ul>
+            </nav>
+            <!-- Mobile Menu Button -->
+            <button 
+                class="md:hidden p-2 hover:bg-gray-100 dark:hover:bg-dark-hover rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-accent-1"
+                aria-label="Toggle mobile menu"
+                onclick="toggleMobileMenu()"
+            >
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                </svg>
+            </button>
         </div>
-
-        <!-- Mobile menu -->
-        <div x-show="mobileMenu" class="md:hidden">
-            <div class="px-2 pt-2 pb-3 space-y-1">
-                <a href="/about" class="block px-3 py-2 text-gray-text dark:text-dark-gray-text hover:text-accent-1 dark:hover:text-accent-1">About</a>
-                <a href="/tools" class="block px-3 py-2 text-gray-text dark:text-dark-gray-text hover:text-accent-1 dark:hover:text-accent-1">Tools</a>
-                <a href="/services/coaching" class="block px-3 py-2 text-gray-text dark:text-dark-gray-text hover:text-accent-1 dark:hover:text-accent-1">Coaching</a>
-                <a href="/services/training" class="block px-3 py-2 text-gray-text dark:text-dark-gray-text hover:text-accent-1 dark:hover:text-accent-1">Training</a>
-                <a href="/tools/ScrumRACI" class="block px-3 py-2 text-accent-1 dark:text-accent-1" aria-current="page">Scrum RACI</a>
-                <a href="/blog" class="block px-3 py-2 text-gray-text dark:text-dark-gray-text hover:text-accent-1 dark:hover:text-accent-1">Blog</a>
-                <a href="/contact" class="block px-3 py-2 text-gray-text dark:text-dark-gray-text hover:text-accent-1 dark:hover:text-accent-1">Contact</a>
-            </div>
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden mt-4 border-t border-gray-200 dark:border-gray-700 pt-4">
+            <ul class="space-y-4">
+                <li>
+                    <button 
+                        onclick="toggleMobileSubmenu('toolsSubmenu')"
+                        class="flex items-center justify-between w-full text-accent-1 dark:text-accent-1 transition-colors"
+                        aria-expanded="false"
+                        aria-current="true"
+                    >
+                        Tools
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                        </svg>
+                    </button>
+                    <ul id="toolsSubmenu" class="hidden pl-4 mt-2 space-y-2">
+                        <li>
+                            <a href="/tools/ScrumRACI" class="block text-accent-1 dark:text-accent-1 transition-colors" aria-current="page">
+                                Scrum RACI
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/tools/RetroTool" class="block text-gray-text dark:text-dark-gray-text hover:text-accent-1 dark:hover:text-accent-1 transition-colors">
+                                Retro Tool
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <button 
+                        onclick="toggleMobileSubmenu('servicesSubmenu')"
+                        class="flex items-center justify-between w-full text-gray-text dark:text-dark-gray-text hover:text-accent-1 dark:hover:text-accent-1 transition-colors"
+                        aria-expanded="false"
+                    >
+                        Services
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                        </svg>
+                    </button>
+                    <ul id="servicesSubmenu" class="hidden pl-4 mt-2 space-y-2">
+                        <li>
+                            <a href="/services/AgileInAction" class="block text-gray-text dark:text-dark-gray-text hover:text-accent-1 dark:hover:text-accent-1 transition-colors">
+                                Agile in Action
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/services/AdHocConsulting" class="block text-gray-text dark:text-dark-gray-text hover:text-accent-1 dark:hover:text-accent-1 transition-colors">
+                                Ad-hoc Consulting
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/services/CoachingHabitCourse" class="block text-gray-text dark:text-dark-gray-text hover:text-accent-1 dark:hover:text-accent-1 transition-colors">
+                                Coaching Habit Course
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="mailto:erik@summerfield.consulting" class="block text-gray-text dark:text-dark-gray-text hover:text-accent-1 dark:hover:text-accent-1 transition-colors">Contact</a>
+                </li>
+            </ul>
         </div>
     </header>
 
@@ -250,5 +342,31 @@
 
     <!-- Scripts -->
     <script src="script.js" defer></script>
+    <script>
+        // Mobile menu toggle
+        function toggleMobileMenu() {
+            const mobileMenu = document.getElementById('mobileMenu');
+            mobileMenu.classList.toggle('hidden');
+        }
+
+        // Mobile submenu toggle
+        function toggleMobileSubmenu(submenuId) {
+            const submenu = document.getElementById(submenuId);
+            if (submenu) {
+                submenu.classList.toggle('hidden');
+            }
+        }
+
+        // Theme toggle functionality
+        function toggleTheme() {
+            if (document.documentElement.classList.contains('dark')) {
+                document.documentElement.classList.remove('dark');
+                localStorage.theme = 'light';
+            } else {
+                document.documentElement.classList.add('dark');
+                localStorage.theme = 'dark';
+            }
+        }
+    </script>
 </body>
 </html> 
