@@ -115,34 +115,5 @@
             </div>
         </section>
     </main>
-
-    <footer class="py-8 px-6 border-t border-gray-200 dark:border-gray-700" role="contentinfo">
-        <p class="text-center text-gray-text dark:text-dark-gray-text">© 2024-2025 Summerfield Consulting. All rights reserved.</p>
-    </footer>
-
-    <script>
-        // Mobile menu toggle
-        function toggleMobileMenu() {
-            const mobileMenu = document.getElementById('mobileMenu');
-            mobileMenu.classList.toggle('hidden');
-        }
-
-        // Mobile submenu toggle
-        function toggleMobileSubmenu(submenuId) {
-            const submenu = document.getElementById(submenuId);
-            submenu.classList.toggle('hidden');
-        }
-
-        // Theme toggle functionality
-        function toggleTheme() {
-            if (document.documentElement.classList.contains('dark')) {
-                document.documentElement.classList.remove('dark');
-                localStorage.theme = 'light';
-            } else {
-                document.documentElement.classList.add('dark');
-                localStorage.theme = 'dark';
-            }
-        }
-    </script>
-</body>
+    {% include "footer.html" %}
 </html>

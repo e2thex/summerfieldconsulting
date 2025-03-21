@@ -9,14 +9,6 @@
     
     <title>Scrum RACI Tool - Summerfield Consulting</title>
     <link href="/assets/css/styles.css" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-            document.documentElement.classList.add('dark');
-        } else {
-            document.documentElement.classList.remove('dark');
-        }
-    </script>
     
     <meta name="description" content="Interactive RACI matrix mapped to the official Scrum Guide, helping teams understand role responsibilities in Scrum.">
     <meta name="keywords" content="Scrum RACI, Scrum roles, Scrum responsibilities, Scrum Guide reference">
@@ -700,67 +692,41 @@
             </section>
         </div>
     </main>
-
-    <!-- Scripts -->
-    <!--script src="script.js" defer></script-->
+    {% include "footer.html" %}
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            // Store the current highlighted section
-            let currentHighlight = null;
-
-            // Add click event listeners to all RACI buttons
-            document.querySelectorAll('[data-section]').forEach(button => {
-                button.addEventListener('click', (e) => {
-                    e.preventDefault();
+        window.addEventListener('load', function() {
+            const cells = document.querySelectorAll('[data-section]');
+            
+            cells.forEach(cell => {
+                cell.addEventListener('click', function(e) {
+                    // Remove highlight from all cells
+                    cells.forEach(c => {
+                        c.classList.remove('bg-accent-1', 'text-white');
+                    });
                     
-                    // Remove all previous highlights
-                    if (currentHighlight) {
-                        currentHighlight.classList.remove('bg-accent-1/10', 'highlight-section');
-                    }
+                    // Highlight clicked cell
+                    this.classList.add('bg-accent-1', 'text-white');
                     
-                    // Get the target section
-                    const sectionId = button.getAttribute('data-section');
-                    const section = document.getElementById(sectionId);
-                    
-                    if (section) {
-                        // Add highlight to new section
-                        section.classList.add('bg-accent-1/10', 'highlight-section');
-                        currentHighlight = section;
-                        
-                        // Scroll the section into view
-                        section.scrollIntoView({ 
-                            behavior: 'smooth', 
-                            block: 'center'
-                        });
+                    // Get the section ID from the cell's data attribute
+                    const sectionId = this.dataset.section;
+                    if (sectionId) {
+                        const section = document.getElementById(sectionId);
+                        if (section) {
+                            // Scroll to the section
+                            section.scrollIntoView({ behavior: 'smooth' });
+                            
+                            // Remove highlight from all sections
+                            document.querySelectorAll('.guide-section').forEach(s => {
+                                s.classList.remove('bg-accent-1/10');
+                            });
+                            
+                            // Highlight the section
+                            section.classList.add('bg-accent-1/10');
+                        }
                     }
                 });
             });
         });
-
-        // Mobile menu toggle
-        function toggleMobileMenu() {
-            const mobileMenu = document.getElementById('mobileMenu');
-            mobileMenu.classList.toggle('hidden');
-        }
-
-        // Mobile submenu toggle
-        function toggleMobileSubmenu(submenuId) {
-            const submenu = document.getElementById(submenuId);
-            if (submenu) {
-                submenu.classList.toggle('hidden');
-            }
-        }
-
-        // Theme toggle functionality
-        function toggleTheme() {
-            if (document.documentElement.classList.contains('dark')) {
-                document.documentElement.classList.remove('dark');
-                localStorage.theme = 'light';
-            } else {
-                document.documentElement.classList.add('dark');
-                localStorage.theme = 'dark';
-            }
-        }
     </script>
 </body>
 </html> 
