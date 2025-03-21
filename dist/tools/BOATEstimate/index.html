@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Theme initialization - must be first script -->
+    <script src="/assets/js/theme-init.js"></script>
+    
+    <meta name="description" content="Use the BOAT (Before, On-time, After, Terrible) estimation technique to evaluate project completion dates and build more reliable estimates.">
+    <meta name="keywords" content="BOAT estimate, project estimation, software development, project management, estimation technique">
+    
+    <!-- Open Graph tags -->
+    <meta property="og:title" content="BOAT Estimate Tool - Summerfield Consulting">
+    <meta property="og:description" content="Learn and apply the BOAT estimation technique for more accurate project timelines and better risk assessment.">
+    <meta property="og:image" content="/logo.png">
+    <meta property="og:url" content="https://summerfieldconsulting.com/tools/BOATEstimate">
+    <meta property="og:type" content="website">
+    
+    <title>BOAT Estimate Tool - Summerfield Consulting</title>
+    <link rel="icon" type="image/png" href="../../logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&family=Inter:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+    <link href="../../output.css" rel="stylesheet">
+</head>
+<body class="bg-off-white dark:bg-dark-bg text-off-black dark:text-off-white font-body transition-colors duration-200">
+
+    <a href="#main-content" 
+class="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 focus:z-50 focus:px-4 focus:py-2 focus:bg-accent-1 focus:text-white">
+ Skip to main content
+</a>
+<div id="theme-announcement" role="status" class="sr-only" aria-live="polite"></div>
+
+<header class="py-8 px-6 border-b border-gray-200 dark:border-gray-700" role="banner">
+ <div class="flex items-center justify-between max-w-4xl mx-auto">
+     <div class="flex items-center gap-4">
+         <a href="/" class="flex items-center gap-4">
+             <img src="/assets/media/logo.png" alt="Summerfield Consulting Logo" class="h-12 w-auto block dark:hidden">
+             <img src="/assets/media/logo-dark.png" alt="Summerfield Consulting Logo" class="h-12 w-auto hidden dark:block">
+             <span class="text-4xl font-heading font-normal">Summerfield Consulting</span>
+         </a>
+     </div>
+     <nav class="hidden md:block" role="navigation" aria-label="Main navigation">
+         <ul class="flex items-center justify-between">
+             <div class="flex items-center gap-6">
+                 <li class="relative group">
+                     <button 
+                         class="flex items-center gap-1 text-accent-1 hover:text-accent-1 dark:hover:text-accent-1 transition-colors"
+                         aria-expanded="false"
+                         aria-haspopup="true"
+                         aria-current="true"
+                     >
+                         Tools
+                         <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                         </svg>
+                     </button>
+                     <div class="absolute left-0 mt-2 w-48 rounded-lg bg-white dark:bg-dark-card border border-gray-200 dark:border-gray-700 shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all">
+                         <ul class="py-2">
+                             <li>
+                                 <a href="/tools/ScrumRACI" 
+                                    class="block px-4 py-2 text-gray-text dark:text-dark-gray-text hover:text-accent-1 dark:hover:text-accent-1 hover:bg-gray-50 dark:hover:bg-dark-hover transition-colors"
+                                    >
+                                     Scrum RACI
+                                 </a>
+                             </li>
+                             <li>
+                                 <a href="/tools/BOATEstimate" 
+                                    class="block px-4 py-2 text-accent-1 hover:text-accent-1 dark:hover:text-accent-1 hover:bg-gray-50 dark:hover:bg-dark-hover transition-colors"
+                                    aria-current="page">
+                                     BOAT Estimate
+                                 </a>
+                             </li>
+                         </ul>
+                     </div>
+                 </li>
+                 <li class="relative group">
+                     <button 
+                         class="flex items-center gap-1 text-gray-text dark:text-dark-gray-text hover:text-accent-1 dark:hover:text-accent-1 transition-colors"
+                         aria-expanded="false"
+                         aria-haspopup="true"
+                         
+                     >
+                         Services
+                         <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                         </svg>
+                     </button>
+                     <div class="absolute left-0 mt-2 w-48 rounded-lg bg-white dark:bg-dark-card border border-gray-200 dark:border-gray-700 shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all">
+                         <ul class="py-2">
+                             <li>
+                                 <a href="/services/AgileInAction" 
+                                    class="block px-4 py-2 text-gray-text dark:text-dark-gray-text hover:text-accent-1 dark:hover:text-accent-1 hover:bg-gray-50 dark:hover:bg-dark-hover transition-colors"
+                                    >
+                                     Agile in Action
+                                 </a>
+                             </li>
+                             <li>
+                                 <a href="/services/AdHocConsulting" 
+                                    class="block px-4 py-2 text-gray-text dark:text-dark-gray-text hover:text-accent-1 dark:hover:text-accent-1 hover:bg-gray-50 dark:hover:bg-dark-hover transition-colors"
+                                    >
+                                     Ad-hoc Consulting
+                                 </a>
+                             </li>
+                             <li>
+                                 <a href="/services/CoachingHabitCourse" 
+                                    class="block px-4 py-2 text-gray-text dark:text-dark-gray-text hover:text-accent-1 dark:hover:text-accent-1 hover:bg-gray-50 dark:hover:bg-dark-hover transition-colors"
+                                    >
+                                     Coaching Habit Course
+                                 </a>
+                             </li>
+                         </ul>
+                     </div>
+                 </li>
+             </div>
+             <div class="flex items-center gap-4 ml-6">
+                 <li>
+                     <a href="mailto:erik@summerfield.consulting" 
+                        class="px-4 py-2 text-accent-1 border border-accent-1 rounded hover:bg-accent-1 hover:text-white transition-colors">
+                         Contact
+                     </a>
+                 </li>
+                 <li>
+                     <button 
+                         onclick="toggleTheme()"
+                         class="p-2 text-gray-text dark:text-dark-gray-text hover:text-accent-1 dark:hover:text-accent-1"
+                         aria-label="Toggle theme"
+                     >
+                         <svg class="w-6 h-6 block dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
+                         </svg>
+                         <svg class="w-6 h-6 hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/>
+                         </svg>
+                     </button>
+                 </li>
+             </div>
+         </ul>
+     </nav>
+     <!-- Mobile Menu Button -->
+     <button 
+         class="md:hidden p-2 hover:bg-gray-100 dark:hover:bg-dark-hover rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-accent-1"
+         aria-label="Toggle mobile menu"
+         onclick="toggleMobileMenu()"
+     >
+         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+         </svg>
+     </button>
+ </div>
+ <!-- Mobile Menu -->
+ <div id="mobileMenu" class="hidden md:hidden">
+    <nav class="mt-4" role="navigation" aria-label="Mobile navigation">
+        <ul class="space-y-2">
+            <!-- Tools Dropdown -->
+            <li>
+                <button 
+                    onclick="toggleMobileSubmenu('mobileToolsSubmenu')"
+                    class="w-full flex items-center justify-between px-4 py-2 text-gray-text dark:text-dark-gray-text hover:text-accent-1 dark:hover:text-accent-1"
+                >
+                    Tools
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                    </svg>
+                </button>
+                <ul id="mobileToolsSubmenu" class="hidden mobile-submenu pl-8 py-2 space-y-2">
+                    <li>
+                        <a href="/tools/ScrumRACI" class="block px-4 py-2 text-gray-text dark:text-dark-gray-text hover:text-accent-1 dark:hover:text-accent-1">
+                            Scrum RACI
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/tools/BOATEstimate" class="block px-4 py-2 text-gray-text dark:text-dark-gray-text hover:text-accent-1 dark:hover:text-accent-1">
+                            BOAT Estimate
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            
+            <!-- Services Dropdown -->
+            <li>
+                <button 
+                    onclick="toggleMobileSubmenu('mobileServicesSubmenu')"
+                    class="w-full flex items-center justify-between px-4 py-2 text-gray-text dark:text-dark-gray-text hover:text-accent-1 dark:hover:text-accent-1"
+                >
+                    Services
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                    </svg>
+                </button>
+                <ul id="mobileServicesSubmenu" class="hidden mobile-submenu pl-8 py-2 space-y-2">
+                    <li>
+                        <a href="/services/AgileInAction" class="block px-4 py-2 text-gray-text dark:text-dark-gray-text hover:text-accent-1 dark:hover:text-accent-1">
+                            Agile in Action
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/services/AdHocConsulting" class="block px-4 py-2 text-gray-text dark:text-dark-gray-text hover:text-accent-1 dark:hover:text-accent-1">
+                            Ad-hoc Consulting
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/services/CoachingHabitCourse" class="block px-4 py-2 text-gray-text dark:text-dark-gray-text hover:text-accent-1 dark:hover:text-accent-1">
+                            Coaching Habit Course
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            
+            <!-- Contact Link -->
+            <li>
+                <a href="mailto:erik@summerfield.consulting" 
+                   class="block px-4 py-2 text-accent-1 hover:text-accent-2">
+                    Contact
+                </a>
+            </li>
+        </ul>
+    </nav>
+ </div>
+</header>
+    <main id="main-content" class="max-w-4xl mx-auto p-6" role="main">
+        <h1 class="text-4xl font-heading font-normal mb-4">B.O.A.T. Estimate</h1>
+
+        <!-- Introduction -->
+        <p class="text-lg text-gray-text dark:text-dark-gray-text mb-8 max-w-3xl">
+            The Boat estimate is a technique to evaluate an estimated completion date. It is very helpful in evaluating confidence in an estimate and is helpful in exposing many anti-patterns in estimates.
+        </p>
+
+        <p class="text-gray-text dark:text-dark-gray-text mb-8">
+            Let's walk through an example and the 3 steps to doing a BOAT.
+        </p>
+
+        <!-- Step 1 -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-heading font-normal mb-6">Step 1: Pick a date</h2>
+            <p class="text-gray-text dark:text-dark-gray-text mb-4">
+                Choose a date on which you plan to commit. There are a variety of techniques to do this, but they are beyond the scope of this post. If you do not have a date, write down your best guess.
+            </p>
+            <p class="text-gray-text dark:text-dark-gray-text italic">
+                For my API, I think it will be done by May 2.
+            </p>
+        </section>
+
+        <!-- Step 2 -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-heading font-normal mb-6">Step 2: Write "B O A T"</h2>
+            <p class="text-gray-text dark:text-dark-gray-text mb-4">
+                Write out – B O A T – <strong>B</strong>efore, <strong>O</strong>n-time, <strong>A</strong>fter, and <strong>T</strong>errible.
+            </p>
+
+            <div class="mb-8">
+                <img src="/EmptyBOATEstimate.webp" 
+                     alt="BOAT diagram showing the four categories: Before, On-time, After, and Terrible" 
+                     class="rounded-lg shadow-lg max-w-full h-auto mx-auto"
+                     loading="lazy">
+            </div>
+
+            <ul class="space-y-2 text-gray-text dark:text-dark-gray-text mb-6">
+                <li><strong>Before</strong> means you will finish more than a week early.</li>
+                <li><strong>On-time</strong> means you will finish within a week of your desired date.</li>
+                <li><strong>After</strong> means you will be one or two weeks late.</li>
+                <li><strong>Terrible</strong> means you will be more than 3 weeks late.</li>
+            </ul>
+
+            <p class="text-gray-text dark:text-dark-gray-text">
+                If the desired date is less than a few months out then scale down ("before" becomes a few days early), or if it is over a year then scale up ("before" becomes a few weeks early). Don't spend much time thinking about the precise cut-off.
+            </p>
+        </section>
+
+        <!-- Step 3 -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-heading font-normal mb-6">Step 3: Estimate your Confidence</h2>
+            <p class="text-gray-text dark:text-dark-gray-text mb-4">
+                For each category estimate the percent chance that the project will be completed in the desired timeframe.
+            </p>
+
+            <blockquote class="mb-8 border-l-4 border-accent-1 pl-6 py-4 bg-gray-50 dark:bg-dark-card rounded-r-lg">
+                <p class="text-gray-text dark:text-dark-gray-text mb-4">
+                    So for my API date, there's a chance that we'll finish early, but not a big chance. Plus this client often brings in new priorities, so that adds to the risk that it will be late. But the work is well known so I do not see many big chances for it to blow up. So I think there is a 20% chance we will finish early, 30% on time, 40% a little late, and 10% chance that we will be really late.
+                </p>
+            </blockquote>
+
+            <div class="mb-8">
+                <img src="/FullBoatEstimate.webp" 
+                     alt="BOAT Estimate distribution example showing percentage breakdowns" 
+                     class="rounded-lg shadow-lg max-w-full h-auto mx-auto"
+                     loading="lazy">
+            </div>
+        </section>
+
+        <!-- Online Tool -->
+        <section class="mb-12 bg-white dark:bg-dark-card rounded-lg border border-gray-200 dark:border-gray-700 p-8">
+            <h2 class="text-2xl font-heading font-normal mb-4">Try It Online</h2>
+            <div class="space-y-4">
+                <p class="text-gray-text dark:text-dark-gray-text">
+                    Want to try BOAT estimation right now? Use our free online tool:
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 items-start sm:items-center">
+                    <a href="https://estimatethisfor.me" 
+                       class="inline-flex items-center px-6 py-3 bg-accent-1 text-white rounded-lg hover:bg-accent-2 transition-colors"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        <span>Launch estimatethisfor.me</span>
+                        <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                        </svg>
+                    </a>
+                    <span class="text-sm text-gray-text dark:text-dark-gray-text">
+                        Free tool - no registration required
+                    </span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Rules -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-heading font-normal mb-6">Rules to Keep in Mind</h2>
+
+            <div class="space-y-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-3 text-accent-1">Rule 1: Do not be precise</h3>
+                    <p class="text-gray-text dark:text-dark-gray-text">
+                        This is a gut check! There is no way you are 23.567% sure that it will be on time. Therefore, only use increments of 10% (e.g. 0% 10% 20% 30%, etc). I also like to allow a &lt;1%, for the occasion when you can't quite say 0%. The lack of precision helps prevent nitpicking at the margins; it is difficult to nitpick when moving 10% at a time.
+                    </p>
+                </div>
+
+                <div>
+                    <h3 class="text-xl font-bold mb-3 text-accent-1">Rule 2: Forget about the details</h3>
+                    <p class="text-gray-text dark:text-dark-gray-text">
+                        Just like we are trying not to be too precise, don't be too specific. We often try and break big things down into smaller things that we feel like we can estimate, and then just add up those estimates, but that is not how life works. Just because one can swim 1.5k in 25 mins, bike 40k in 60 mins and run 10k in 35 mins does not mean they can do a triathlon in 2 hours. This is your chance to think big.
+                    </p>
+                </div>
+
+                <div>
+                    <h3 class="text-xl font-bold mb-3 text-accent-1">Rule 3: No assuming away risks</h3>
+                    <p class="text-gray-text dark:text-dark-gray-text mb-4">
+                        I used this exercise with a Project Manager and he thought for a second and then started assuming. "Assuming we get the team we want, and there is no feature scope creep, and the designer delivers on time, and the third party vendor has good documentation…"
+                    </p>
+
+                    <blockquote class="border-l-4 border-accent-1 pl-6 py-4 bg-gray-50 dark:bg-dark-card rounded-r-lg mb-4">
+                        <p class="text-gray-text dark:text-dark-gray-text italic">
+                            An economist is trapped on a deserted island with some other people. They have nothing, but a shipment of canned foods. The others turn to him and ask what should we do to get the food? He replies "Well first let's assume we have a can opener."
+                        </p>
+                        <footer class="text-sm mt-2">
+                            <cite class="text-gray-text dark:text-dark-gray-text not-italic">
+                                Old bad joke
+                            </cite>
+                        </footer>
+                    </blockquote>
+
+                    <p class="text-gray-text dark:text-dark-gray-text">
+                        If we could assume away all risks, estimating would be so easy it would not be fun. Think about the risks and the chance they will happen and how that would affect the chance of project/software delivery. Keep the risks and put them in your estimate. That is where they belong.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Evaluating Results -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-heading font-normal mb-6">Evaluating the Results</h2>
+            <p class="text-gray-text dark:text-dark-gray-text mb-6">
+                Now that you have your BOAT what does it mean? Here are a few common outcomes and help on what they mean.
+            </p>
+
+            <div class="space-y-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-3 text-accent-1">Sit Down, you're rocking the BOAT</h3>
+                    <p class="text-gray-text dark:text-dark-gray-text">
+                        If you have supermajorities in B or T, then there is a good chance you have the wrong date and you should start over with the date close to the supermajority. That second scenario can pose real trouble when a salesperson sees it and says "So you are telling me there's a chance". Don't give them the opportunity, re-estimate.
+                    </p>
+                </div>
+
+                <div>
+                    <h3 class="text-xl font-bold mb-3 text-accent-1">If you can't be early, you will never be on time</h3>
+                    <p class="text-gray-text dark:text-dark-gray-text">
+                        If your estimate does not allow any possibility of being early then your completion date is too early. If you can't be early even if all the stars align, then you're relying on all the stars to align for you to just be on time. This is not the situation on which you should rely. Think about your friends, the ones that are on time, they are always the ones that are early some of the time.
+                    </p>
+                </div>
+
+                <div>
+                    <h3 class="text-xl font-bold mb-3 text-accent-1">Commitment dates are not coin flips</h3>
+                    <p class="text-gray-text dark:text-dark-gray-text">
+                        Whenever your estimate has only a 50% chance of B+O, it might seem like you have hit it perfectly. But deadlines are not the average date of delivery. People expect a much higher chance of success. In reality, anything less than 70% in the B+O category is problematic, and for some risk-averse clients I would even say 80% is on the edge.
+                    </p>
+                </div>
+
+                <div>
+                    <h3 class="text-xl font-bold mb-3 text-accent-1">Countdown to Success</h3>
+                    <p class="text-gray-text dark:text-dark-gray-text">
+                        When the BOAT starts high with B and gets smaller and smaller, then we have a reasonable deadline date.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Finishing up -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-heading font-normal mb-6">Finishing up</h2>
+            <p class="text-gray-text dark:text-dark-gray-text">
+                This method can also be a great exercise for a team to do. Much like Planning Poker it can help to allow us all to see each others perspective. Estimatethisfor.me is a web app that can help facilitate such activity.
+            </p>
+        </section>
+    </main>
+    <footer class="py-8 px-6 border-t border-gray-200 dark:border-gray-700" role="contentinfo">
+    <p class="text-center text-gray-text dark:text-dark-gray-text">© 2024-2025 Summerfield Consulting. All rights reserved.</p>
+</footer>
+<script src="/assets/js/nav-controls.js"></script>
+</html> 

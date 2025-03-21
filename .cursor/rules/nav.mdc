@@ -10,6 +10,7 @@ globs: index.html
   - Logo linking to home (this serves as the home navigation)
   - Main navigation
   - Services dropdown
+  - Tools dropdown
   - Contact button
   - Theme toggle
   - Mobile responsive menu
@@ -17,13 +18,15 @@ globs: index.html
 
 ## Navigation Rules
 - The nav should be identical on all pages
-- The nav should come from the [design.html](mdc:dist/design.html) design
-- The nav should include all index.html pages (but by their folder name)
+- The nav design should come form the home page of the site
+- The nav should include all index.html pages (but by their folder name) (expect for home)
+- The nav should not include pages that do not exist
 - If there are folders with no index.html then they should still be in the nav but not clickable
 - Active states must be properly set for current page:
   - Current page link should have `text-accent-1` class
   - Current page link should have `aria-current="page"` attribute
   - Parent "Services" button should have `aria-current="true"` if on a service page
+  - Parent "Tools" button should have `aria-current="true"` if on a tool page
 
 ## When Adding New Pages
 1. Copy the complete header from an existing page
@@ -35,6 +38,7 @@ globs: index.html
 ## File Structure Reference
 - Root pages: Use relative paths starting with `/`
 - Service pages: Use relative paths starting with `../../`
+- Tool pages: Use relative paths starting with `../../`
 - Ensure logo.png path is correct based on page depth
 
 ## Required Classes and Attributes
