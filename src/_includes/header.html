@@ -18,9 +18,10 @@ class="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 focus:z
              <div class="flex items-center gap-6">
                  <li class="relative group">
                      <button 
-                         class="flex items-center gap-1 text-gray-text dark:text-dark-gray-text hover:text-accent-1 dark:hover:text-accent-1 transition-colors"
+                         class="flex items-center gap-1 {% if page.url contains '/tools/' %}text-accent-1{% else %}text-gray-text dark:text-dark-gray-text{% endif %} hover:text-accent-1 dark:hover:text-accent-1 transition-colors"
                          aria-expanded="false"
                          aria-haspopup="true"
+                         {% if page.url contains '/tools/' %}aria-current="true"{% endif %}
                      >
                          Tools
                          <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -31,13 +32,15 @@ class="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 focus:z
                          <ul class="py-2">
                              <li>
                                  <a href="/tools/ScrumRACI" 
-                                    class="block px-4 py-2 text-gray-text dark:text-dark-gray-text hover:text-accent-1 dark:hover:text-accent-1 hover:bg-gray-50 dark:hover:bg-dark-hover transition-colors">
+                                    class="block px-4 py-2 {% if page.url == '/tools/ScrumRACI/' %}text-accent-1{% else %}text-gray-text dark:text-dark-gray-text{% endif %} hover:text-accent-1 dark:hover:text-accent-1 hover:bg-gray-50 dark:hover:bg-dark-hover transition-colors"
+                                    {% if page.url == '/tools/ScrumRACI/' %}aria-current="page"{% endif %}>
                                      Scrum RACI
                                  </a>
                              </li>
                              <li>
                                  <a href="/tools/BOATEstimate" 
-                                    class="block px-4 py-2 text-gray-text dark:text-dark-gray-text hover:text-accent-1 dark:hover:text-accent-1 hover:bg-gray-50 dark:hover:bg-dark-hover transition-colors">
+                                    class="block px-4 py-2 {% if page.url == '/tools/BOATEstimate/' %}text-accent-1{% else %}text-gray-text dark:text-dark-gray-text{% endif %} hover:text-accent-1 dark:hover:text-accent-1 hover:bg-gray-50 dark:hover:bg-dark-hover transition-colors"
+                                    {% if page.url == '/tools/BOATEstimate/' %}aria-current="page"{% endif %}>
                                      BOAT Estimate
                                  </a>
                              </li>
@@ -46,10 +49,10 @@ class="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 focus:z
                  </li>
                  <li class="relative group">
                      <button 
-                         class="flex items-center gap-1 text-accent-1 dark:text-accent-1 transition-colors"
+                         class="flex items-center gap-1 {% if page.url contains '/services/' %}text-accent-1{% else %}text-gray-text dark:text-dark-gray-text{% endif %} hover:text-accent-1 dark:hover:text-accent-1 transition-colors"
                          aria-expanded="false"
                          aria-haspopup="true"
-                         aria-current="true"
+                         {% if page.url contains '/services/' %}aria-current="true"{% endif %}
                      >
                          Services
                          <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -60,20 +63,22 @@ class="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 focus:z
                          <ul class="py-2">
                              <li>
                                  <a href="/services/AgileInAction" 
-                                    class="block px-4 py-2 text-gray-text dark:text-dark-gray-text hover:text-accent-1 dark:hover:text-accent-1 hover:bg-gray-50 dark:hover:bg-dark-hover transition-colors">
+                                    class="block px-4 py-2 {% if page.url == '/services/AgileInAction/' %}text-accent-1{% else %}text-gray-text dark:text-dark-gray-text{% endif %} hover:text-accent-1 dark:hover:text-accent-1 hover:bg-gray-50 dark:hover:bg-dark-hover transition-colors"
+                                    {% if page.url == '/services/AgileInAction/' %}aria-current="page"{% endif %}>
                                      Agile in Action
                                  </a>
                              </li>
                              <li>
                                  <a href="/services/AdHocConsulting" 
-                                    class="block px-4 py-2 text-accent-1 dark:text-accent-1 hover:bg-gray-50 dark:hover:bg-dark-hover transition-colors"
-                                    aria-current="page">
+                                    class="block px-4 py-2 {% if page.url == '/services/AdHocConsulting/' %}text-accent-1{% else %}text-gray-text dark:text-dark-gray-text{% endif %} hover:text-accent-1 dark:hover:text-accent-1 hover:bg-gray-50 dark:hover:bg-dark-hover transition-colors"
+                                    {% if page.url == '/services/AdHocConsulting/' %}aria-current="page"{% endif %}>
                                      Ad-hoc Consulting
                                  </a>
                              </li>
                              <li>
                                  <a href="/services/CoachingHabitCourse" 
-                                    class="block px-4 py-2 text-gray-text dark:text-dark-gray-text hover:text-accent-1 dark:hover:text-accent-1 hover:bg-gray-50 dark:hover:bg-dark-hover transition-colors">
+                                    class="block px-4 py-2 {% if page.url == '/services/CoachingHabitCourse/' %}text-accent-1{% else %}text-gray-text dark:text-dark-gray-text{% endif %} hover:text-accent-1 dark:hover:text-accent-1 hover:bg-gray-50 dark:hover:bg-dark-hover transition-colors"
+                                    {% if page.url == '/services/CoachingHabitCourse/' %}aria-current="page"{% endif %}>
                                      Coaching Habit Course
                                  </a>
                              </li>
