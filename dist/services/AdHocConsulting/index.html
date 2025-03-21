@@ -22,6 +22,8 @@
     <script src="/assets/js/theme-init.js"></script>
 </head>
 <body class="bg-off-white dark:bg-dark-bg text-off-black dark:text-off-white font-body transition-colors duration-200">
+    <div id="theme-announcement" role="status" class="sr-only" aria-live="polite"></div>
+
     <a href="#main-content" 
 class="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 focus:z-50 focus:px-4 focus:py-2 focus:bg-accent-1 focus:text-white">
  Skip to main content
@@ -215,214 +217,221 @@ class="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 focus:z
     </nav>
  </div>
 </header>
-    <main class="max-w-4xl mx-auto p-6" role="main">
-        <h1 class="text-4xl font-heading font-normal mb-8">Ad-hoc Engineering Consulting</h1>
 
-        <!-- Hero Section -->
-        <section class="mb-12">
-            <div class="p-8 bg-off-black dark:bg-dark-card text-off-white rounded-lg">
-                <h2 class="text-2xl font-bold mb-4">Flexible Support When You Need It</h2>
-                <p class="text-lg mb-6">Whether you need a quick consultation on a specific challenge or ongoing weekly support, I provide expert engineering leadership guidance tailored to your needs.</p>
-                <a href="mailto:erik@summerfield.consulting" class="inline-block px-6 py-3 bg-accent-1 text-white rounded-lg hover:bg-accent-2 transition-colors">
-                    Schedule a Consultation
-                </a>
-            </div>
-        </section>
+    <main id="main-content" class="max-w-4xl mx-auto p-6" role="main">
+        <article>
+            <header>
+                <h1 class="text-4xl font-heading font-normal mb-4">Ad-hoc Consulting</h1>
+                <p class="text-xl font-semibold text-accent-1 mb-4">Expert Advice When You Need It</p>
+                <p>Get targeted engineering leadership advice and support for your specific challenges.</p>
+            </header>
 
-        <!-- Services Section -->
-        <section class="mb-12" aria-labelledby="services-heading">
-            <h2 id="services-heading" class="text-2xl font-heading font-normal mb-6">How I Can Help</h2>
-            <div class="grid gap-6 md:grid-cols-2">
-                <div class="p-6 border border-gray-200 dark:border-gray-700 rounded-lg">
-                    <h3 class="text-xl font-bold mb-4 text-accent-1">One-Off Consultations</h3>
-                    <ul class="space-y-3">
-                        <li class="flex items-start gap-2">
-                            <svg class="w-5 h-5 mt-1 text-accent-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                            </svg>
-                            <span class="text-gray-text dark:text-dark-gray-text">Technical architecture review</span>
-                        </li>
-                        <li class="flex items-start gap-2">
-                            <svg class="w-5 h-5 mt-1 text-accent-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                            </svg>
-                            <span class="text-gray-text dark:text-dark-gray-text">Process optimization recommendations</span>
-                        </li>
-                        <li class="flex items-start gap-2">
-                            <svg class="w-5 h-5 mt-1 text-accent-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                            </svg>
-                            <span class="text-gray-text dark:text-dark-gray-text">Team structure assessment</span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="p-6 border border-gray-200 dark:border-gray-700 rounded-lg">
-                    <h3 class="text-xl font-bold mb-4 text-accent-1">Weekly Support</h3>
-                    <ul class="space-y-3">
-                        <li class="flex items-start gap-2">
-                            <svg class="w-5 h-5 mt-1 text-accent-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                            </svg>
-                            <span class="text-gray-text dark:text-dark-gray-text">Ongoing leadership mentoring</span>
-                        </li>
-                        <li class="flex items-start gap-2">
-                            <svg class="w-5 h-5 mt-1 text-accent-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                            </svg>
-                            <span class="text-gray-text dark:text-dark-gray-text">Regular process improvement check-ins</span>
-                        </li>
-                        <li class="flex items-start gap-2">
-                            <svg class="w-5 h-5 mt-1 text-accent-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                            </svg>
-                            <span class="text-gray-text dark:text-dark-gray-text">Continuous optimization support</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <!-- Experience Section -->
-        <section class="mb-12" aria-labelledby="experience-heading">
-            <h2 id="experience-heading" class="text-2xl font-heading font-normal mb-4">Proven Leadership Experience</h2>
-            <p class="text-gray-text dark:text-dark-gray-text mb-8 max-w-3xl">
-                With over a decade of experience leading remote engineering teams and implementing agile practices at scale, 
-                I've helped organizations transform their development processes and build high-performing teams. My approach 
-                combines hands-on technical leadership with effective coaching methods that have consistently delivered 
-                measurable improvements in team performance and project outcomes.
-            </p>
-            <div class="grid gap-8 md:grid-cols-2">
-                <div class="p-6 bg-white dark:bg-dark-card rounded-lg border border-gray-200 dark:border-gray-700">
-                    <h3 class="text-xl font-bold mb-4 text-accent-1">Remote Team Leadership</h3>
-                    <ul class="space-y-4">
-                        <li class="flex items-start gap-3">
-                            <svg class="w-5 h-5 mt-1 text-accent-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                            </svg>
-                            <span class="text-gray-text dark:text-dark-gray-text">10+ years managing distributed teams across 8 time zones</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <svg class="w-5 h-5 mt-1 text-accent-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                            </svg>
-                            <span class="text-gray-text dark:text-dark-gray-text">Led 19+ direct reports and 20+ concurrent projects</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <svg class="w-5 h-5 mt-1 text-accent-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                            </svg>
-                            <span class="text-gray-text dark:text-dark-gray-text">Zero attrition during major team mergers</span>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="p-6 bg-white dark:bg-dark-card rounded-lg border border-gray-200 dark:border-gray-700">
-                    <h3 class="text-xl font-bold mb-4 text-accent-1">Agile Development</h3>
-                    <ul class="space-y-4">
-                        <li class="flex items-start gap-3">
-                            <svg class="w-5 h-5 mt-1 text-accent-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                            </svg>
-                            <span class="text-gray-text dark:text-dark-gray-text">Led enterprise projects for RedHat, Johnson & Johnson</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <svg class="w-5 h-5 mt-1 text-accent-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                            </svg>
-                            <span class="text-gray-text dark:text-dark-gray-text">Pioneered AI/ML-assisted development practices</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <svg class="w-5 h-5 mt-1 text-accent-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                            </svg>
-                            <span class="text-gray-text dark:text-dark-gray-text">Led OpenPublic Drupal distribution development</span>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="p-6 bg-white dark:bg-dark-card rounded-lg border border-gray-200 dark:border-gray-700">
-                    <h3 class="text-xl font-bold mb-4 text-accent-1">Team Development</h3>
-                    <ul class="space-y-4">
-                        <li class="flex items-start gap-3">
-                            <svg class="w-5 h-5 mt-1 text-accent-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                            </svg>
-                            <span class="text-gray-text dark:text-dark-gray-text">Created leadership program developing 20% of company leaders</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <svg class="w-5 h-5 mt-1 text-accent-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                            </svg>
-                            <span class="text-gray-text dark:text-dark-gray-text">Founded Guild system with 20+ active guilds</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <svg class="w-5 h-5 mt-1 text-accent-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                            </svg>
-                            <span class="text-gray-text dark:text-dark-gray-text">Increased peer feedback engagement by 50%</span>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="p-6 bg-white dark:bg-dark-card rounded-lg border border-gray-200 dark:border-gray-700">
-                    <h3 class="text-xl font-bold mb-4 text-accent-1">Thought Leadership</h3>
-                    <ul class="space-y-4">
-                        <li class="flex items-start gap-3">
-                            <svg class="w-5 h-5 mt-1 text-accent-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                            </svg>
-                            <span class="text-gray-text dark:text-dark-gray-text">Conference speaker on agile and team leadership</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <svg class="w-5 h-5 mt-1 text-accent-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                            </svg>
-                            <span class="text-gray-text dark:text-dark-gray-text">Featured guest on industry podcasts</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <svg class="w-5 h-5 mt-1 text-accent-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                            </svg>
-                            <span class="text-gray-text dark:text-dark-gray-text">Led successful cross-department initiatives</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <!-- Pricing Section -->
-        <section class="mb-12" aria-labelledby="pricing-heading">
-            <h2 id="pricing-heading" class="text-2xl font-heading font-normal mb-6">Transparent Pricing</h2>
-            <div class="grid gap-6 md:grid-cols-2">
-                <div class="p-6 bg-white dark:bg-dark-card rounded-lg border-2 border-gray-200 dark:border-gray-700">
-                    <h3 class="text-xl font-bold mb-2">One-Off Consulting</h3>
-                    <div class="text-3xl font-bold text-accent-1 mb-4">$250/hour</div>
-                    <p class="text-gray-text dark:text-dark-gray-text mb-6">Perfect for specific challenges or short-term needs</p>
-                    <a href="mailto:erik@summerfield.consulting" class="inline-block w-full text-center px-6 py-3 bg-accent-1 text-white rounded-lg hover:bg-accent-2 transition-colors">
-                        Book a Session
+            <!-- Hero Section -->
+            <section class="mb-12">
+                <div class="p-8 bg-off-black dark:bg-dark-card text-off-white rounded-lg">
+                    <h2 class="text-2xl font-bold mb-4">Flexible Support When You Need It</h2>
+                    <p class="text-lg mb-6">Whether you need a quick consultation on a specific challenge or ongoing weekly support, I provide expert engineering leadership guidance tailored to your needs.</p>
+                    <a href="mailto:erik@summerfield.consulting" class="inline-block px-6 py-3 bg-accent-1 text-white rounded-lg hover:bg-accent-2 transition-colors">
+                        Schedule a Consultation
                     </a>
                 </div>
-                <div class="p-6 bg-white dark:bg-dark-card rounded-lg border-2 border-accent-1">
-                    <h3 class="text-xl font-bold mb-2">Weekly Commitment</h3>
-                    <div class="text-3xl font-bold text-accent-1 mb-4">$200/hour</div>
-                    <p class="text-gray-text dark:text-dark-gray-text mb-6">Ideal for ongoing support and continuous improvement</p>
-                    <a href="mailto:erik@summerfield.consulting" class="inline-block w-full text-center px-6 py-3 bg-accent-1 text-white rounded-lg hover:bg-accent-2 transition-colors">
-                        Start Weekly Sessions
+            </section>
+
+            <!-- Services Section -->
+            <section class="mb-12" aria-labelledby="services-heading">
+                <h2 id="services-heading" class="text-2xl font-heading font-normal mb-6">How I Can Help</h2>
+                <div class="grid gap-6 md:grid-cols-2">
+                    <div class="p-6 border border-gray-200 dark:border-gray-700 rounded-lg">
+                        <h3 class="text-xl font-bold mb-4 text-accent-1">One-Off Consultations</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-start gap-2">
+                                <svg class="w-5 h-5 mt-1 text-accent-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                                <span class="text-gray-text dark:text-dark-gray-text">Technical architecture review</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <svg class="w-5 h-5 mt-1 text-accent-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                                <span class="text-gray-text dark:text-dark-gray-text">Process optimization recommendations</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <svg class="w-5 h-5 mt-1 text-accent-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                                <span class="text-gray-text dark:text-dark-gray-text">Team structure assessment</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="p-6 border border-gray-200 dark:border-gray-700 rounded-lg">
+                        <h3 class="text-xl font-bold mb-4 text-accent-1">Weekly Support</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-start gap-2">
+                                <svg class="w-5 h-5 mt-1 text-accent-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                                <span class="text-gray-text dark:text-dark-gray-text">Ongoing leadership mentoring</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <svg class="w-5 h-5 mt-1 text-accent-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                                <span class="text-gray-text dark:text-dark-gray-text">Regular process improvement check-ins</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <svg class="w-5 h-5 mt-1 text-accent-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                                <span class="text-gray-text dark:text-dark-gray-text">Continuous optimization support</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Experience Section -->
+            <section class="mb-12" aria-labelledby="experience-heading">
+                <h2 id="experience-heading" class="text-2xl font-heading font-normal mb-4">Proven Leadership Experience</h2>
+                <p class="text-gray-text dark:text-dark-gray-text mb-8 max-w-3xl">
+                    With over a decade of experience leading remote engineering teams and implementing agile practices at scale, 
+                    I've helped organizations transform their development processes and build high-performing teams. My approach 
+                    combines hands-on technical leadership with effective coaching methods that have consistently delivered 
+                    measurable improvements in team performance and project outcomes.
+                </p>
+                <div class="grid gap-8 md:grid-cols-2">
+                    <div class="p-6 bg-white dark:bg-dark-card rounded-lg border border-gray-200 dark:border-gray-700">
+                        <h3 class="text-xl font-bold mb-4 text-accent-1">Remote Team Leadership</h3>
+                        <ul class="space-y-4">
+                            <li class="flex items-start gap-3">
+                                <svg class="w-5 h-5 mt-1 text-accent-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                                <span class="text-gray-text dark:text-dark-gray-text">10+ years managing distributed teams across 8 time zones</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <svg class="w-5 h-5 mt-1 text-accent-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                                <span class="text-gray-text dark:text-dark-gray-text">Led 19+ direct reports and 20+ concurrent projects</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <svg class="w-5 h-5 mt-1 text-accent-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                                <span class="text-gray-text dark:text-dark-gray-text">Zero attrition during major team mergers</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="p-6 bg-white dark:bg-dark-card rounded-lg border border-gray-200 dark:border-gray-700">
+                        <h3 class="text-xl font-bold mb-4 text-accent-1">Agile Development</h3>
+                        <ul class="space-y-4">
+                            <li class="flex items-start gap-3">
+                                <svg class="w-5 h-5 mt-1 text-accent-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                                <span class="text-gray-text dark:text-dark-gray-text">Led enterprise projects for RedHat, Johnson & Johnson</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <svg class="w-5 h-5 mt-1 text-accent-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                                <span class="text-gray-text dark:text-dark-gray-text">Pioneered AI/ML-assisted development practices</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <svg class="w-5 h-5 mt-1 text-accent-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                                <span class="text-gray-text dark:text-dark-gray-text">Led OpenPublic Drupal distribution development</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="p-6 bg-white dark:bg-dark-card rounded-lg border border-gray-200 dark:border-gray-700">
+                        <h3 class="text-xl font-bold mb-4 text-accent-1">Team Development</h3>
+                        <ul class="space-y-4">
+                            <li class="flex items-start gap-3">
+                                <svg class="w-5 h-5 mt-1 text-accent-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                                <span class="text-gray-text dark:text-dark-gray-text">Created leadership program developing 20% of company leaders</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <svg class="w-5 h-5 mt-1 text-accent-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                                <span class="text-gray-text dark:text-dark-gray-text">Founded Guild system with 20+ active guilds</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <svg class="w-5 h-5 mt-1 text-accent-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                                <span class="text-gray-text dark:text-dark-gray-text">Increased peer feedback engagement by 50%</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="p-6 bg-white dark:bg-dark-card rounded-lg border border-gray-200 dark:border-gray-700">
+                        <h3 class="text-xl font-bold mb-4 text-accent-1">Thought Leadership</h3>
+                        <ul class="space-y-4">
+                            <li class="flex items-start gap-3">
+                                <svg class="w-5 h-5 mt-1 text-accent-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                                <span class="text-gray-text dark:text-dark-gray-text">Conference speaker on agile and team leadership</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <svg class="w-5 h-5 mt-1 text-accent-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                                <span class="text-gray-text dark:text-dark-gray-text">Featured guest on industry podcasts</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <svg class="w-5 h-5 mt-1 text-accent-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                                <span class="text-gray-text dark:text-dark-gray-text">Led successful cross-department initiatives</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Pricing Section -->
+            <section class="mb-12" aria-labelledby="pricing-heading">
+                <h2 id="pricing-heading" class="text-2xl font-heading font-normal mb-6">Transparent Pricing</h2>
+                <div class="grid gap-6 md:grid-cols-2">
+                    <div class="p-6 bg-white dark:bg-dark-card rounded-lg border-2 border-gray-200 dark:border-gray-700">
+                        <h3 class="text-xl font-bold mb-2">One-Off Consulting</h3>
+                        <div class="text-3xl font-bold text-accent-1 mb-4">$250/hour</div>
+                        <p class="text-gray-text dark:text-dark-gray-text mb-6">Perfect for specific challenges or short-term needs</p>
+                        <a href="mailto:erik@summerfield.consulting" class="inline-block w-full text-center px-6 py-3 bg-accent-1 text-white rounded-lg hover:bg-accent-2 transition-colors">
+                            Book a Session
+                        </a>
+                    </div>
+                    <div class="p-6 bg-white dark:bg-dark-card rounded-lg border-2 border-accent-1">
+                        <h3 class="text-xl font-bold mb-2">Weekly Commitment</h3>
+                        <div class="text-3xl font-bold text-accent-1 mb-4">$200/hour</div>
+                        <p class="text-gray-text dark:text-dark-gray-text mb-6">Ideal for ongoing support and continuous improvement</p>
+                        <a href="mailto:erik@summerfield.consulting" class="inline-block w-full text-center px-6 py-3 bg-accent-1 text-white rounded-lg hover:bg-accent-2 transition-colors">
+                            Start Weekly Sessions
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Call to Action -->
+            <section class="mb-12" aria-labelledby="cta-heading">
+                <div class="p-8 bg-off-black dark:bg-dark-card text-white rounded-lg">
+                    <h2 id="cta-heading" class="text-2xl font-bold mb-4">Ready to Get Started?</h2>
+                    <p class="mb-6">Let's discuss your challenges and see how I can help improve your engineering processes.</p>
+                    <a href="mailto:erik@summerfield.consulting" class="inline-block px-8 py-3 bg-accent-1 text-white rounded-lg hover:bg-accent-2 transition-colors">
+                        Schedule a Free 30-Minute Consultation
                     </a>
                 </div>
-            </div>
-        </section>
-
-        <!-- Call to Action -->
-        <section class="mb-12" aria-labelledby="cta-heading">
-            <div class="p-8 bg-off-black dark:bg-dark-card text-white rounded-lg">
-                <h2 id="cta-heading" class="text-2xl font-bold mb-4">Ready to Get Started?</h2>
-                <p class="mb-6">Let's discuss your challenges and see how I can help improve your engineering processes.</p>
-                <a href="mailto:erik@summerfield.consulting" class="inline-block px-8 py-3 bg-accent-1 text-white rounded-lg hover:bg-accent-2 transition-colors">
-                    Schedule a Free 30-Minute Consultation
-                </a>
-            </div>
-        </section>
+            </section>
+        </article>
     </main>
     <footer class="py-8 px-6 border-t border-gray-200 dark:border-gray-700" role="contentinfo">
     <p class="text-center text-gray-text dark:text-dark-gray-text">© 2024-2025 Summerfield Consulting. All rights reserved.</p>
