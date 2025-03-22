@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
-    {% assign meta %}
+    {% assign page_meta = '' %}
+    {% capture page_meta %}
     <meta name="description" content="Summerfield Consulting provides expert engineering leadership and agile development consulting services. Transform your remote teams and development processes.">
     <meta name="keywords" content="engineering leadership, agile consulting, remote team management, software development, team coaching">
     
@@ -13,7 +14,7 @@
     <meta property="og:type" content="website">
     
     <title>Summerfield Consulting</title>
-    {% endassign %}
+    {% endcapture %}
     
     {% include "head.html" %}
 </head>

@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
-    {% assign meta %}
+    {% assign page_meta = '' %}
+    {% capture page_meta %}
     <meta name="description" content="Use the BOAT (Before, On-time, After, Terrible) estimation technique to evaluate project completion dates and build more reliable estimates.">
     <meta name="keywords" content="BOAT estimate, project estimation, software development, project management, estimation technique">
     
@@ -13,7 +14,7 @@
     <meta property="og:type" content="website">
     
     <title>BOAT Estimate Tool - Summerfield Consulting</title>
-    {% endassign %}
+    {% endcapture %}
     
     {% include "head.html" %}
 </head>

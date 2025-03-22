@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
-    {% assign meta %}
+    {% assign page_meta = '' %}
+    {% capture page_meta %}
     <meta name="description" content="Interactive RACI matrix mapped to the official Scrum Guide, helping teams understand role responsibilities in Scrum.">
     <meta name="keywords" content="Scrum RACI, Scrum roles, Scrum responsibilities, Scrum Guide reference">
     
@@ -13,7 +14,7 @@
     <meta property="og:type" content="website">
     
     <title>Scrum RACI Tool - Summerfield Consulting</title>
-    {% endassign %}
+    {% endcapture %}
     
     {% include "head.html" %}
 </head>

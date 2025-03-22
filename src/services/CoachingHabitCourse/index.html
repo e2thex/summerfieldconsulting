@@ -1,19 +1,20 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
-    {% assign meta %}
+    {% assign page_meta = '' %}
+    {% capture page_meta %}
     <meta name="description" content="Master the art of coaching with our comprehensive Coaching Habit Course. Transform your leadership style and build stronger teams.">
     <meta name="keywords" content="coaching course, leadership development, team management, coaching skills, professional development">
     
     <!-- Open Graph tags -->
     <meta property="og:title" content="Coaching Habit Course - Summerfield Consulting">
-    <meta property="og:description" content="Transform your leadership style with our comprehensive Coaching Habit Course. Learn practical coaching skills for better team management.">
+    <meta property="og:description" content="Learn effective coaching techniques to develop stronger teams and improve leadership outcomes. Practical skills you can apply immediately.">
     <meta property="og:image" content="/logo.png">
     <meta property="og:url" content="https://summerfieldconsulting.com/services/CoachingHabitCourse">
     <meta property="og:type" content="website">
     
     <title>Coaching Habit Course - Summerfield Consulting</title>
-    {% endassign %}
+    {% endcapture %}
     
     {% include "head.html" %}
 </head>
