@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    {% assign page_meta = '' %}
+    {% capture page_meta %}
+    <meta name="description" content="Get in touch with Summerfield Consulting for expert engineering leadership and agile development guidance. Schedule a consultation today.">
+    <meta name="keywords" content="contact, consulting services, engineering leadership, schedule consultation, agile development">
+    
+    <!-- Open Graph tags -->
+    <meta property="og:title" content="Contact - Summerfield Consulting">
+    <meta property="og:description" content="Connect with Summerfield Consulting to discuss your engineering leadership and team development needs. Expert guidance for your specific challenges.">
+    <meta property="og:image" content="/logo.png">
+    <meta property="og:url" content="https://summerfieldconsulting.com/contact">
+    <meta property="og:type" content="website">
+    
+    <title>Contact - Summerfield Consulting</title>
+    {% endcapture %}
+    
+    {% include "head.html" %}
+</head>
+<body class="bg-off-white dark:bg-dark-bg text-off-black dark:text-off-white font-body transition-colors duration-200">
+    {% include "header.html" %}
+
+    <main id="main-content" class="max-w-4xl mx-auto p-6" role="main">
+        <article class="contact-page">
+            <!-- Hero Section -->
+            <header class="mb-12" aria-labelledby="page-title">
+                <h1 id="page-title" class="text-4xl font-heading font-normal mb-4">Contact Us</h1>
+                <p class="text-xl font-semibold text-accent-1 mb-4">Let's Discuss Your Team's Needs</p>
+                <div class="prose dark:prose-invert max-w-none">
+                    <p>Ready to transform your engineering team? Fill out the form below, and I'll get back to you within 24 hours to schedule a consultation.</p>
+                </div>
+            </header>
+
+            <!-- Contact Form Section -->
+            <section class="mb-12" aria-labelledby="form-heading">
+                <h2 id="form-heading" class="sr-only">Contact Form</h2>
+                <div class="bg-white dark:bg-dark-card p-6 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700">
+                    <div id="google-form-container" class="w-full overflow-hidden">
+                        <iframe 
+                            src="https://docs.google.com/forms/d/e/1FAIpQLSfjMrLJAAvTPYh74IgiG4H5beKUzQHhJp439wKaYKXQXU3Lhg/viewform?embedded=true" 
+                            class="w-full min-h-[1200px]"
+                            frameborder="0" 
+                            marginheight="0" 
+                            marginwidth="0"
+                            title="Contact Form"
+                            loading="lazy">
+                            Loading…
+                        </iframe>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Alternative Contact Methods -->
+            <section class="mb-12" aria-labelledby="alt-contact-heading">
+                <h2 id="alt-contact-heading" class="text-2xl font-heading font-normal mb-6">Other Ways to Connect</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-white dark:bg-dark-card p-6 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700">
+                        <h3 class="text-xl font-bold mb-3 text-accent-1">Direct Email</h3>
+                        <p class="text-gray-text dark:text-dark-gray-text mb-4">Prefer email? Reach out directly:</p>
+                        <a href="mailto:erik@summerfield.consulting" 
+                           class="inline-flex items-center gap-2 text-accent-1 hover:text-accent-2 transition-colors">
+                            erik@summerfield.consulting
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="bg-white dark:bg-dark-card p-6 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700">
+                        <h3 class="text-xl font-bold mb-3 text-accent-1">Quick Response</h3>
+                        <p class="text-gray-text dark:text-dark-gray-text">I aim to respond to all inquiries within 24 hours during business days.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Analytics Tracking -->
+            <script>
+                window.addEventListener('load', function() {
+                    // Track form submissions
+                    const formContainer = document.getElementById('google-form-container');
+                    const observer = new MutationObserver(function(mutations) {
+                        mutations.forEach(function(mutation) {
+                            if (mutation.target.classList.contains('freebirdFormviewerViewResponseConfirmationMessage')) {
+                                gtag('event', 'form_submission', {
+                                    'form_type': 'contact',
+                                    'page': 'contact'
+                                });
+                            }
+                        });
+                    });
+
+                    observer.observe(formContainer, {
+                        childList: true,
+                        subtree: true
+                    });
+
+                    // Track email clicks
+                    document.querySelectorAll('a[href^="mailto:"]').forEach(link => {
+                        link.addEventListener('click', function() {
+                            gtag('event', 'contact_click', {
+                                'method': 'email',
+                                'location': 'contact_page'
+                            });
+                        });
+                    });
+                });
+            </script>
+        </article>
+    </main>
+
+    {% include "footer.html" %}
+</body>
+</html> 

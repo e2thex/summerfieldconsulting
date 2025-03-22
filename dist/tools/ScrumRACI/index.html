@@ -25,7 +25,7 @@
 <!-- Common styles -->
 <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&family=Inter:wght@200;300;400;500;600&display=swap" rel="stylesheet">
 <link href="/assets/css/styles.css" rel="stylesheet">
-<link rel="icon" type="image/png" href="/logo.png"> 
+<link rel="icon" type="image/png" href="/assets/media/logo.png"> 
 </head>
 <body class="bg-off-white dark:bg-dark-bg text-off-black dark:text-off-white font-body transition-colors duration-200">
     <a href="#main-content" 
@@ -118,8 +118,9 @@ class="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 focus:z
              </div>
              <div class="flex items-center gap-4 ml-6">
                  <li>
-                     <a href="mailto:erik@summerfield.consulting" 
-                        class="px-4 py-2 text-accent-1 border border-accent-1 rounded hover:bg-accent-1 hover:text-white transition-colors">
+                     <a href="/contact" 
+                        class="inline-flex items-center px-4 py-2 bg-accent-1 text-white rounded hover:bg-accent-2 transition-colors"
+                        aria-label="Contact us">
                          Contact
                      </a>
                  </li>
@@ -212,7 +213,7 @@ class="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 focus:z
             
             <!-- Contact Link -->
             <li>
-                <a href="mailto:erik@summerfield.consulting" 
+                <a href="/contact" 
                    class="block px-4 py-2 text-accent-1 hover:text-accent-2">
                     Contact
                 </a>
@@ -887,8 +888,23 @@ class="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 focus:z
             </section>
         </div>
     </main>
-    <footer class="py-8 px-6 border-t border-gray-200 dark:border-gray-700" role="contentinfo">
-    <p class="text-center text-gray-text dark:text-dark-gray-text">© 2024-2025 Summerfield Consulting. All rights reserved.</p>
+    <footer class="bg-white dark:bg-dark-card border-t border-gray-200 dark:border-gray-700" role="contentinfo">
+    <div class="max-w-7xl mx-auto px-6 py-8">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+            <p class="text-sm text-gray-text dark:text-dark-gray-text mb-4 md:mb-0">
+                © 2025 Summerfield Consulting. All rights reserved.
+            </p>
+            <a href="https://www.linkedin.com/in/e2thex/" 
+               class="text-gray-text dark:text-dark-gray-text hover:text-accent-1 dark:hover:text-accent-1 transition-colors"
+               target="_blank"
+               rel="noopener noreferrer"
+               aria-label="Visit Erik Summerfield's LinkedIn profile">
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                </svg>
+            </a>
+        </div>
+    </div>
 </footer>
 <script src="/assets/js/nav-controls.js"></script>
     <script>

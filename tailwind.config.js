@@ -2,7 +2,7 @@
 module.exports = {
     darkMode: 'class',
     content: [
-        "./**/*.{html,js}",  // Adjust this pattern based on your project structure
+        "./src/**/*.{html,js}",  // Only scan src directory
     ],
     theme: {
         extend: {
