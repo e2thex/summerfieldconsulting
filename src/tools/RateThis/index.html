@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    {% assign page_meta = '' %}
+    {% capture page_meta %}
+    <meta name="description" content="RateThisFor.me - A simple tool for quick, temporary group ratings. Share a URL and collect instant feedback that vanishes when the session ends.">
+    <meta name="keywords" content="group rating, temporary feedback, quick polling, collaborative rating, instant feedback">
+    
+    <!-- Open Graph tags -->
+    <meta property="og:title" content="Rate This For Me - Summerfield Consulting">
+    <meta property="og:description" content="Share a URL and collect instant group ratings. Perfect for quick, temporary feedback that disappears when everyone leaves.">
+    <meta property="og:image" content="/assets/media/logo.png">
+    <meta property="og:url" content="https://summerfieldconsulting.com/tools/RateThis">
+    <meta property="og:type" content="website">
+    
+    <title>Rate This For Me - Summerfield Consulting</title>
+    {% endcapture %}
+    
+    {% include "head.html" %}
+</head>
+<body class="bg-off-white dark:bg-dark-bg text-off-black dark:text-off-white font-body transition-colors duration-200">
+    {% include "header.html" %}
+
+    <main id="main-content" class="max-w-4xl mx-auto p-6" role="main">
+        <article class="tool-details">
+            <!-- Hero Section -->
+            <header class="mb-12" aria-labelledby="tool-title">
+                <h1 id="tool-title" class="text-4xl font-heading font-normal mb-4">Rate This For Me</h1>
+                <p class="text-xl font-semibold text-accent-1 mb-4">Quick Group Rating Tool</p>
+                <div class="prose dark:prose-invert max-w-none">
+                    <p>Share a URL and instantly collect ratings from your group. Perfect for quick, temporary feedback that vanishes when the session ends.</p>
+                </div>
+            </header>
+
+            <!-- Tool Description -->
+            <section class="mb-12" aria-labelledby="description-heading">
+                <h2 id="description-heading" class="text-2xl font-heading font-normal mb-6">How It Works</h2>
+                <div class="prose dark:prose-invert max-w-none">
+                    <p>RateThisFor.me is designed for simplicity and immediacy:</p>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center gap-2 text-gray-text dark:text-dark-gray-text">
+                            <svg class="w-5 h-5 text-accent-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            Share a URL with your group
+                        </li>
+                        <li class="flex items-center gap-2 text-gray-text dark:text-dark-gray-text">
+                            <svg class="w-5 h-5 text-accent-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            Everyone submits their ratings
+                        </li>
+                        <li class="flex items-center gap-2 text-gray-text dark:text-dark-gray-text">
+                            <svg class="w-5 h-5 text-accent-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            View results in real-time
+                        </li>
+                        <li class="flex items-center gap-2 text-gray-text dark:text-dark-gray-text">
+                            <svg class="w-5 h-5 text-accent-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            Data disappears when everyone leaves
+                        </li>
+                        <li class="flex items-center gap-2 text-gray-text dark:text-dark-gray-text">
+                            <svg class="w-5 h-5 text-accent-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            Copy data if you need to save it
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Features Section -->
+            <section class="mb-12" aria-labelledby="features-heading">
+                <h2 id="features-heading" class="text-2xl font-heading font-normal mb-6">Features</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-white dark:bg-dark-card p-6 rounded-lg border border-gray-200 dark:border-gray-700">
+                        <h3 class="text-xl font-bold mb-3 text-accent-1">No Setup Required</h3>
+                        <p class="text-gray-text dark:text-dark-gray-text">Just share a URL and start collecting ratings instantly.</p>
+                    </div>
+                    <div class="bg-white dark:bg-dark-card p-6 rounded-lg border border-gray-200 dark:border-gray-700">
+                        <h3 class="text-xl font-bold mb-3 text-accent-1">Temporary Storage</h3>
+                        <p class="text-gray-text dark:text-dark-gray-text">Data vanishes when the session ends - perfect for temporal information.</p>
+                    </div>
+                    <div class="bg-white dark:bg-dark-card p-6 rounded-lg border border-gray-200 dark:border-gray-700">
+                        <h3 class="text-xl font-bold mb-3 text-accent-1">Real-time Results</h3>
+                        <p class="text-gray-text dark:text-dark-gray-text">See everyone's ratings as they come in.</p>
+                    </div>
+                    <div class="bg-white dark:bg-dark-card p-6 rounded-lg border border-gray-200 dark:border-gray-700">
+                        <h3 class="text-xl font-bold mb-3 text-accent-1">Data Export</h3>
+                        <p class="text-gray-text dark:text-dark-gray-text">Copy data from the page if you need to save the results.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Call to Action -->
+            <section class="mb-12" aria-labelledby="cta-heading">
+                <div class="bg-white dark:bg-dark-card p-8 rounded-lg border border-gray-200 dark:border-gray-700 text-center">
+                    <h2 id="cta-heading" class="text-2xl font-heading font-normal mb-4">Ready to Collect Some Ratings?</h2>
+                    <p class="text-gray-text dark:text-dark-gray-text mb-6">Try our free group rating tool - no setup or registration required.</p>
+                    <a href="https://ratethisfor.me" 
+                       class="inline-block px-8 py-3 bg-accent-1 text-white rounded-lg hover:bg-accent-2 transition-colors"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       aria-label="Open Rate This For Me tool in a new tab">
+                        Launch Rate This For Me
+                    </a>
+                </div>
+            </section>
+
+            <!-- Support Section -->
+            <section class="mb-12" aria-labelledby="support-heading">
+                <h2 id="support-heading" class="text-2xl font-heading font-normal mb-6">Support</h2>
+                <div class="prose dark:prose-invert max-w-none">
+                    <p>Have suggestions or found a bug? Please submit them on our <a href="https://github.com/esummerfield" class="text-accent-1 hover:text-accent-2" target="_blank" rel="noopener noreferrer">GitHub page</a>.</p>
+                </div>
+            </section>
+        </article>
+    </main>
+
+    {% include "footer.html" %}
+</body>
+</html> 

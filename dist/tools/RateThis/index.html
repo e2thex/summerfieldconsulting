@@ -28,8 +28,6 @@
 <link rel="icon" type="image/png" href="/assets/media/logo.png"> 
 </head>
 <body class="bg-off-white dark:bg-dark-bg text-off-black dark:text-off-white font-body transition-colors duration-200">
-    <div id="theme-announcement" role="status" class="sr-only" aria-live="polite"></div>
-
     <a href="#main-content" 
 class="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 focus:z-50 focus:px-4 focus:py-2 focus:bg-accent-1 focus:text-white">
  Skip to main content
@@ -50,10 +48,10 @@ class="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 focus:z
              <div class="flex items-center gap-6">
                  <li class="relative group">
                      <button 
-                         class="flex items-center gap-1 text-gray-text dark:text-dark-gray-text hover:text-accent-1 dark:hover:text-accent-1 transition-colors"
+                         class="flex items-center gap-1 text-accent-1 hover:text-accent-1 dark:hover:text-accent-1 transition-colors"
                          aria-expanded="false"
                          aria-haspopup="true"
-                         
+                         aria-current="true"
                      >
                          Tools
                          <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -78,8 +76,8 @@ class="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 focus:z
                              </li>
                              <li>
                                  <a href="/tools/RateThis" 
-                                    class="block px-4 py-2 text-gray-text dark:text-dark-gray-text hover:text-accent-1 dark:hover:text-accent-1 hover:bg-gray-50 dark:hover:bg-dark-hover transition-colors"
-                                    >
+                                    class="block px-4 py-2 text-accent-1 hover:text-accent-1 dark:hover:text-accent-1 hover:bg-gray-50 dark:hover:bg-dark-hover transition-colors"
+                                    aria-current="page">
                                      Rate This For Me
                                  </a>
                              </li>
@@ -88,10 +86,10 @@ class="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 focus:z
                  </li>
                  <li class="relative group">
                      <button 
-                         class="flex items-center gap-1 text-accent-1 hover:text-accent-1 dark:hover:text-accent-1 transition-colors"
+                         class="flex items-center gap-1 text-gray-text dark:text-dark-gray-text hover:text-accent-1 dark:hover:text-accent-1 transition-colors"
                          aria-expanded="false"
                          aria-haspopup="true"
-                         aria-current="true"
+                         
                      >
                          Services
                          <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -102,8 +100,8 @@ class="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 focus:z
                          <ul class="py-2">
                              <li>
                                  <a href="/services/AgileInAction" 
-                                    class="block px-4 py-2 text-accent-1 hover:text-accent-1 dark:hover:text-accent-1 hover:bg-gray-50 dark:hover:bg-dark-hover transition-colors"
-                                    aria-current="page">
+                                    class="block px-4 py-2 text-gray-text dark:text-dark-gray-text hover:text-accent-1 dark:hover:text-accent-1 hover:bg-gray-50 dark:hover:bg-dark-hover transition-colors"
+                                    >
                                      Agile in Action
                                  </a>
                              </li>
@@ -238,69 +236,99 @@ class="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 focus:z
 </header>
 
     <main id="main-content" class="max-w-4xl mx-auto p-6" role="main">
-        <article class="service-details">
+        <article class="tool-details">
             <!-- Hero Section -->
-            <header class="mb-12" aria-labelledby="service-title">
-                <h1 id="service-title" class="text-4xl font-heading font-normal mb-4">Agile in Action</h1>
-                <p class="text-xl font-semibold text-accent-1 mb-4">Transform Your Team's Agile Practice</p>
+            <header class="mb-12" aria-labelledby="tool-title">
+                <h1 id="tool-title" class="text-4xl font-heading font-normal mb-4">Rate This For Me</h1>
+                <p class="text-xl font-semibold text-accent-1 mb-4">Quick Group Rating Tool</p>
                 <div class="prose dark:prose-invert max-w-none">
-                    <p>Transform your team's Agile practice from routine ceremonies into real, measurable improvements.</p>
+                    <p>Share a URL and instantly collect ratings from your group. Perfect for quick, temporary feedback that vanishes when the session ends.</p>
                 </div>
             </header>
 
-            <!-- Process Section -->
-            <section class="mb-12" aria-labelledby="process-heading">
-                <h2 id="process-heading" class="text-2xl font-heading font-normal mb-6">Our Process</h2>
-                <ol class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <li class="flex flex-col items-center text-center">
-                        <div class="w-16 h-16 bg-accent-1 rounded-full flex items-center justify-center mb-4" aria-hidden="true">
-                            <span class="text-2xl text-white">1</span>
-                        </div>
-                        <h3 class="text-xl font-bold mb-2">Observation</h3>
-                        <p class="text-gray-text dark:text-dark-gray-text">Two weeks embedded with your team, observing current practices and identifying opportunities.</p>
-                    </li>
-                    <li class="flex flex-col items-center text-center">
-                        <div class="w-16 h-16 bg-accent-1 rounded-full flex items-center justify-center mb-4" aria-hidden="true">
-                            <span class="text-2xl text-white">2</span>
-                        </div>
-                        <h3 class="text-xl font-bold mb-2">Analysis</h3>
-                        <p class="text-gray-text dark:text-dark-gray-text">Detailed analysis of team dynamics, processes, and potential improvements.</p>
-                    </li>
-                    <li class="flex flex-col items-center text-center">
-                        <div class="w-16 h-16 bg-accent-1 rounded-full flex items-center justify-center mb-4" aria-hidden="true">
-                            <span class="text-2xl text-white">3</span>
-                        </div>
-                        <h3 class="text-xl font-bold mb-2">Implementation</h3>
-                        <p class="text-gray-text dark:text-dark-gray-text">Guided implementation of improvements with measurable outcomes.</p>
-                    </li>
-                </ol>
+            <!-- Tool Description -->
+            <section class="mb-12" aria-labelledby="description-heading">
+                <h2 id="description-heading" class="text-2xl font-heading font-normal mb-6">How It Works</h2>
+                <div class="prose dark:prose-invert max-w-none">
+                    <p>RateThisFor.me is designed for simplicity and immediacy:</p>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center gap-2 text-gray-text dark:text-dark-gray-text">
+                            <svg class="w-5 h-5 text-accent-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            Share a URL with your group
+                        </li>
+                        <li class="flex items-center gap-2 text-gray-text dark:text-dark-gray-text">
+                            <svg class="w-5 h-5 text-accent-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            Everyone submits their ratings
+                        </li>
+                        <li class="flex items-center gap-2 text-gray-text dark:text-dark-gray-text">
+                            <svg class="w-5 h-5 text-accent-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            View results in real-time
+                        </li>
+                        <li class="flex items-center gap-2 text-gray-text dark:text-dark-gray-text">
+                            <svg class="w-5 h-5 text-accent-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            Data disappears when everyone leaves
+                        </li>
+                        <li class="flex items-center gap-2 text-gray-text dark:text-dark-gray-text">
+                            <svg class="w-5 h-5 text-accent-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            Copy data if you need to save it
+                        </li>
+                    </ul>
+                </div>
             </section>
 
-            <!-- Benefits Section -->
-            <section class="mb-12" aria-labelledby="benefits-heading">
-                <h2 id="benefits-heading" class="text-2xl font-heading font-normal mb-6">Benefits</h2>
-                <ul class="grid grid-cols-1 md:grid-cols-2 gap-8" role="list">
-                    <li class="bg-white dark:bg-dark-card p-6 rounded-lg border border-gray-200 dark:border-gray-700">
-                        <h3 class="text-xl font-bold mb-3 text-accent-1">Improved Velocity</h3>
-                        <p class="text-gray-text dark:text-dark-gray-text">Real improvements in team velocity through better practices and reduced waste.</p>
-                    </li>
-                    <li class="bg-white dark:bg-dark-card p-6 rounded-lg border border-gray-200 dark:border-gray-700">
-                        <h3 class="text-xl font-bold mb-3 text-accent-1">Team Engagement</h3>
-                        <p class="text-gray-text dark:text-dark-gray-text">Higher team engagement through meaningful ceremonies and clear objectives.</p>
-                    </li>
-                </ul>
+            <!-- Features Section -->
+            <section class="mb-12" aria-labelledby="features-heading">
+                <h2 id="features-heading" class="text-2xl font-heading font-normal mb-6">Features</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-white dark:bg-dark-card p-6 rounded-lg border border-gray-200 dark:border-gray-700">
+                        <h3 class="text-xl font-bold mb-3 text-accent-1">No Setup Required</h3>
+                        <p class="text-gray-text dark:text-dark-gray-text">Just share a URL and start collecting ratings instantly.</p>
+                    </div>
+                    <div class="bg-white dark:bg-dark-card p-6 rounded-lg border border-gray-200 dark:border-gray-700">
+                        <h3 class="text-xl font-bold mb-3 text-accent-1">Temporary Storage</h3>
+                        <p class="text-gray-text dark:text-dark-gray-text">Data vanishes when the session ends - perfect for temporal information.</p>
+                    </div>
+                    <div class="bg-white dark:bg-dark-card p-6 rounded-lg border border-gray-200 dark:border-gray-700">
+                        <h3 class="text-xl font-bold mb-3 text-accent-1">Real-time Results</h3>
+                        <p class="text-gray-text dark:text-dark-gray-text">See everyone's ratings as they come in.</p>
+                    </div>
+                    <div class="bg-white dark:bg-dark-card p-6 rounded-lg border border-gray-200 dark:border-gray-700">
+                        <h3 class="text-xl font-bold mb-3 text-accent-1">Data Export</h3>
+                        <p class="text-gray-text dark:text-dark-gray-text">Copy data from the page if you need to save the results.</p>
+                    </div>
+                </div>
             </section>
 
             <!-- Call to Action -->
             <section class="mb-12" aria-labelledby="cta-heading">
-                <div class="p-6 bg-off-black dark:bg-dark-card text-white rounded-lg">
-                    <h2 id="cta-heading" class="text-2xl font-heading font-normal mb-6">Ready to Transform Your Agile Practice?</h2>
-                    <p class="mb-4">Start your team's transformation today. Contact us to schedule your two-week observation period.</p>
-                    <a href="/contact" 
-                       class="inline-block px-6 py-2 bg-accent-1 text-white rounded hover:bg-accent-2 transition-colors"
-                       aria-label="Contact us to get started with Agile in Action">
-                        Contact us to get started
+                <div class="bg-white dark:bg-dark-card p-8 rounded-lg border border-gray-200 dark:border-gray-700 text-center">
+                    <h2 id="cta-heading" class="text-2xl font-heading font-normal mb-4">Ready to Collect Some Ratings?</h2>
+                    <p class="text-gray-text dark:text-dark-gray-text mb-6">Try our free group rating tool - no setup or registration required.</p>
+                    <a href="https://ratethisfor.me" 
+                       class="inline-block px-8 py-3 bg-accent-1 text-white rounded-lg hover:bg-accent-2 transition-colors"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       aria-label="Open Rate This For Me tool in a new tab">
+                        Launch Rate This For Me
                     </a>
+                </div>
+            </section>
+
+            <!-- Support Section -->
+            <section class="mb-12" aria-labelledby="support-heading">
+                <h2 id="support-heading" class="text-2xl font-heading font-normal mb-6">Support</h2>
+                <div class="prose dark:prose-invert max-w-none">
+                    <p>Have suggestions or found a bug? Please submit them on our <a href="https://github.com/esummerfield" class="text-accent-1 hover:text-accent-2" target="_blank" rel="noopener noreferrer">GitHub page</a>.</p>
                 </div>
             </section>
         </article>
@@ -326,4 +354,4 @@ class="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 focus:z
 </footer>
 <script src="/assets/js/nav-controls.js"></script>
 </body>
-</html>
+</html> 

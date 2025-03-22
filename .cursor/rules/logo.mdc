@@ -5,5 +5,6 @@ globs: index.html, design.html
 
 # Your rule content
 
-- the logo is always logo.png
-- it is always in the root of dist
+- the logo is assests/media/logo.png
+- the dark theme logo is assets/media/logo-dark.png
+
