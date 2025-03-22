@@ -1,15 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- Theme initialization - must be first script -->
-    <script src="/assets/js/theme-init.js"></script>
-    
-    <title>Scrum RACI Tool - Summerfield Consulting</title>
-    <link href="/assets/css/styles.css" rel="stylesheet">
-    
+    {% assign meta %}
     <meta name="description" content="Interactive RACI matrix mapped to the official Scrum Guide, helping teams understand role responsibilities in Scrum.">
     <meta name="keywords" content="Scrum RACI, Scrum roles, Scrum responsibilities, Scrum Guide reference">
     
@@ -20,9 +12,10 @@
     <meta property="og:url" content="https://summerfieldconsulting.com/tools/ScrumRACI">
     <meta property="og:type" content="website">
     
-    <link rel="icon" type="image/png" href="../../logo.png">
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&family=Inter:wght@200;300;400;500;600&display=swap" rel="stylesheet">
-    <link href="../../output.css" rel="stylesheet">
+    <title>Scrum RACI Tool - Summerfield Consulting</title>
+    {% endassign %}
+    
+    {% include "head.html" %}
 </head>
 <body class="bg-off-white dark:bg-dark-bg text-off-black dark:text-off-white font-body transition-colors duration-200">
     {% include "header.html" %}

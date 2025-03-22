@@ -1,12 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- Theme initialization - must be first script -->
-    <script src="/assets/js/theme-init.js"></script>
-    
+    {% assign meta %}
     <meta name="description" content="Use the BOAT (Before, On-time, After, Terrible) estimation technique to evaluate project completion dates and build more reliable estimates.">
     <meta name="keywords" content="BOAT estimate, project estimation, software development, project management, estimation technique">
     
@@ -18,9 +13,9 @@
     <meta property="og:type" content="website">
     
     <title>BOAT Estimate Tool - Summerfield Consulting</title>
-    <link rel="icon" type="image/png" href="../../logo.png">
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&family=Inter:wght@200;300;400;500;600&display=swap" rel="stylesheet">
-    <link href="../../output.css" rel="stylesheet">
+    {% endassign %}
+    
+    {% include "head.html" %}
 </head>
 <body class="bg-off-white dark:bg-dark-bg text-off-black dark:text-off-white font-body transition-colors duration-200">
 

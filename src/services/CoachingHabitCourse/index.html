@@ -1,12 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- Theme initialization - must be first script -->
-    <script src="/assets/js/theme-init.js"></script>
-    
+    {% assign meta %}
     <meta name="description" content="Master the art of coaching with our comprehensive Coaching Habit Course. Transform your leadership style and build stronger teams.">
     <meta name="keywords" content="coaching course, leadership development, team management, coaching skills, professional development">
     
@@ -18,9 +13,9 @@
     <meta property="og:type" content="website">
     
     <title>Coaching Habit Course - Summerfield Consulting</title>
-    <link rel="icon" type="image/png" href="../../logo.png">
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&family=Inter:wght@200;300;400;500;600&display=swap" rel="stylesheet">
-    <link href="../../output.css" rel="stylesheet">
+    {% endassign %}
+    
+    {% include "head.html" %}
 </head>
 <body class="bg-off-white dark:bg-dark-bg text-off-black dark:text-off-white font-body transition-colors duration-200">
     {% include "header.html" %}
