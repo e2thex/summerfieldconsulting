@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    {% assign page_meta = '' %}
+    {% capture page_meta %}
+    <meta name="description" content="Understanding how teams can change while maintaining their effectiveness, and why jelling is a process of constant change rather than a fixed state.">
+    <meta name="keywords" content="team development, team jelling, organizational change, team management, theseus paradox, team effectiveness">
+    
+    <!-- Open Graph tags -->
+    <meta property="og:title" content="Theseus Teams - Summerfield Consulting">
+    <meta property="og:description" content="Explore how well-functioning teams can adapt and change while maintaining their effectiveness, using the Theseus paradox as a framework for understanding team evolution.">
+    <meta property="og:image" content="/assets/media/logo.png">
+    <meta property="og:url" content="https://summerfieldconsulting.com/briefs/TheseusTeams">
+    <meta property="og:type" content="website">
+    
+    <title>Theseus Teams - Summerfield Consulting</title>
+    {% endcapture %}
+    
+    {% include "head.html" %}
+</head>
+<body class="bg-off-white dark:bg-dark-bg text-off-black dark:text-off-white font-body transition-colors duration-200">
+    {% include "header.html" %}
+
+    <main id="main-content" class="max-w-4xl mx-auto p-6" role="main">
+        <article class="brief-content">
+            <!-- Hero Section -->
+            <header class="mb-12" aria-labelledby="brief-title">
+                <h1 id="brief-title" class="text-4xl font-heading font-normal mb-4">Touching Jelled Teams</h1>
+                <p class="text-xl font-semibold text-accent-1 mb-4">TLDR; Jelling is something you do, not something you are.</p>
+                <div class="prose dark:prose-invert max-w-none">
+                    <p>Teams need to jell. So let us skip the hard part and say you have a team that has jelled. Congratulations, that is really hard to do and you have succeeded! You must be amazing.</p>
+                </div>
+            </header>
+
+            <!-- Main Content -->
+            <section class="mb-12" aria-labelledby="main-content">
+                <div class="prose dark:prose-invert max-w-none">
+                    <p>So now that you have captured magic in a bottle, you should do everything you possibly can do to not disrupt this well oiled machine, right? What would happen if you:</p>
+
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center gap-2 text-gray-text dark:text-dark-gray-text">
+                            <svg class="w-5 h-5 text-accent-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            Change the kind of work we do or
+                        </li>
+                        <li class="flex items-center gap-2 text-gray-text dark:text-dark-gray-text">
+                            <svg class="w-5 h-5 text-accent-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            Add a person to the team or
+                        </li>
+                        <li class="flex items-center gap-2 text-gray-text dark:text-dark-gray-text">
+                            <svg class="w-5 h-5 text-accent-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            Remove a person from the team?
+                        </li>
+                    </ul>
+
+                    <p>Is that the end? Does that mean you will destroy the good thing that you spent the last 3 hard years building, piece by piece?</p>
+
+                    <p>I am going to go with no, a jelled team is like Theseus Ship.</p>
+
+                    <blockquote class="border-l-4 border-accent-1 pl-6 py-4 bg-gray-50 dark:bg-dark-card rounded-r-lg mb-4">
+                        <p class="text-gray-text dark:text-dark-gray-text italic mb-2">
+                            The ship wherein Theseus and the youth of Athens returned from Crete had thirty oars, and was preserved by the Athenians down even to the time of Demetrius Phalereus, for they took away the old planks as they decayed, putting in new and stronger timber in their places...
+                        </p>
+                        <footer class="text-sm mt-2">
+                            <cite class="text-gray-text dark:text-dark-gray-text not-italic">
+                                — Plutarch, Theseus
+                            </cite>
+                        </footer>
+                    </blockquote>
+
+                    <p>Did Theseus ship fail when any one board was swapped? Did it no longer float? Would it no longer have allowed them to "return from Crete?" No, it was maintained, not destroyed. In fact, what would have happened if the Athenians had said no we cannot change any part, for fear it will destroy the whole?</p>
+
+                    <p>It would have withered away into nothing. The key here is that Jelling is the maintenance, not the Team.</p>
+
+                    <blockquote class="border-l-4 border-accent-1 pl-6 py-4 bg-gray-50 dark:bg-dark-card rounded-r-lg mb-4">
+                        <p class="text-gray-text dark:text-dark-gray-text italic mb-2">
+                            Jelling is something you do, not something you are.
+                        </p>
+                        <footer class="text-sm mt-2">
+                            <cite class="text-gray-text dark:text-dark-gray-text not-italic">
+                                — Critter
+                            </cite>
+                        </footer>
+                    </blockquote>
+
+                    <p>As soon as we realize that jelling is a process and not a state, then how can we be scared of change? Jelling is a process of <em>constant</em> change; change is something we should embrace, not fear. If your team is Jelling that means it <em>can</em> change and that it will change well.</p>
+                </div>
+            </section>
+
+            <!-- Attribution -->
+            <footer class="text-sm text-gray-text dark:text-dark-gray-text">
+                <p>Originally published on <a href="https://e2thex.org/forkthesystem/2021/01/theseusteams/" class="text-accent-1 hover:text-accent-2" target="_blank" rel="noopener noreferrer">Fork The System</a></p>
+                <p>©Erik Summerfield 2021</p>
+            </footer>
+        </article>
+    </main>
+
+    {% include "footer.html" %}
+</body>
+</html> 
