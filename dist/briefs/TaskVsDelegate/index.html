@@ -28,7 +28,6 @@
 <link rel="icon" type="image/png" href="/assets/media/logo.png"> 
 </head>
 <body class="bg-off-white dark:bg-dark-bg text-off-black dark:text-off-white font-body transition-colors duration-200">
-
     <a href="#main-content" 
 class="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 focus:z-50 focus:px-4 focus:py-2 focus:bg-accent-1 focus:text-white">
  Skip to main content
@@ -49,10 +48,10 @@ class="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 focus:z
              <div class="flex items-center gap-6">
                  <li class="relative group">
                      <button 
-                         class="flex items-center gap-1 text-accent-1 hover:text-accent-1 dark:hover:text-accent-1 transition-colors"
+                         class="flex items-center gap-1 text-gray-text dark:text-dark-gray-text hover:text-accent-1 dark:hover:text-accent-1 transition-colors"
                          aria-expanded="false"
                          aria-haspopup="true"
-                         aria-current="true"
+                         
                      >
                          Tools
                          <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -70,8 +69,8 @@ class="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 focus:z
                              </li>
                              <li>
                                  <a href="/tools/BOATEstimate" 
-                                    class="block px-4 py-2 text-accent-1 hover:text-accent-1 dark:hover:text-accent-1 hover:bg-gray-50 dark:hover:bg-dark-hover transition-colors"
-                                    aria-current="page">
+                                    class="block px-4 py-2 text-gray-text dark:text-dark-gray-text hover:text-accent-1 dark:hover:text-accent-1 hover:bg-gray-50 dark:hover:bg-dark-hover transition-colors"
+                                    >
                                      BOAT Estimate
                                  </a>
                              </li>
@@ -125,10 +124,10 @@ class="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 focus:z
                  </li>
                  <li class="relative group">
                      <button 
-                         class="flex items-center gap-1 text-gray-text dark:text-dark-gray-text hover:text-accent-1 dark:hover:text-accent-1 transition-colors"
+                         class="flex items-center gap-1 text-accent-1 hover:text-accent-1 dark:hover:text-accent-1 transition-colors"
                          aria-expanded="false"
                          aria-haspopup="true"
-                         
+                         aria-current="true"
                      >
                          Briefs
                          <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -139,8 +138,8 @@ class="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 focus:z
                          <ul class="py-2">
                              <li>
                                  <a href="/briefs/TaskVsDelegate" 
-                                    class="block px-4 py-2 text-gray-text dark:text-dark-gray-text hover:text-accent-1 dark:hover:text-accent-1 hover:bg-gray-50 dark:hover:bg-dark-hover transition-colors"
-                                    >
+                                    class="block px-4 py-2 text-accent-1 hover:text-accent-1 dark:hover:text-accent-1 hover:bg-gray-50 dark:hover:bg-dark-hover transition-colors"
+                                    aria-current="page">
                                     Task vs Delegate
                                  </a>
                              </li>
@@ -291,189 +290,209 @@ class="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 focus:z
     </nav>
  </div>
 </header>
+
     <main id="main-content" class="max-w-4xl mx-auto p-6" role="main">
-        <h1 class="text-4xl font-heading font-normal mb-4">B.O.A.T. Estimate</h1>
-
-        <!-- Introduction -->
-        <p class="text-lg text-gray-text dark:text-dark-gray-text mb-8 max-w-3xl">
-            The Boat estimate is a technique to evaluate an estimated completion date. It is very helpful in evaluating confidence in an estimate and is helpful in exposing many anti-patterns in estimates.
-        </p>
-
-        <p class="text-gray-text dark:text-dark-gray-text mb-8">
-            Let's walk through an example and the 3 steps to doing a BOAT.
-        </p>
-
-        <!-- Step 1 -->
-        <section class="mb-12">
-            <h2 class="text-2xl font-heading font-normal mb-6">Step 1: Pick a date</h2>
-            <p class="text-gray-text dark:text-dark-gray-text mb-4">
-                Choose a date on which you plan to commit. There are a variety of techniques to do this, but they are beyond the scope of this post. If you do not have a date, write down your best guess.
-            </p>
-            <p class="text-gray-text dark:text-dark-gray-text italic">
-                For my API, I think it will be done by May 2.
-            </p>
-        </section>
-
-        <!-- Step 2 -->
-        <section class="mb-12">
-            <h2 class="text-2xl font-heading font-normal mb-6">Step 2: Write "B O A T"</h2>
-            <p class="text-gray-text dark:text-dark-gray-text mb-4">
-                Write out – B O A T – <strong>B</strong>efore, <strong>O</strong>n-time, <strong>A</strong>fter, and <strong>T</strong>errible.
-            </p>
-
-            <div class="mb-8">
-                <img src="/EmptyBOATEstimate.webp" 
-                     alt="BOAT diagram showing the four categories: Before, On-time, After, and Terrible" 
-                     class="rounded-lg shadow-lg max-w-full h-auto mx-auto"
-                     loading="lazy">
-            </div>
-
-            <ul class="space-y-2 text-gray-text dark:text-dark-gray-text mb-6">
-                <li><strong>Before</strong> means you will finish more than a week early.</li>
-                <li><strong>On-time</strong> means you will finish within a week of your desired date.</li>
-                <li><strong>After</strong> means you will be one or two weeks late.</li>
-                <li><strong>Terrible</strong> means you will be more than 3 weeks late.</li>
-            </ul>
-
-            <p class="text-gray-text dark:text-dark-gray-text">
-                If the desired date is less than a few months out then scale down ("before" becomes a few days early), or if it is over a year then scale up ("before" becomes a few weeks early). Don't spend much time thinking about the precise cut-off.
-            </p>
-        </section>
-
-        <!-- Step 3 -->
-        <section class="mb-12">
-            <h2 class="text-2xl font-heading font-normal mb-6">Step 3: Estimate your Confidence</h2>
-            <p class="text-gray-text dark:text-dark-gray-text mb-4">
-                For each category estimate the percent chance that the project will be completed in the desired timeframe.
-            </p>
-
-            <blockquote class="mb-8 border-l-4 border-accent-1 pl-6 py-4 bg-gray-50 dark:bg-dark-card rounded-r-lg">
-                <p class="text-gray-text dark:text-dark-gray-text mb-4">
-                    So for my API date, there's a chance that we'll finish early, but not a big chance. Plus this client often brings in new priorities, so that adds to the risk that it will be late. But the work is well known so I do not see many big chances for it to blow up. So I think there is a 20% chance we will finish early, 30% on time, 40% a little late, and 10% chance that we will be really late.
-                </p>
-            </blockquote>
-
-            <div class="mb-8">
-                <img src="/FullBoatEstimate.webp" 
-                     alt="BOAT Estimate distribution example showing percentage breakdowns" 
-                     class="rounded-lg shadow-lg max-w-full h-auto mx-auto"
-                     loading="lazy">
-            </div>
-        </section>
-
-        <!-- Online Tool -->
-        <section class="mb-12 bg-white dark:bg-dark-card rounded-lg border border-gray-200 dark:border-gray-700 p-8">
-            <h2 class="text-2xl font-heading font-normal mb-4">Try It Online</h2>
-            <div class="space-y-4">
-                <p class="text-gray-text dark:text-dark-gray-text">
-                    Want to try BOAT estimation right now? Use our free online tool:
-                </p>
-                <div class="flex flex-col sm:flex-row gap-4 items-start sm:items-center">
-                    <a href="https://estimatethisfor.me" 
-                       class="inline-flex items-center px-6 py-3 bg-accent-1 text-white rounded-lg hover:bg-accent-2 transition-colors"
-                       target="_blank"
-                       rel="noopener noreferrer">
-                        <span>Launch estimatethisfor.me</span>
-                        <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
-                        </svg>
-                    </a>
-                    <span class="text-sm text-gray-text dark:text-dark-gray-text">
-                        Free tool - no registration required
-                    </span>
+        <article class="brief-content">
+            <!-- Hero Section -->
+            <header class="mb-12" aria-labelledby="brief-title">
+                <h1 id="brief-title" class="text-4xl font-heading font-normal mb-4">Task vs Delegate</h1>
+                <p class="text-xl font-semibold text-accent-1 mb-4">TLDR; Delegate to teams; task within them.</p>
+                <div class="prose dark:prose-invert max-w-none">
+                    <p>I find that people often use the terms task and delegate interchangeably. This can lead to team failure both from inside and outside the team. I now try to understand which term should be used to ensure we are not damaging the team.</p>
                 </div>
-            </div>
-        </section>
+            </header>
 
-        <!-- Rules -->
-        <section class="mb-12">
-            <h2 class="text-2xl font-heading font-normal mb-6">Rules to Keep in Mind</h2>
-
-            <div class="space-y-8">
-                <div>
-                    <h3 class="text-xl font-bold mb-3 text-accent-1">Rule 1: Do not be precise</h3>
-                    <p class="text-gray-text dark:text-dark-gray-text">
-                        This is a gut check! There is no way you are 23.567% sure that it will be on time. Therefore, only use increments of 10% (e.g. 0% 10% 20% 30%, etc). I also like to allow a &lt;1%, for the occasion when you can't quite say 0%. The lack of precision helps prevent nitpicking at the margins; it is difficult to nitpick when moving 10% at a time.
-                    </p>
-                </div>
-
-                <div>
-                    <h3 class="text-xl font-bold mb-3 text-accent-1">Rule 2: Forget about the details</h3>
-                    <p class="text-gray-text dark:text-dark-gray-text">
-                        Just like we are trying not to be too precise, don't be too specific. We often try and break big things down into smaller things that we feel like we can estimate, and then just add up those estimates, but that is not how life works. Just because one can swim 1.5k in 25 mins, bike 40k in 60 mins and run 10k in 35 mins does not mean they can do a triathlon in 2 hours. This is your chance to think big.
-                    </p>
-                </div>
-
-                <div>
-                    <h3 class="text-xl font-bold mb-3 text-accent-1">Rule 3: No assuming away risks</h3>
-                    <p class="text-gray-text dark:text-dark-gray-text mb-4">
-                        I used this exercise with a Project Manager and he thought for a second and then started assuming. "Assuming we get the team we want, and there is no feature scope creep, and the designer delivers on time, and the third party vendor has good documentation…"
-                    </p>
-
+            <!-- Let's Get Pedantic Section -->
+            <section class="mb-12" aria-labelledby="pedantic-heading">
+                <h2 id="pedantic-heading" class="text-2xl font-heading font-normal mb-6">Let's Get Pedantic</h2>
+                <div class="prose dark:prose-invert max-w-none">
+                    <p>To start off let us just look at the definitions.</p>
+                    
                     <blockquote class="border-l-4 border-accent-1 pl-6 py-4 bg-gray-50 dark:bg-dark-card rounded-r-lg mb-4">
-                        <p class="text-gray-text dark:text-dark-gray-text italic">
-                            An economist is trapped on a deserted island with some other people. They have nothing, but a shipment of canned foods. The others turn to him and ask what should we do to get the food? He replies "Well first let's assume we have a can opener."
+                        <p class="text-gray-text dark:text-dark-gray-text mb-2">
+                            <strong>Task</strong> (verb): Assign a piece of work to.
                         </p>
                         <footer class="text-sm mt-2">
                             <cite class="text-gray-text dark:text-dark-gray-text not-italic">
-                                Old bad joke
+                                — Oxford English Dictionary
                             </cite>
                         </footer>
                     </blockquote>
 
-                    <p class="text-gray-text dark:text-dark-gray-text">
-                        If we could assume away all risks, estimating would be so easy it would not be fun. Think about the risks and the chance they will happen and how that would affect the chance of project/software delivery. Keep the risks and put them in your estimate. That is where they belong.
-                    </p>
+                    <blockquote class="border-l-4 border-accent-1 pl-6 py-4 bg-gray-50 dark:bg-dark-card rounded-r-lg mb-4">
+                        <p class="text-gray-text dark:text-dark-gray-text mb-2">
+                            <strong>Delegate</strong> (verb): Entrust ... to another person, typically one who is less senior than oneself.
+                        </p>
+                        <footer class="text-sm mt-2">
+                            <cite class="text-gray-text dark:text-dark-gray-text not-italic">
+                                — Oxford English Dictionary
+                            </cite>
+                        </footer>
+                    </blockquote>
+
+                    <p>Ok lets go one more level ...</p>
+
+                    <blockquote class="border-l-4 border-accent-1 pl-6 py-4 bg-gray-50 dark:bg-dark-card rounded-r-lg mb-4">
+                        <p class="text-gray-text dark:text-dark-gray-text mb-2">
+                            <strong>Assign</strong> (verb): Allocate
+                        </p>
+                        <footer class="text-sm mt-2">
+                            <cite class="text-gray-text dark:text-dark-gray-text not-italic">
+                                — Oxford English Dictionary
+                            </cite>
+                        </footer>
+                    </blockquote>
+
+                    <blockquote class="border-l-4 border-accent-1 pl-6 py-4 bg-gray-50 dark:bg-dark-card rounded-r-lg mb-4">
+                        <p class="text-gray-text dark:text-dark-gray-text mb-2">
+                            <strong>Entrust</strong> (verb): Assign the responsibility for doing something to (someone)
+                        </p>
+                        <footer class="text-sm mt-2">
+                            <cite class="text-gray-text dark:text-dark-gray-text not-italic">
+                                — Oxford English Dictionary
+                            </cite>
+                        </footer>
+                    </blockquote>
+
+                    <p>This gets to the heart of it for me. <strong>One tasks work; one delegates ownership</strong>. Ok, Erik thanks for making me read a dictionary, but why should I care?</p>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <!-- Evaluating Results -->
-        <section class="mb-12">
-            <h2 class="text-2xl font-heading font-normal mb-6">Evaluating the Results</h2>
-            <p class="text-gray-text dark:text-dark-gray-text mb-6">
-                Now that you have your BOAT what does it mean? Here are a few common outcomes and help on what they mean.
-            </p>
+            <!-- Tasking, Delegating, and Teams Section -->
+            <section class="mb-12" aria-labelledby="teams-heading">
+                <h2 id="teams-heading" class="text-2xl font-heading font-normal mb-6">Tasking, Delegating, and Teams</h2>
+                <div class="prose dark:prose-invert max-w-none">
+                    <p>When we see high functioning teams, whether that is a SEAL Team, an executive team, a sports team, or a project team, responsibility is shared. The agile alliance sums it up well with:</p>
 
-            <div class="space-y-8">
-                <div>
-                    <h3 class="text-xl font-bold mb-3 text-accent-1">Sit Down, you're rocking the BOAT</h3>
-                    <p class="text-gray-text dark:text-dark-gray-text">
-                        If you have supermajorities in B or T, then there is a good chance you have the wrong date and you should start over with the date close to the supermajority. That second scenario can pose real trouble when a salesperson sees it and says "So you are telling me there's a chance". Don't give them the opportunity, re-estimate.
-                    </p>
+                    <blockquote class="border-l-4 border-accent-1 pl-6 py-4 bg-gray-50 dark:bg-dark-card rounded-r-lg mb-4">
+                        <p class="text-gray-text dark:text-dark-gray-text mb-2">
+                            The notion of team entails shared accountability: good or bad, the outcomes should be attributed to the entire team rather than to any individual.
+                        </p>
+                        <footer class="text-sm mt-2">
+                            <cite class="text-gray-text dark:text-dark-gray-text not-italic">
+                                — Agile Alliance
+                            </cite>
+                        </footer>
+                    </blockquote>
+
+                    <p>So one cannot delegate inside of the team. We can allocate parts of the work to different members of the team but we all own its success.</p>
+                    <p>When there is delegation inside of a team it breaks the collective accountability and starts finger-pointing, and that is ... bad.</p>
+                    <p>On the flip side if you ask a team to do something without ownership then the team is not complete. Back to the Agile Alliance:</p>
+
+                    <blockquote class="border-l-4 border-accent-1 pl-6 py-4 bg-gray-50 dark:bg-dark-card rounded-r-lg mb-4">
+                        <p class="text-gray-text dark:text-dark-gray-text mb-2">
+                            The team is expected to possess all of the necessary competencies, whether technical (programming, designing, testing) or business (domain knowledge, <strong>decision making ability</strong>).
+                        </p>
+                        <footer class="text-sm mt-2">
+                            <cite class="text-gray-text dark:text-dark-gray-text not-italic">
+                                — Agile Alliance
+                            </cite>
+                        </footer>
+                    </blockquote>
+
+                    <p>If there is any huddle to the task, they cannot move forward, they have to stop and throw the issue over the fence to the tasker.</p>
                 </div>
+            </section>
 
-                <div>
-                    <h3 class="text-xl font-bold mb-3 text-accent-1">If you can't be early, you will never be on time</h3>
-                    <p class="text-gray-text dark:text-dark-gray-text">
-                        If your estimate does not allow any possibility of being early then your completion date is too early. If you can't be early even if all the stars align, then you're relying on all the stars to align for you to just be on time. This is not the situation on which you should rely. Think about your friends, the ones that are on time, they are always the ones that are early some of the time.
-                    </p>
+            <!-- Phrasing Section -->
+            <section class="mb-12" aria-labelledby="phrasing-heading">
+                <h2 id="phrasing-heading" class="text-2xl font-heading font-normal mb-6">Phrasing</h2>
+                <div class="prose dark:prose-invert max-w-none">
+                    <p>One can often hear the difference in the language used.</p>
+
+                    <h3 class="text-2xl font-heading font-normal dark:text-off-white mb-4">Delegating Phrases</h3>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center gap-2 text-gray-text dark:text-dark-gray-text">
+                            <svg class="w-5 h-5 text-accent-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            "We will fix it by Friday."
+                        </li>
+                        <li class="flex items-center gap-2 text-gray-text dark:text-dark-gray-text">
+                            <svg class="w-5 h-5 text-accent-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            "We don't understand the problem we need to dive deeper."
+                        </li>
+                        <li class="flex items-center gap-2 text-gray-text dark:text-dark-gray-text">
+                            <svg class="w-5 h-5 text-accent-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            "That's out of the scope of our mission."
+                        </li>
+                        <li class="flex items-center gap-2 text-gray-text dark:text-dark-gray-text">
+                            <svg class="w-5 h-5 text-accent-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            "We will figure that out."
+                        </li>
+                    </ul>
+
+                    <p>These are all delegating phrases. With each one, the <em>we</em> in each phrase is accepting responsibility for completion or discussing what their responsibility is.</p>
+
+                    <h3 class="text-2xl font-heading font-normal dark:text-off-white mb-4">Tasking Phrases</h3>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center gap-2 text-gray-text dark:text-dark-gray-text">
+                            <svg class="w-5 h-5 text-accent-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            "I will explore how to solve this?"
+                        </li>
+                        <li class="flex items-center gap-2 text-gray-text dark:text-dark-gray-text">
+                            <svg class="w-5 h-5 text-accent-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            "Let me play with that for a while."
+                        </li>
+                        <li class="flex items-center gap-2 text-gray-text dark:text-dark-gray-text">
+                            <svg class="w-5 h-5 text-accent-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            "I can test that out."
+                        </li>
+                        <li class="flex items-center gap-2 text-gray-text dark:text-dark-gray-text">
+                            <svg class="w-5 h-5 text-accent-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            "I will work on that today."
+                        </li>
+                        <li class="flex items-center gap-2 text-gray-text dark:text-dark-gray-text">
+                            <svg class="w-5 h-5 text-accent-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            "If you have that done today I can start on this tomorrow."
+                        </li>
+                    </ul>
+
+                    <p>These are all tasking phrases the <em>I</em> in each phrase is signaling, informing the team about their action, not committing, not accepting ownership but informing so the team can move forward as one.</p>
                 </div>
+            </section>
 
-                <div>
-                    <h3 class="text-xl font-bold mb-3 text-accent-1">Commitment dates are not coin flips</h3>
-                    <p class="text-gray-text dark:text-dark-gray-text">
-                        Whenever your estimate has only a 50% chance of B+O, it might seem like you have hit it perfectly. But deadlines are not the average date of delivery. People expect a much higher chance of success. In reality, anything less than 70% in the B+O category is problematic, and for some risk-averse clients I would even say 80% is on the edge.
-                    </p>
+            <!-- Finishing up Section -->
+            <section class="mb-12" aria-labelledby="finishing-heading">
+                <h2 id="finishing-heading" class="text-2xl font-heading font-normal mb-6">Finishing up</h2>
+                <div class="prose dark:prose-invert max-w-none">
+                    <p>In the end, this clarification between tasking work and delegating responsibility ensures our teams have things they can achieve and ensures they work together to achieve it. <strong>Delegate to teams; task within them.</strong></p>
                 </div>
+            </section>
 
-                <div>
-                    <h3 class="text-xl font-bold mb-3 text-accent-1">Countdown to Success</h3>
-                    <p class="text-gray-text dark:text-dark-gray-text">
-                        When the BOAT starts high with B and gets smaller and smaller, then we have a reasonable deadline date.
-                    </p>
+            <!-- One more thing Section -->
+            <section class="mb-12" aria-labelledby="one-more-heading">
+                <h2 id="one-more-heading" class="text-2xl font-heading font-normal mb-6">One more thing</h2>
+                <div class="prose dark:prose-invert max-w-none">
+                    <p>It is much easier to delegate problems, this is because it is a clear way to ensure you are giving ownership. Please solve this problem.</p>
+                    <p>One can view delegating as a process of defining the problem that needs to be solved, where tasking is the process of building the solution.</p>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <!-- Finishing up -->
-        <section class="mb-12">
-            <h2 class="text-2xl font-heading font-normal mb-6">Finishing up</h2>
-            <p class="text-gray-text dark:text-dark-gray-text">
-                This method can also be a great exercise for a team to do. Much like Planning Poker it can help to allow us all to see each others perspective. Estimatethisfor.me is a web app that can help facilitate such activity.
-            </p>
-        </section>
+            <!-- Attribution -->
+            <footer class="text-sm text-gray-text dark:text-dark-gray-text">
+                <p>Originally published on <a href="https://e2thex.org/forkthesystem/taskvsdelegate/" class="text-accent-1 hover:text-accent-2" target="_blank" rel="noopener noreferrer">Fork The System</a></p>
+                <p>©Erik Summerfield 2022</p>
+            </footer>
+        </article>
     </main>
+
     <footer class="bg-white dark:bg-dark-card border-t border-gray-200 dark:border-gray-700" role="contentinfo">
     <div class="max-w-7xl mx-auto px-6 py-8">
         <div class="flex flex-col md:flex-row justify-between items-center">
@@ -493,4 +512,5 @@ class="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 focus:z
     </div>
 </footer>
 <script src="/assets/js/nav-controls.js"></script>
+</body>
 </html> 

@@ -122,6 +122,37 @@ class="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 focus:z
                          </ul>
                      </div>
                  </li>
+                 <li class="relative group">
+                     <button 
+                         class="flex items-center gap-1 text-gray-text dark:text-dark-gray-text hover:text-accent-1 dark:hover:text-accent-1 transition-colors"
+                         aria-expanded="false"
+                         aria-haspopup="true"
+                         
+                     >
+                         Briefs
+                         <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                         </svg>
+                     </button>
+                     <div class="absolute left-0 mt-2 w-48 rounded-lg bg-white dark:bg-dark-card border border-gray-200 dark:border-gray-700 shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all">
+                         <ul class="py-2">
+                             <li>
+                                 <a href="/briefs/TaskVsDelegate" 
+                                    class="block px-4 py-2 text-gray-text dark:text-dark-gray-text hover:text-accent-1 dark:hover:text-accent-1 hover:bg-gray-50 dark:hover:bg-dark-hover transition-colors"
+                                    >
+                                    Task vs Delegate
+                                 </a>
+                             </li>
+                             <li>
+                                 <a href="/briefs/WhenToAppealToAuthority" 
+                                    class="block px-4 py-2 text-gray-text dark:text-dark-gray-text hover:text-accent-1 dark:hover:text-accent-1 hover:bg-gray-50 dark:hover:bg-dark-hover transition-colors"
+                                    >
+                                    When to Appeal to Authority
+                                 </a>
+                             </li>
+                         </ul>
+                     </div>
+                 </li>
              </div>
              <div class="flex items-center gap-4 ml-6">
                  <li>
@@ -218,6 +249,31 @@ class="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 focus:z
                     <li>
                         <a href="/services/CoachingHabitCourse" class="block px-4 py-2 text-gray-text dark:text-dark-gray-text hover:text-accent-1 dark:hover:text-accent-1">
                             Coaching Habit Course
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            
+            <!-- Briefs Dropdown -->
+            <li>
+                <button 
+                    onclick="toggleMobileSubmenu('mobileBriefsSubmenu')"
+                    class="w-full flex items-center justify-between px-4 py-2 text-gray-text dark:text-dark-gray-text hover:text-accent-1 dark:hover:text-accent-1"
+                >
+                    Briefs
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                    </svg>
+                </button>
+                <ul id="mobileBriefsSubmenu" class="hidden mobile-submenu pl-8 py-2 space-y-2">
+                    <li>
+                        <a href="/briefs/TaskVsDelegate" class="block px-4 py-2 text-gray-text dark:text-dark-gray-text hover:text-accent-1 dark:hover:text-accent-1">
+                            Task vs Delegate
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/briefs/WhenToAppealToAuthority" class="block px-4 py-2 text-gray-text dark:text-dark-gray-text hover:text-accent-1 dark:hover:text-accent-1">
+                            When to Appeal to Authority
                         </a>
                     </li>
                 </ul>
