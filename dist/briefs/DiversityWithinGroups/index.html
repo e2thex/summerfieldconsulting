@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    
+    
+    
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Theme initialization - must be first script -->
+<script src="/assets/js/theme-init.js"></script>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SKRVQJJYLH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-SKRVQJJYLH');
+</script>
+
+<!-- Page specific meta tags - to be provided by the page -->
+
+
+<!-- Common styles -->
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&family=Inter:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+<link href="/assets/css/styles.css" rel="stylesheet">
+<link rel="icon" type="image/png" href="/assets/media/logo.png"> 
+    
+    <!-- MathJax Configuration -->
+    <script type="text/javascript">
+        window.MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']],
+                processEscapes: true,
+                processEnvironments: true
+            },
+            options: {
+                skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+            }
+        };
+    </script>
+    <script type="text/javascript" id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+</head>
+<body class="bg-off-white dark:bg-dark-bg text-off-black dark:text-off-white font-body transition-colors duration-200">
+    <a href="#main-content" 
+class="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 focus:z-50 focus:px-4 focus:py-2 focus:bg-accent-1 focus:text-white">
+ Skip to main content
+</a>
+<div id="theme-announcement" role="status" class="sr-only" aria-live="polite"></div>
+
+<header class="py-8 px-6 border-b border-gray-200 dark:border-gray-700" role="banner">
+ <div class="flex items-center justify-between max-w-4xl mx-auto">
+     <div class="flex items-center gap-4">
+         <a href="/" class="flex items-center gap-4">
+             <img src="/assets/media/logo.png" alt="Summerfield Consulting Logo" class="h-12 w-auto block dark:hidden">
+             <img src="/assets/media/logo-dark.png" alt="Summerfield Consulting Logo" class="h-12 w-auto hidden dark:block">
+             <span class="text-4xl font-heading font-normal">Summerfield Consulting</span>
+         </a>
+     </div>
+     <nav class="hidden md:block" role="navigation" aria-label="Main navigation">
+         <ul class="flex items-center justify-between">
+             <div class="flex items-center gap-6">
+                 <li class="relative group">
+                     <button 
+                         class="flex items-center gap-1 text-gray-text dark:text-dark-gray-text hover:text-accent-1 dark:hover:text-accent-1 transition-colors"
+                         aria-expanded="false"
+                         aria-haspopup="true"
+                         
+                     >
+                         Tools
+                         <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                         </svg>
+                     </button>
+                     <div class="absolute left-0 mt-2 w-48 rounded-lg bg-white dark:bg-dark-card border border-gray-200 dark:border-gray-700 shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all">
+                         <ul class="py-2">
+                             <li>
+                                 <a href="/tools/ScrumRACI" 
+                                    class="block px-4 py-2 text-gray-text dark:text-dark-gray-text hover:text-accent-1 dark:hover:text-accent-1 hover:bg-gray-50 dark:hover:bg-dark-hover transition-colors"
+                                    >
+                                     Scrum RACI
+                                 </a>
+                             </li>
+                             <li>
+                                 <a href="/tools/BOATEstimate" 
+                                    class="block px-4 py-2 text-gray-text dark:text-dark-gray-text hover:text-accent-1 dark:hover:text-accent-1 hover:bg-gray-50 dark:hover:bg-dark-hover transition-colors"
+                                    >
+                                     BOAT Estimate
+                                 </a>
+                             </li>
+                             <li>
+                                 <a href="/tools/RateThis" 
+                                    class="block px-4 py-2 text-gray-text dark:text-dark-gray-text hover:text-accent-1 dark:hover:text-accent-1 hover:bg-gray-50 dark:hover:bg-dark-hover transition-colors"
+                                    >
+                                     Rate This For Me
+                                 </a>
+                             </li>
+                         </ul>
+                     </div>
+                 </li>
+                 <li class="relative group">
+                     <button 
+                         class="flex items-center gap-1 text-gray-text dark:text-dark-gray-text hover:text-accent-1 dark:hover:text-accent-1 transition-colors"
+                         aria-expanded="false"
+                         aria-haspopup="true"
+                         
+                     >
+                         Services
+                         <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                         </svg>
+                     </button>
+                     <div class="absolute left-0 mt-2 w-48 rounded-lg bg-white dark:bg-dark-card border border-gray-200 dark:border-gray-700 shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all">
+                         <ul class="py-2">
+                             <li>
+                                 <a href="/services/AgileInAction" 
+                                    class="block px-4 py-2 text-gray-text dark:text-dark-gray-text hover:text-accent-1 dark:hover:text-accent-1 hover:bg-gray-50 dark:hover:bg-dark-hover transition-colors"
+                                    >
+                                     Agile in Action
+                                 </a>
+                             </li>
+                             <li>
+                                 <a href="/services/AdHocConsulting" 
+                                    class="block px-4 py-2 text-gray-text dark:text-dark-gray-text hover:text-accent-1 dark:hover:text-accent-1 hover:bg-gray-50 dark:hover:bg-dark-hover transition-colors"
+                                    >
+                                     Ad-hoc Consulting
+                                 </a>
+                             </li>
+                             <li>
+                                 <a href="/services/CoachingHabitCourse" 
+                                    class="block px-4 py-2 text-gray-text dark:text-dark-gray-text hover:text-accent-1 dark:hover:text-accent-1 hover:bg-gray-50 dark:hover:bg-dark-hover transition-colors"
+                                    >
+                                     Coaching Habit Course
+                                 </a>
+                             </li>
+                         </ul>
+                     </div>
+                 </li>
+                 <li class="relative group">
+                     <button 
+                         class="flex items-center gap-1 text-accent-1 hover:text-accent-1 dark:hover:text-accent-1 transition-colors"
+                         aria-expanded="false"
+                         aria-haspopup="true"
+                         aria-current="true"
+                     >
+                         Briefs
+                         <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                         </svg>
+                     </button>
+                     <div class="absolute left-0 mt-2 w-48 rounded-lg bg-white dark:bg-dark-card border border-gray-200 dark:border-gray-700 shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all">
+                         <ul class="py-2">
+                             <li>
+                                 <a href="/briefs/TaskVsDelegate" 
+                                    class="block px-4 py-2 text-gray-text dark:text-dark-gray-text hover:text-accent-1 dark:hover:text-accent-1 hover:bg-gray-50 dark:hover:bg-dark-hover transition-colors"
+                                    >
+                                    Task vs Delegate
+                                 </a>
+                             </li>
+                             <li>
+                                 <a href="/briefs/WhenToAppealToAuthority" 
+                                    class="block px-4 py-2 text-gray-text dark:text-dark-gray-text hover:text-accent-1 dark:hover:text-accent-1 hover:bg-gray-50 dark:hover:bg-dark-hover transition-colors"
+                                    >
+                                    When to Appeal to Authority
+                                 </a>
+                             </li>
+                             <li>
+                                 <a href="/briefs/TheseusTeams" 
+                                    class="block px-4 py-2 text-gray-text dark:text-dark-gray-text hover:text-accent-1 dark:hover:text-accent-1 hover:bg-gray-50 dark:hover:bg-dark-hover transition-colors"
+                                    >
+                                    Theseus Teams
+                                 </a>
+                             </li>
+                             <li>
+                                 <a href="/briefs/DefineYourUniverse" 
+                                    class="block px-4 py-2 text-gray-text dark:text-dark-gray-text hover:text-accent-1 dark:hover:text-accent-1 hover:bg-gray-50 dark:hover:bg-dark-hover transition-colors"
+                                    >
+                                    Define Your Universe
+                                 </a>
+                             </li>
+                             <li>
+                                 <a href="/briefs/DontHaveToDoAnything" 
+                                    class="block px-4 py-2 text-gray-text dark:text-dark-gray-text hover:text-accent-1 dark:hover:text-accent-1 hover:bg-gray-50 dark:hover:bg-dark-hover transition-colors"
+                                    >
+                                    The Passive Voice of Responsibility
+                                 </a>
+                             </li>
+                             <li>
+                                 <a href="/briefs/DiversityWithinGroups" 
+                                    class="block px-4 py-2 text-accent-1 hover:text-accent-1 dark:hover:text-accent-1 hover:bg-gray-50 dark:hover:bg-dark-hover transition-colors"
+                                    aria-current="page">
+                                    Diversity Within Groups
+                                 </a>
+                             </li>
+                         </ul>
+                     </div>
+                 </li>
+             </div>
+             <div class="flex items-center gap-4 ml-6">
+                 <li>
+                     <a href="/contact" 
+                        class="inline-flex items-center px-4 py-2 bg-accent-1 text-white rounded hover:bg-accent-2 transition-colors"
+                        aria-label="Contact us">
+                         Contact
+                     </a>
+                 </li>
+                 <li>
+                     <button 
+                         onclick="toggleTheme()"
+                         class="p-2 text-gray-text dark:text-dark-gray-text hover:text-accent-1 dark:hover:text-accent-1"
+                         aria-label="Toggle theme"
+                     >
+                         <svg class="w-6 h-6 block dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
+                         </svg>
+                         <svg class="w-6 h-6 hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/>
+                         </svg>
+                     </button>
+                 </li>
+             </div>
+         </ul>
+     </nav>
+     <!-- Mobile Menu Button -->
+     <button 
+         class="md:hidden p-2 hover:bg-gray-100 dark:hover:bg-dark-hover rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-accent-1"
+         aria-label="Toggle mobile menu"
+         onclick="toggleMobileMenu()"
+     >
+         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+         </svg>
+     </button>
+ </div>
+ <!-- Mobile Menu -->
+ <div id="mobileMenu" class="hidden md:hidden">
+    <nav class="mt-4" role="navigation" aria-label="Mobile navigation">
+        <ul class="space-y-2">
+            <!-- Tools Dropdown -->
+            <li>
+                <button 
+                    onclick="toggleMobileSubmenu('mobileToolsSubmenu')"
+                    class="w-full flex items-center justify-between px-4 py-2 text-gray-text dark:text-dark-gray-text hover:text-accent-1 dark:hover:text-accent-1"
+                >
+                    Tools
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                    </svg>
+                </button>
+                <ul id="mobileToolsSubmenu" class="hidden mobile-submenu pl-8 py-2 space-y-2">
+                    <li>
+                        <a href="/tools/ScrumRACI" class="block px-4 py-2 text-gray-text dark:text-dark-gray-text hover:text-accent-1 dark:hover:text-accent-1">
+                            Scrum RACI
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/tools/BOATEstimate" class="block px-4 py-2 text-gray-text dark:text-dark-gray-text hover:text-accent-1 dark:hover:text-accent-1">
+                            BOAT Estimate
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/tools/RateThis" class="block px-4 py-2 text-gray-text dark:text-dark-gray-text hover:text-accent-1 dark:hover:text-accent-1">
+                            Rate This For Me
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            
+            <!-- Services Dropdown -->
+            <li>
+                <button 
+                    onclick="toggleMobileSubmenu('mobileServicesSubmenu')"
+                    class="w-full flex items-center justify-between px-4 py-2 text-gray-text dark:text-dark-gray-text hover:text-accent-1 dark:hover:text-accent-1"
+                >
+                    Services
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                    </svg>
+                </button>
+                <ul id="mobileServicesSubmenu" class="hidden mobile-submenu pl-8 py-2 space-y-2">
+                    <li>
+                        <a href="/services/AgileInAction" class="block px-4 py-2 text-gray-text dark:text-dark-gray-text hover:text-accent-1 dark:hover:text-accent-1">
+                            Agile in Action
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/services/AdHocConsulting" class="block px-4 py-2 text-gray-text dark:text-dark-gray-text hover:text-accent-1 dark:hover:text-accent-1">
+                            Ad-hoc Consulting
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/services/CoachingHabitCourse" class="block px-4 py-2 text-gray-text dark:text-dark-gray-text hover:text-accent-1 dark:hover:text-accent-1">
+                            Coaching Habit Course
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            
+            <!-- Briefs Dropdown -->
+            <li>
+                <button 
+                    onclick="toggleMobileSubmenu('mobileBriefsSubmenu')"
+                    class="w-full flex items-center justify-between px-4 py-2 text-gray-text dark:text-dark-gray-text hover:text-accent-1 dark:hover:text-accent-1"
+                >
+                    Briefs
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                    </svg>
+                </button>
+                <ul id="mobileBriefsSubmenu" class="hidden mobile-submenu pl-8 py-2 space-y-2">
+                    <li>
+                        <a href="/briefs/TaskVsDelegate" class="block px-4 py-2 text-gray-text dark:text-dark-gray-text hover:text-accent-1 dark:hover:text-accent-1">
+                            Task vs Delegate
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/briefs/WhenToAppealToAuthority" class="block px-4 py-2 text-gray-text dark:text-dark-gray-text hover:text-accent-1 dark:hover:text-accent-1">
+                            When to Appeal to Authority
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/briefs/TheseusTeams" class="block px-4 py-2 text-gray-text dark:text-dark-gray-text hover:text-accent-1 dark:hover:text-accent-1">
+                            Theseus Teams
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/briefs/DefineYourUniverse" class="block px-4 py-2 text-gray-text dark:text-dark-gray-text hover:text-accent-1 dark:hover:text-accent-1">
+                            Define Your Universe
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/briefs/DontHaveToDoAnything" class="block px-4 py-2 text-gray-text dark:text-dark-gray-text hover:text-accent-1 dark:hover:text-accent-1">
+                            The Passive Voice of Responsibility
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/briefs/DiversityWithinGroups" class="block px-4 py-2 text-gray-text dark:text-dark-gray-text hover:text-accent-1 dark:hover:text-accent-1">
+                            Diversity Within Groups
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            
+            <!-- Contact Link -->
+            <li>
+                <a href="/contact" 
+                   class="block px-4 py-2 text-accent-1 hover:text-accent-2">
+                    Contact
+                </a>
+            </li>
+        </ul>
+    </nav>
+ </div>
+</header>
+
+    <main id="main-content" class="max-w-4xl mx-auto p-6" role="main">
+        <article class="brief-content">
+            <!-- Hero Section -->
+            <header class="mb-12" aria-labelledby="brief-title">
+                <h1 id="brief-title" class="text-4xl font-heading font-normal mb-4">Diversity Within Groups Is Always Larger Than Between Them</h1>
+                <p class="text-xl font-semibold text-accent-1 mb-4">TLDR; Individual variation matters more than group averages.</p>
+                <div class="prose dark:prose-invert max-w-none">
+                    <p>While grouping people and measuring differences between groups can help us evaluate items at the macro level, it's crucial to remember that the variation within groups is almost always larger than the differences between them. This insight has profound implications for leadership and decision-making.</p>
+                </div>
+            </header>
+
+            <!-- Examples Section -->
+            <section class="mb-12" aria-labelledby="examples-heading">
+                <h2 id="examples-heading" class="text-2xl font-heading font-normal mb-6">Real-World Examples</h2>
+                <div class="prose dark:prose-invert max-w-none">
+                    <div class="grid md:grid-cols-2 gap-4 mb-4">
+                        <blockquote class="border-l-4 border-accent-1 pl-6 py-4 bg-gray-50 dark:bg-dark-card rounded-r-lg">
+                            <p class="text-gray-text dark:text-dark-gray-text mb-2">In professional tennis, the difference between the best and worst ranked men's players is far larger than the average difference between men's and women's players.</p>
+                            <footer class="text-sm mt-2">
+                                <cite class="text-gray-text dark:text-dark-gray-text not-italic">Sports Example</cite>
+                            </footer>
+                        </blockquote>
+
+                        <blockquote class="border-l-4 border-accent-1 pl-6 py-4 bg-gray-50 dark:bg-dark-card rounded-r-lg">
+                            <p class="text-gray-text dark:text-dark-gray-text mb-2">When comparing urban and rural residents' music preferences, both groups contain individuals who deeply love and strongly dislike country music.</p>
+                            <footer class="text-sm mt-2">
+                                <cite class="text-gray-text dark:text-dark-gray-text not-italic">Cultural Example</cite>
+                            </footer>
+                        </blockquote>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Applications Section -->
+            <section class="mb-12" aria-labelledby="applications-heading">
+                <h2 id="applications-heading" class="text-2xl font-heading font-normal mb-6">Why This Matters</h2>
+                <div class="prose dark:prose-invert max-w-none">
+                    <p>Understanding this principle helps us avoid three common pitfalls:</p>
+                    
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center gap-2 text-gray-text dark:text-dark-gray-text">
+                            <svg class="w-5 h-5 text-accent-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            Assuming group averages apply to individuals
+                        </li>
+                        <li class="flex items-center gap-2 text-gray-text dark:text-dark-gray-text">
+                            <svg class="w-5 h-5 text-accent-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            Using demographic shortcuts instead of getting to know people
+                        </li>
+                        <li class="flex items-center gap-2 text-gray-text dark:text-dark-gray-text">
+                            <svg class="w-5 h-5 text-accent-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            Making decisions based on group stereotypes rather than individual characteristics
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Practical Implementation Section -->
+            <section class="mb-12" aria-labelledby="implementation-heading">
+                <h2 id="implementation-heading" class="text-2xl font-heading font-normal mb-6">Putting This Into Practice</h2>
+                <div class="prose dark:prose-invert max-w-none">
+                    <p>When working with individuals:</p>
+                    
+                    <div class="grid md:grid-cols-2 gap-4 mb-4">
+                        <blockquote class="border-l-4 border-accent-1 pl-6 py-4 bg-gray-50 dark:bg-dark-card rounded-r-lg">
+                            <p class="text-gray-text dark:text-dark-gray-text mb-2">Take time to understand each person's unique characteristics, motivations, and capabilities.</p>
+                            <footer class="text-sm mt-2">
+                                <cite class="text-gray-text dark:text-dark-gray-text not-italic">Individual Focus</cite>
+                            </footer>
+                        </blockquote>
+
+                        <blockquote class="border-l-4 border-accent-1 pl-6 py-4 bg-gray-50 dark:bg-dark-card rounded-r-lg">
+                            <p class="text-gray-text dark:text-dark-gray-text mb-2">Use group-level data for high-level planning, but always adapt to individual circumstances in implementation.</p>
+                            <footer class="text-sm mt-2">
+                                <cite class="text-gray-text dark:text-dark-gray-text not-italic">Practical Application</cite>
+                            </footer>
+                        </blockquote>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Conclusion Section -->
+            <section class="mb-12" aria-labelledby="conclusion-heading">
+                <h2 id="conclusion-heading" class="text-2xl font-heading font-normal mb-6">Conclusion</h2>
+                <div class="prose dark:prose-invert max-w-none">
+                    <p>While group-level analysis has its place in understanding broad patterns, individual variation is almost always more significant. There are no shortcuts to understanding individuals; you must invest the time to know each person as they are, not as their group statistics might suggest.</p>
+                </div>
+            </section>
+
+            <!-- Mathematical Proof Aside -->
+            <aside class="mb-12 border-l-4 border-accent-1 bg-gray-50 dark:bg-dark-card rounded-r-lg p-6">
+                <h2 class="text-2xl font-heading font-normal mb-6">Mathematical Proof</h2>
+                <div class="prose dark:prose-invert max-w-none">
+                    <p class="mb-4">For those interested in the mathematical foundation of this principle:</p>
+                    
+                    <p class="mb-4">If you split a population into two groups that have a standard distribution of an outcome/trait and there is any overlap in that outcome/trait, then the range of at least one group will be larger than the difference between the two groups' means.</p>
+                    
+                    <div class="bg-white dark:bg-dark-bg p-4 rounded-lg mb-4">
+                        <p class="mb-2">Let:</p>
+                        <ul class="list-none space-y-2">
+                            <li>\(d\) = difference between the means of the two groups</li>
+                            <li>\(d_a\) = range of group A</li>
+                            <li>\(d_b\) = range of group B (the larger range)</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-white dark:bg-dark-bg p-4 rounded-lg mb-4">
+                        <p class="font-semibold mb-2">Proof:</p>
+                        <p>Because the groups overlap:</p>
+                        <p>\[d < \frac{1}{2}d_a + \frac{1}{2}d_b\]</p>
+                        <p>Since \(d_b\) has the larger range, \(d_b \geq d_a\), therefore:</p>
+                        <p>\[d < \frac{1}{2}d_a + \frac{1}{2}d_b \leq \frac{1}{2}d_b + \frac{1}{2}d_b = d_b\]</p>
+                        <p>Thus: \[d < d_b\]</p>
+                    </div>
+
+                    <p class="text-sm text-gray-text dark:text-dark-gray-text">This mathematical proof demonstrates why, in overlapping distributions, within-group variation (represented by the range) must exceed between-group differences (represented by the difference in means).</p>
+                </div>
+            </aside>
+
+            <!-- Attribution -->
+            <footer class="text-sm text-gray-text dark:text-dark-gray-text">
+                <p>Originally inspired by statistical analysis of group differences</p>
+                <p>©Erik Summerfield 2024</p>
+            </footer>
+        </article>
+    </main>
+
+    <footer class="bg-white dark:bg-dark-card border-t border-gray-200 dark:border-gray-700" role="contentinfo">
+    <div class="max-w-7xl mx-auto px-6 py-8">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+            <p class="text-sm text-gray-text dark:text-dark-gray-text mb-4 md:mb-0">
+                © 2025 Summerfield Consulting. All rights reserved.
+            </p>
+            <a href="https://www.linkedin.com/in/e2thex/" 
+               class="text-gray-text dark:text-dark-gray-text hover:text-accent-1 dark:hover:text-accent-1 transition-colors"
+               target="_blank"
+               rel="noopener noreferrer"
+               aria-label="Visit Erik Summerfield's LinkedIn profile">
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                </svg>
+            </a>
+        </div>
+    </div>
+</footer>
+<script src="/assets/js/nav-controls.js"></script>
+</body>
+</html> 
