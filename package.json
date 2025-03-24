@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Summerfield Consulting website",
   "scripts": {
-    "clean": "rm -rf dist",
+    "clean": "rm -rf dist/*",
     "build:pages": "eleventy",
     "build:css": "tailwindcss -i ./src/input.css -o ./dist/assets/css/styles.css --minify",
     "build": "npm run clean && npm run build:css && npm run build:pages",
