@@ -5,11 +5,13 @@
   "scripts": {
     "clean": "rm -rf dist/*",
     "build:pages": "eleventy",
-    "build:css": "tailwindcss -i ./src/input.css -o ./dist/assets/css/styles.css --minify",
+    "build:css": "tailwindcss -i ./src/assets/css/tailwind.css -o ./dist/assets/css/styles.css --minify",
     "build": "npm run clean && npm run build:css && npm run build:pages",
-    "serve": "npm run build:css && eleventy --serve",
     "serve2": "http-server ./dist -p 3000 -c-1",
-    "watch:css": "tailwindcss -i ./src/assets/css/tailwind.css -o ./dist/assets/css/styles.css --watch"
+    "watch:css": "tailwindcss -i ./src/assets/css/tailwind.css -o ./dist/assets/css/styles.css --watch",
+    "watch:eleventy": "eleventy --serve",
+    "serve": "npm-run-all --parallel watch:*"
+
   },
   "dependencies": {
     "@11ty/eleventy": "^2.0.1",
