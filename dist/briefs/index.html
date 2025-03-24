@@ -26,24 +26,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&family=Inter:wght@200;300;400;500;600&display=swap" rel="stylesheet">
 <link href="/assets/css/styles.css" rel="stylesheet">
 <link rel="icon" type="image/png" href="/assets/media/logo.png"> 
-    
-    <!-- MathJax Configuration -->
-    <script type="text/javascript">
-        window.MathJax = {
-            tex: {
-                inlineMath: [['$', '$'], ['\\(', '\\)']],
-                displayMath: [['$$', '$$'], ['\\[', '\\]']],
-                processEscapes: true,
-                processEnvironments: true
-            },
-            options: {
-                skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
-            }
-        };
-    </script>
-    <script type="text/javascript" id="MathJax-script" async
-        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-    </script>
 </head>
 <body class="bg-off-white dark:bg-dark-bg text-off-black dark:text-off-white font-body transition-colors duration-200">
     <a href="#main-content" 
@@ -156,8 +138,8 @@ class="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 focus:z
                          <ul class="py-2">
                              <li>
                                  <a href="/briefs" 
-                                    class="block px-4 py-2 text-gray-text dark:text-dark-gray-text hover:text-accent-1 dark:hover:text-accent-1 hover:bg-gray-50 dark:hover:bg-dark-hover transition-colors"
-                                    >
+                                    class="block px-4 py-2 text-accent-1 hover:text-accent-1 dark:hover:text-accent-1 hover:bg-gray-50 dark:hover:bg-dark-hover transition-colors"
+                                    aria-current="page">
                                     All Briefs
                                  </a>
                              </li>
@@ -198,8 +180,8 @@ class="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 focus:z
                              </li>
                              <li>
                                  <a href="/briefs/DiversityWithinGroups" 
-                                    class="block px-4 py-2 text-accent-1 hover:text-accent-1 dark:hover:text-accent-1 hover:bg-gray-50 dark:hover:bg-dark-hover transition-colors"
-                                    aria-current="page">
+                                    class="block px-4 py-2 text-gray-text dark:text-dark-gray-text hover:text-accent-1 dark:hover:text-accent-1 hover:bg-gray-50 dark:hover:bg-dark-hover transition-colors"
+                                    >
                                     Diversity Within Groups
                                  </a>
                              </li>
@@ -369,100 +351,170 @@ class="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 focus:z
  </div>
 </header>
 
-    <main id="main-content" class="max-w-4xl mx-auto p-6" role="main">
-        <article class="brief-content">
-            <!-- Hero Section -->
-            <header class="mb-12" aria-labelledby="brief-title">
-                <h1 id="brief-title" class="text-4xl font-heading font-normal mb-4">Diversity Within Groups Is Always Larger Than Between Them</h1>
-                <p class="text-xl font-semibold text-accent-1 mb-4">TLDR; Individual variation matters more than group averages.</p>
-                <div class="prose dark:prose-invert max-w-none">
-                    <p>While grouping people and measuring differences between groups can help us evaluate items at the macro level, it's crucial to remember that the variation within groups is almost always larger than the differences between them. This insight has profound implications for leadership and decision-making.</p>
-                </div>
-            </header>
+    <main id="main-content" class="max-w-6xl mx-auto p-6" role="main">
+        <header class="mb-12" aria-labelledby="page-title">
+            <h1 id="page-title" class="text-4xl font-heading font-normal mb-4">Leadership Briefs</h1>
+            <p class="text-xl text-gray-text dark:text-dark-gray-text">Practical insights for modern leaders</p>
+        </header>
 
-            <!-- Examples Section -->
-            <section class="mb-12" aria-labelledby="examples-heading">
-                <h2 id="examples-heading" class="text-2xl font-heading font-normal mb-6">Real-World Examples</h2>
-                <div class="prose dark:prose-invert max-w-none">
-                    <div class="grid md:grid-cols-2 gap-4 mb-4">
-                        <blockquote class="border-l-4 border-accent-1 pl-6 py-4 bg-gray-50 dark:bg-dark-card rounded-r-lg">
-                            <p class="text-gray-text dark:text-dark-gray-text mb-2">In professional tennis, the difference between the best and worst ranked men's players is far larger than the average difference between men's and women's players.</p>
-                            <footer class="text-sm mt-2">
-                                <cite class="text-gray-text dark:text-dark-gray-text not-italic">Sports Example</cite>
-                            </footer>
-                        </blockquote>
+        <!-- Faceted Search -->
+        <div class="grid md:grid-cols-4 gap-8 mb-12">
+            <!-- Filters Sidebar -->
+            <aside class="md:col-span-1">
+                <div class="sticky top-4">
+                    <h2 class="text-2xl font-heading font-normal mb-6">Filters</h2>
+                    
+                    <!-- Topic Filter -->
+                    <div class="mb-6">
+                        <h3 class="font-semibold mb-3">Topic</h3>
+                        <ul class="space-y-2">
+                            <li>
+                                <label class="flex items-center gap-2">
+                                    <input type="checkbox" class="form-checkbox text-accent-1" data-filter="topic" value="communication">
+                                    <span>Communication</span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="flex items-center gap-2">
+                                    <input type="checkbox" class="form-checkbox text-accent-1" data-filter="topic" value="team-dynamics">
+                                    <span>Team Dynamics</span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="flex items-center gap-2">
+                                    <input type="checkbox" class="form-checkbox text-accent-1" data-filter="topic" value="decision-making">
+                                    <span>Decision Making</span>
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
 
-                        <blockquote class="border-l-4 border-accent-1 pl-6 py-4 bg-gray-50 dark:bg-dark-card rounded-r-lg">
-                            <p class="text-gray-text dark:text-dark-gray-text mb-2">When comparing urban and rural residents' music preferences, both groups contain individuals who deeply love and strongly dislike country music.</p>
-                            <footer class="text-sm mt-2">
-                                <cite class="text-gray-text dark:text-dark-gray-text not-italic">Cultural Example</cite>
-                            </footer>
-                        </blockquote>
+                    <!-- Audience Filter -->
+                    <div class="mb-6">
+                        <h3 class="font-semibold mb-3">Audience</h3>
+                        <ul class="space-y-2">
+                            <li>
+                                <label class="flex items-center gap-2">
+                                    <input type="checkbox" class="form-checkbox text-accent-1" data-filter="audience" value="individual">
+                                    <span>Individual</span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="flex items-center gap-2">
+                                    <input type="checkbox" class="form-checkbox text-accent-1" data-filter="audience" value="team">
+                                    <span>Team</span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="flex items-center gap-2">
+                                    <input type="checkbox" class="form-checkbox text-accent-1" data-filter="audience" value="leadership">
+                                    <span>Leadership</span>
+                                </label>
+                            </li>
+                        </ul>
                     </div>
                 </div>
-            </section>
+            </aside>
 
-            <!-- Applications Section -->
-            <section class="mb-12" aria-labelledby="applications-heading">
-                <h2 id="applications-heading" class="text-2xl font-heading font-normal mb-6">Why This Matters</h2>
-                <div class="prose dark:prose-invert max-w-none">
-                    <p>Understanding this principle helps us avoid three common pitfalls:</p>
-                    
-                    <ul class="space-y-2 mb-6">
-                        <li class="flex items-center gap-2 text-gray-text dark:text-dark-gray-text">
-                            <svg class="w-5 h-5 text-accent-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                            </svg>
-                            Assuming group averages apply to individuals
-                        </li>
-                        <li class="flex items-center gap-2 text-gray-text dark:text-dark-gray-text">
-                            <svg class="w-5 h-5 text-accent-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                            </svg>
-                            Using demographic shortcuts instead of getting to know people
-                        </li>
-                        <li class="flex items-center gap-2 text-gray-text dark:text-dark-gray-text">
-                            <svg class="w-5 h-5 text-accent-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                            </svg>
-                            Making decisions based on group stereotypes rather than individual characteristics
-                        </li>
-                    </ul>
+            <!-- Briefs Grid -->
+            <div class="md:col-span-3">
+                <div class="space-y-6" id="briefs-grid">
+                    <!-- Task vs Delegate -->
+                    <article class="brief-card" 
+                             data-topics="decision-making team-dynamics" 
+                             data-audience="team">
+                        <a href="/briefs/TaskVsDelegate" 
+                           class="block p-6 bg-white dark:bg-dark-card rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                            <h3 class="text-xl font-heading font-normal mb-2">Task vs Delegate</h3>
+                            <p class="text-gray-text dark:text-dark-gray-text mb-4">Understanding when to handle a task yourself versus when to delegate it to your team.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-2 py-1 text-sm bg-gray-100 dark:bg-dark-bg rounded">Decision Making</span>
+                                <span class="px-2 py-1 text-sm bg-gray-100 dark:bg-dark-bg rounded">Team Dynamics</span>
+                                <span class="px-2 py-1 text-sm bg-gray-100 dark:bg-dark-bg rounded">Team</span>
+                            </div>
+                        </a>
+                    </article>
+
+                    <!-- When to Appeal to Authority -->
+                    <article class="brief-card" 
+                             data-topics="communication decision-making" 
+                             data-audience="team">
+                        <a href="/briefs/WhenToAppealToAuthority" 
+                           class="block p-6 bg-gray-50 dark:bg-dark-hover rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                            <h3 class="text-xl font-heading font-normal mb-2">When to Appeal to Authority</h3>
+                            <p class="text-gray-text dark:text-dark-gray-text mb-4">Learn when and how to effectively use authority in your arguments and decision-making.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-2 py-1 text-sm bg-white dark:bg-dark-card rounded">Communication</span>
+                                <span class="px-2 py-1 text-sm bg-white dark:bg-dark-card rounded">Decision Making</span>
+                                <span class="px-2 py-1 text-sm bg-white dark:bg-dark-card rounded">Team</span>
+                            </div>
+                        </a>
+                    </article>
+
+                    <!-- Theseus Teams -->
+                    <article class="brief-card" 
+                             data-topics="team-dynamics" 
+                             data-audience="leadership">
+                        <a href="/briefs/TheseusTeams" 
+                           class="block p-6 bg-white dark:bg-dark-card rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                            <h3 class="text-xl font-heading font-normal mb-2">Theseus Teams</h3>
+                            <p class="text-gray-text dark:text-dark-gray-text mb-4">Understanding team identity and continuity through gradual member changes.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-2 py-1 text-sm bg-gray-100 dark:bg-dark-bg rounded">Team Dynamics</span>
+                                <span class="px-2 py-1 text-sm bg-gray-100 dark:bg-dark-bg rounded">Leadership</span>
+                            </div>
+                        </a>
+                    </article>
+
+                    <!-- Define Your Universe -->
+                    <article class="brief-card" 
+                             data-topics="communication decision-making" 
+                             data-audience="individual team leadership">
+                        <a href="/briefs/DefineYourUniverse" 
+                           class="block p-6 bg-gray-50 dark:bg-dark-hover rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                            <h3 class="text-xl font-heading font-normal mb-2">Define Your Universe</h3>
+                            <p class="text-gray-text dark:text-dark-gray-text mb-4">How to avoid false dichotomies and improve communication by defining the full scope of possibilities.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-2 py-1 text-sm bg-white dark:bg-dark-card rounded">Communication</span>
+                                <span class="px-2 py-1 text-sm bg-white dark:bg-dark-card rounded">Decision Making</span>
+                                <span class="px-2 py-1 text-sm bg-white dark:bg-dark-card rounded">All Levels</span>
+                            </div>
+                        </a>
+                    </article>
+
+                    <!-- Don't Have to Do Anything -->
+                    <article class="brief-card" 
+                             data-topics="communication" 
+                             data-audience="individual">
+                        <a href="/briefs/DontHaveToDoAnything" 
+                           class="block p-6 bg-white dark:bg-dark-card rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                            <h3 class="text-xl font-heading font-normal mb-2">The Passive Voice of Responsibility</h3>
+                            <p class="text-gray-text dark:text-dark-gray-text mb-4">Moving from passive "have to" language to active expression of wants and reasons.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-2 py-1 text-sm bg-gray-100 dark:bg-dark-bg rounded">Communication</span>
+                                <span class="px-2 py-1 text-sm bg-gray-100 dark:bg-dark-bg rounded">Individual</span>
+                            </div>
+                        </a>
+                    </article>
+
+                    <!-- Diversity Within Groups -->
+                    <article class="brief-card" 
+                             data-topics="team-dynamics decision-making" 
+                             data-audience="leadership">
+                        <a href="/briefs/DiversityWithinGroups" 
+                           class="block p-6 bg-gray-50 dark:bg-dark-hover rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                            <h3 class="text-xl font-heading font-normal mb-2">Diversity Within Groups</h3>
+                            <p class="text-gray-text dark:text-dark-gray-text mb-4">Understanding why individual variation matters more than group averages.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-2 py-1 text-sm bg-white dark:bg-dark-card rounded">Team Dynamics</span>
+                                <span class="px-2 py-1 text-sm bg-white dark:bg-dark-card rounded">Decision Making</span>
+                                <span class="px-2 py-1 text-sm bg-white dark:bg-dark-card rounded">Leadership</span>
+                            </div>
+                        </a>
+                    </article>
                 </div>
-            </section>
-
-            <!-- Practical Implementation Section -->
-            <section class="mb-12" aria-labelledby="implementation-heading">
-                <h2 id="implementation-heading" class="text-2xl font-heading font-normal mb-6">Putting This Into Practice</h2>
-                <div class="prose dark:prose-invert max-w-none">
-                    <p>When working with individuals:</p>
-                    
-                    <div class="grid md:grid-cols-2 gap-4 mb-4">
-                        <blockquote class="border-l-4 border-accent-1 pl-6 py-4 bg-gray-50 dark:bg-dark-card rounded-r-lg">
-                            <p class="text-gray-text dark:text-dark-gray-text mb-2">Take time to understand each person's unique characteristics, motivations, and capabilities.</p>
-                            <footer class="text-sm mt-2">
-                                <cite class="text-gray-text dark:text-dark-gray-text not-italic">Individual Focus</cite>
-                            </footer>
-                        </blockquote>
-
-                        <blockquote class="border-l-4 border-accent-1 pl-6 py-4 bg-gray-50 dark:bg-dark-card rounded-r-lg">
-                            <p class="text-gray-text dark:text-dark-gray-text mb-2">Use group-level data for high-level planning, but always adapt to individual circumstances in implementation.</p>
-                            <footer class="text-sm mt-2">
-                                <cite class="text-gray-text dark:text-dark-gray-text not-italic">Practical Application</cite>
-                            </footer>
-                        </blockquote>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Conclusion Section -->
-            <section class="mb-12" aria-labelledby="conclusion-heading">
-                <h2 id="conclusion-heading" class="text-2xl font-heading font-normal mb-6">Conclusion</h2>
-                <div class="prose dark:prose-invert max-w-none">
-                    <p>While group-level analysis has its place in understanding broad patterns, individual variation is almost always more significant. There are no shortcuts to understanding individuals; you must invest the time to know each person as they are, not as their group statistics might suggest.</p>
-                </div>
-            </section>
-        </article>
+            </div>
+        </div>
     </main>
 
     <footer class="bg-white dark:bg-dark-card border-t border-gray-200 dark:border-gray-700" role="contentinfo">
@@ -484,5 +536,42 @@ class="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 focus:z
     </div>
 </footer>
 <script src="/assets/js/nav-controls.js"></script>
+
+    <script>
+        // Filtering functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const briefs = document.querySelectorAll('.brief-card');
+            const filters = document.querySelectorAll('input[type="checkbox"]');
+            
+            function updateFilters() {
+                const activeFilters = {
+                    topic: Array.from(document.querySelectorAll('input[data-filter="topic"]:checked')).map(cb => cb.value),
+                    audience: Array.from(document.querySelectorAll('input[data-filter="audience"]:checked')).map(cb => cb.value)
+                };
+
+                briefs.forEach(brief => {
+                    const topics = brief.dataset.topics.split(' ');
+                    const audiences = brief.dataset.audience.split(' ');
+                    
+                    const topicMatch = activeFilters.topic.length === 0 || 
+                                     topics.some(t => activeFilters.topic.includes(t));
+                    const audienceMatch = activeFilters.audience.length === 0 || 
+                                        audiences.some(a => activeFilters.audience.includes(a));
+                    
+                    brief.style.display = topicMatch && audienceMatch ? 'block' : 'none';
+
+                    // Debug logging
+                    console.log('Brief:', brief.querySelector('h3').textContent);
+                    console.log('Audiences:', audiences);
+                    console.log('Active audience filters:', activeFilters.audience);
+                    console.log('Audience match:', audienceMatch);
+                });
+            }
+
+            filters.forEach(filter => {
+                filter.addEventListener('change', updateFilters);
+            });
+        });
+    </script>
 </body>
 </html> 

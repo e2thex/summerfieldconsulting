@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    {% assign page_meta = '' %}
+    {% capture page_meta %}
+    <meta name="description" content="Collection of leadership and management briefs covering topics from team dynamics to decision making - Summerfield Consulting">
+    <meta name="keywords" content="leadership briefs, management insights, team dynamics, decision making, communication, leadership skills">
+    
+    <!-- Open Graph tags -->
+    <meta property="og:title" content="Leadership Briefs - Summerfield Consulting">
+    <meta property="og:description" content="Explore our collection of leadership and management briefs covering essential topics for modern leaders.">
+    <meta property="og:image" content="/assets/media/logo.png">
+    <meta property="og:url" content="https://summerfieldconsulting.com/briefs">
+    <meta property="og:type" content="website">
+    
+    <title>Leadership Briefs - Summerfield Consulting</title>
+    {% endcapture %}
+    
+    {% include "head.html" %}
+</head>
+<body class="bg-off-white dark:bg-dark-bg text-off-black dark:text-off-white font-body transition-colors duration-200">
+    {% include "header.html" %}
+
+    <main id="main-content" class="max-w-6xl mx-auto p-6" role="main">
+        <header class="mb-12" aria-labelledby="page-title">
+            <h1 id="page-title" class="text-4xl font-heading font-normal mb-4">Leadership Briefs</h1>
+            <p class="text-xl text-gray-text dark:text-dark-gray-text">Practical insights for modern leaders</p>
+        </header>
+
+        <!-- Faceted Search -->
+        <div class="grid md:grid-cols-4 gap-8 mb-12">
+            <!-- Filters Sidebar -->
+            <aside class="md:col-span-1">
+                <div class="sticky top-4">
+                    <h2 class="text-2xl font-heading font-normal mb-6">Filters</h2>
+                    
+                    <!-- Topic Filter -->
+                    <div class="mb-6">
+                        <h3 class="font-semibold mb-3">Topic</h3>
+                        <ul class="space-y-2">
+                            <li>
+                                <label class="flex items-center gap-2">
+                                    <input type="checkbox" class="form-checkbox text-accent-1" data-filter="topic" value="communication">
+                                    <span>Communication</span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="flex items-center gap-2">
+                                    <input type="checkbox" class="form-checkbox text-accent-1" data-filter="topic" value="team-dynamics">
+                                    <span>Team Dynamics</span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="flex items-center gap-2">
+                                    <input type="checkbox" class="form-checkbox text-accent-1" data-filter="topic" value="decision-making">
+                                    <span>Decision Making</span>
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Audience Filter -->
+                    <div class="mb-6">
+                        <h3 class="font-semibold mb-3">Audience</h3>
+                        <ul class="space-y-2">
+                            <li>
+                                <label class="flex items-center gap-2">
+                                    <input type="checkbox" class="form-checkbox text-accent-1" data-filter="audience" value="individual">
+                                    <span>Individual</span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="flex items-center gap-2">
+                                    <input type="checkbox" class="form-checkbox text-accent-1" data-filter="audience" value="team">
+                                    <span>Team</span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="flex items-center gap-2">
+                                    <input type="checkbox" class="form-checkbox text-accent-1" data-filter="audience" value="leadership">
+                                    <span>Leadership</span>
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Briefs Grid -->
+            <div class="md:col-span-3">
+                <div class="space-y-6" id="briefs-grid">
+                    <!-- Task vs Delegate -->
+                    <article class="brief-card" 
+                             data-topics="decision-making team-dynamics" 
+                             data-audience="team">
+                        <a href="/briefs/TaskVsDelegate" 
+                           class="block p-6 bg-white dark:bg-dark-card rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                            <h3 class="text-xl font-heading font-normal mb-2">Task vs Delegate</h3>
+                            <p class="text-gray-text dark:text-dark-gray-text mb-4">Understanding when to handle a task yourself versus when to delegate it to your team.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-2 py-1 text-sm bg-gray-100 dark:bg-dark-bg rounded">Decision Making</span>
+                                <span class="px-2 py-1 text-sm bg-gray-100 dark:bg-dark-bg rounded">Team Dynamics</span>
+                                <span class="px-2 py-1 text-sm bg-gray-100 dark:bg-dark-bg rounded">Team</span>
+                            </div>
+                        </a>
+                    </article>
+
+                    <!-- When to Appeal to Authority -->
+                    <article class="brief-card" 
+                             data-topics="communication decision-making" 
+                             data-audience="team">
+                        <a href="/briefs/WhenToAppealToAuthority" 
+                           class="block p-6 bg-gray-50 dark:bg-dark-hover rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                            <h3 class="text-xl font-heading font-normal mb-2">When to Appeal to Authority</h3>
+                            <p class="text-gray-text dark:text-dark-gray-text mb-4">Learn when and how to effectively use authority in your arguments and decision-making.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-2 py-1 text-sm bg-white dark:bg-dark-card rounded">Communication</span>
+                                <span class="px-2 py-1 text-sm bg-white dark:bg-dark-card rounded">Decision Making</span>
+                                <span class="px-2 py-1 text-sm bg-white dark:bg-dark-card rounded">Team</span>
+                            </div>
+                        </a>
+                    </article>
+
+                    <!-- Theseus Teams -->
+                    <article class="brief-card" 
+                             data-topics="team-dynamics" 
+                             data-audience="leadership">
+                        <a href="/briefs/TheseusTeams" 
+                           class="block p-6 bg-white dark:bg-dark-card rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                            <h3 class="text-xl font-heading font-normal mb-2">Theseus Teams</h3>
+                            <p class="text-gray-text dark:text-dark-gray-text mb-4">Understanding team identity and continuity through gradual member changes.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-2 py-1 text-sm bg-gray-100 dark:bg-dark-bg rounded">Team Dynamics</span>
+                                <span class="px-2 py-1 text-sm bg-gray-100 dark:bg-dark-bg rounded">Leadership</span>
+                            </div>
+                        </a>
+                    </article>
+
+                    <!-- Define Your Universe -->
+                    <article class="brief-card" 
+                             data-topics="communication decision-making" 
+                             data-audience="individual team leadership">
+                        <a href="/briefs/DefineYourUniverse" 
+                           class="block p-6 bg-gray-50 dark:bg-dark-hover rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                            <h3 class="text-xl font-heading font-normal mb-2">Define Your Universe</h3>
+                            <p class="text-gray-text dark:text-dark-gray-text mb-4">How to avoid false dichotomies and improve communication by defining the full scope of possibilities.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-2 py-1 text-sm bg-white dark:bg-dark-card rounded">Communication</span>
+                                <span class="px-2 py-1 text-sm bg-white dark:bg-dark-card rounded">Decision Making</span>
+                                <span class="px-2 py-1 text-sm bg-white dark:bg-dark-card rounded">All Levels</span>
+                            </div>
+                        </a>
+                    </article>
+
+                    <!-- Don't Have to Do Anything -->
+                    <article class="brief-card" 
+                             data-topics="communication" 
+                             data-audience="individual">
+                        <a href="/briefs/DontHaveToDoAnything" 
+                           class="block p-6 bg-white dark:bg-dark-card rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                            <h3 class="text-xl font-heading font-normal mb-2">The Passive Voice of Responsibility</h3>
+                            <p class="text-gray-text dark:text-dark-gray-text mb-4">Moving from passive "have to" language to active expression of wants and reasons.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-2 py-1 text-sm bg-gray-100 dark:bg-dark-bg rounded">Communication</span>
+                                <span class="px-2 py-1 text-sm bg-gray-100 dark:bg-dark-bg rounded">Individual</span>
+                            </div>
+                        </a>
+                    </article>
+
+                    <!-- Diversity Within Groups -->
+                    <article class="brief-card" 
+                             data-topics="team-dynamics decision-making" 
+                             data-audience="leadership">
+                        <a href="/briefs/DiversityWithinGroups" 
+                           class="block p-6 bg-gray-50 dark:bg-dark-hover rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                            <h3 class="text-xl font-heading font-normal mb-2">Diversity Within Groups</h3>
+                            <p class="text-gray-text dark:text-dark-gray-text mb-4">Understanding why individual variation matters more than group averages.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-2 py-1 text-sm bg-white dark:bg-dark-card rounded">Team Dynamics</span>
+                                <span class="px-2 py-1 text-sm bg-white dark:bg-dark-card rounded">Decision Making</span>
+                                <span class="px-2 py-1 text-sm bg-white dark:bg-dark-card rounded">Leadership</span>
+                            </div>
+                        </a>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    {% include "footer.html" %}
+
+    <script>
+        // Filtering functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const briefs = document.querySelectorAll('.brief-card');
+            const filters = document.querySelectorAll('input[type="checkbox"]');
+            
+            function updateFilters() {
+                const activeFilters = {
+                    topic: Array.from(document.querySelectorAll('input[data-filter="topic"]:checked')).map(cb => cb.value),
+                    audience: Array.from(document.querySelectorAll('input[data-filter="audience"]:checked')).map(cb => cb.value)
+                };
+
+                briefs.forEach(brief => {
+                    const topics = brief.dataset.topics.split(' ');
+                    const audiences = brief.dataset.audience.split(' ');
+                    
+                    const topicMatch = activeFilters.topic.length === 0 || 
+                                     topics.some(t => activeFilters.topic.includes(t));
+                    const audienceMatch = activeFilters.audience.length === 0 || 
+                                        audiences.some(a => activeFilters.audience.includes(a));
+                    
+                    brief.style.display = topicMatch && audienceMatch ? 'block' : 'none';
+
+                    // Debug logging
+                    console.log('Brief:', brief.querySelector('h3').textContent);
+                    console.log('Audiences:', audiences);
+                    console.log('Active audience filters:', activeFilters.audience);
+                    console.log('Audience match:', audienceMatch);
+                });
+            }
+
+            filters.forEach(filter => {
+                filter.addEventListener('change', updateFilters);
+            });
+        });
+    </script>
+</body>
+</html> 
