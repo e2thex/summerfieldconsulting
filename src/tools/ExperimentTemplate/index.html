@@ -1,9 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Experiment Template - Summerfield Consulting</title>
+    {% assign page_meta = '' %}
+    {% capture page_meta %}
     <meta name="description" content="A structured approach to testing ideas early, staying aligned while learning, and refining approaches through experimentation.">
     <meta name="keywords" content="experiment template, team alignment, hypothesis testing, agile experimentation, decision making">
     
@@ -14,8 +13,10 @@
     <meta property="og:url" content="https://summerfieldconsulting.com/tools/ExperimentTemplate">
     <meta property="og:type" content="website">
     
-    <link href="../../assets/css/styles.css" rel="stylesheet">
-    <script src="../../assets/js/theme-init.js"></script>
+    <title>Experiment Template - Summerfield Consulting</title>
+    {% endcapture %}
+    
+    {% include "head.html" %}
 </head>
 <body class="bg-base text-content">
     <!-- Skip to main content -->
@@ -138,31 +139,41 @@
                                     <tr>
                                         <td class="px-4 py-2">The new format will take less time than the old format.</td>
                                         <td class="px-4 py-2">Compare average duration over 2 weeks</td>
-                                        <td class="px-4 py-2">Mostly True</td>
+                                        <td class="px-4 py-2">
+                                            <div class="bg-green-500 text-white p-2 rounded text-center font-medium">Mostly True</div>
+                                        </td>
                                         <td class="px-4 py-2">Standup averaged 9 mins; old format was 12 mins.</td>
                                     </tr>
                                     <tr>
                                         <td class="px-4 py-2">Team members will feel more energized by standup.</td>
                                         <td class="px-4 py-2">Anonymous pulse survey on Day 3, 6, 10</td>
-                                        <td class="px-4 py-2">Inconclusive</td>
+                                        <td class="px-4 py-2">
+                                            <div class="bg-red-500 text-white p-2 rounded text-center font-medium">Inconclusive</div>
+                                        </td>
                                         <td class="px-4 py-2">Some felt energized, others found it disorienting.</td>
                                     </tr>
                                     <tr>
                                         <td class="px-4 py-2">Rotating facilitation will help quieter voices get heard.</td>
                                         <td class="px-4 py-2">Track facilitator rotation and team feedback</td>
-                                        <td class="px-4 py-2">False</td>
+                                        <td class="px-4 py-2">
+                                            <div class="bg-green-500 text-white p-2 rounded text-center font-medium">False</div>
+                                        </td>
                                         <td class="px-4 py-2">Most facilitators were the same few people.</td>
                                     </tr>
                                     <tr>
                                         <td class="px-4 py-2">If this format is worse, someone will raise it within 3 days.</td>
                                         <td class="px-4 py-2">Monitor Slack and 1:1s</td>
-                                        <td class="px-4 py-2">True</td>
+                                        <td class="px-4 py-2">
+                                            <div class="bg-green-500 text-white p-2 rounded text-center font-medium">True</div>
+                                        </td>
                                         <td class="px-4 py-2">Two people raised concerns by Day 2.</td>
                                     </tr>
                                     <tr>
                                         <td class="px-4 py-2">There will be confusion and overlap in updates.</td>
                                         <td class="px-4 py-2">Ask in retro if people missed the old format's clarity</td>
-                                        <td class="px-4 py-2">Mostly False</td>
+                                        <td class="px-4 py-2">
+                                            <div class="bg-green-500 text-white p-2 rounded text-center font-medium">Mostly False</div>
+                                        </td>
                                         <td class="px-4 py-2">A few missed updates, but not enough to derail things.</td>
                                     </tr>
                                 </tbody>
@@ -211,31 +222,41 @@
                                     <tr>
                                         <td class="px-4 py-2">Self-staffing will take less time than traditional assignment meetings.</td>
                                         <td class="px-4 py-2">Compare time spent by leads on staffing</td>
-                                        <td class="px-4 py-2">True</td>
+                                        <td class="px-4 py-2">
+                                            <div class="bg-green-500 text-white p-2 rounded text-center font-medium">True</div>
+                                        </td>
                                         <td class="px-4 py-2">Reduced staffing time by ~6 hours per project round.</td>
                                     </tr>
                                     <tr>
                                         <td class="px-4 py-2">Engineers will feel more ownership over their projects.</td>
                                         <td class="px-4 py-2">Pulse survey after assignment + 2 weeks into the project</td>
-                                        <td class="px-4 py-2">Mostly True</td>
+                                        <td class="px-4 py-2">
+                                            <div class="bg-green-500 text-white p-2 rounded text-center font-medium">Mostly True</div>
+                                        </td>
                                         <td class="px-4 py-2">80% reported stronger connection to their work.</td>
                                     </tr>
                                     <tr>
                                         <td class="px-4 py-2">Some projects will get overlooked or receive fewer volunteers.</td>
                                         <td class="px-4 py-2">Track how many engineers selected each project</td>
-                                        <td class="px-4 py-2">True</td>
+                                        <td class="px-4 py-2">
+                                            <div class="bg-green-500 text-white p-2 rounded text-center font-medium">False</div>
+                                        </td>
                                         <td class="px-4 py-2">One project needed nudging to get coverage.</td>
                                     </tr>
                                     <tr>
                                         <td class="px-4 py-2">There will be skill mismatches that impact early velocity.</td>
                                         <td class="px-4 py-2">Leads report on project ramp-up after 2 weeks</td>
-                                        <td class="px-4 py-2">False</td>
+                                        <td class="px-4 py-2">
+                                            <div class="bg-green-500 text-white p-2 rounded text-center font-medium">False</div>
+                                        </td>
                                         <td class="px-4 py-2">Ramp-up was actually smoother with higher motivation.</td>
                                     </tr>
                                     <tr>
                                         <td class="px-4 py-2">Leads will just override choices, making this moot.</td>
                                         <td class="px-4 py-2">Compare initial preferences vs. final assignments</td>
-                                        <td class="px-4 py-2">Mostly False</td>
+                                        <td class="px-4 py-2">
+                                            <div class="bg-green-500 text-white p-2 rounded text-center font-medium">Mostly False</div>
+                                        </td>
                                         <td class="px-4 py-2">90% got one of their top 2 picks.</td>
                                     </tr>
                                 </tbody>
@@ -285,31 +306,41 @@
                                     <tr>
                                         <td class="px-4 py-2">Leadership decisions will take less time.</td>
                                         <td class="px-4 py-2">Compare time spent per decision over the 6-week period</td>
-                                        <td class="px-4 py-2">Mostly True</td>
+                                        <td class="px-4 py-2">
+                                            <div class="bg-green-500 text-white p-2 rounded text-center font-medium">Mostly True</div>
+                                        </td>
                                         <td class="px-4 py-2">Avg decision time dropped from 25 to 12 minutes.</td>
                                     </tr>
                                     <tr>
                                         <td class="px-4 py-2">More decisions will actually stick without re-litigation.</td>
                                         <td class="px-4 py-2">Track how often decisions are reopened</td>
-                                        <td class="px-4 py-2">Mostly False</td>
+                                        <td class="px-4 py-2">
+                                            <div class="bg-green-500 text-white p-2 rounded text-center font-medium">Mostly False</div>
+                                        </td>
                                         <td class="px-4 py-2">Two decisions were reopened within a week.</td>
                                     </tr>
                                     <tr>
                                         <td class="px-4 py-2">Team members will feel more confident about clarity and ownership.</td>
                                         <td class="px-4 py-2">Pulse survey after 3 and 6 weeks</td>
-                                        <td class="px-4 py-2">Inconclusive</td>
+                                        <td class="px-4 py-2">
+                                            <div class="bg-red-500 text-white p-2 rounded text-center font-medium">Inconclusive</div>
+                                        </td>
                                         <td class="px-4 py-2">Split feedback—some felt clarity improved, others felt rushed.</td>
                                     </tr>
                                     <tr>
                                         <td class="px-4 py-2">The decider role will create power struggles.</td>
                                         <td class="px-4 py-2">Track friction/confusion around who is the decider</td>
-                                        <td class="px-4 py-2">Mostly False</td>
+                                        <td class="px-4 py-2">
+                                            <div class="bg-green-500 text-white p-2 rounded text-center font-medium">False</div>
+                                        </td>
                                         <td class="px-4 py-2">One instance of confusion, but generally smooth.</td>
                                     </tr>
                                     <tr>
                                         <td class="px-4 py-2">A log of disagreements will surface key themes we should address later.</td>
                                         <td class="px-4 py-2">Review disagreement log at end of 6 weeks</td>
-                                        <td class="px-4 py-2">True</td>
+                                        <td class="px-4 py-2">
+                                            <div class="bg-green-500 text-white p-2 rounded text-center font-medium">True</div>
+                                        </td>
                                         <td class="px-4 py-2">Several recurring themes were identified, leading to deeper convos.</td>
                                     </tr>
                                 </tbody>
