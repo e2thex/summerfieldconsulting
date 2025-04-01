@@ -1,0 +1,34 @@
+<svg width="800" height="800" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .quote {
+      font-family: sans-serif;
+      fill: white;
+      font-size: 36px;
+      font-weight: bold;
+    }
+    .bg {
+      fill: #336699;
+    }
+    .logo {
+      fill: white;
+    }
+  </style>
+  <rect width="100%" height="100%" class="bg"/>
+  <text x="50%" y="35%" dominant-baseline="middle" text-anchor="middle" class="quote">
+    “Hypotheses aren’t for
+  </text>
+  <text x="50%" y="45%" dominant-baseline="middle" text-anchor="middle" class="quote">
+    proving you’re right—
+  </text>
+  <text x="50%" y="55%" dominant-baseline="middle" text-anchor="middle" class="quote">
+    they’re for making
+  </text>
+  <text x="50%" y="65%" dominant-baseline="middle" text-anchor="middle" class="quote">
+    learning inevitable.”
+  </text>
+  <!-- Logo placeholder -->
+  <g transform="translate(680, 720) scale(1.5)">
+    <!-- Replace this path with your actual logo SVG path -->
+    <path class="logo" d="M0,0 L10,0 L5,10 Z"/>
+  </g>
+</svg>
