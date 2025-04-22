@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    {% assign page_meta = '' %}
+    {% capture page_meta %}
+    <meta name="description" content="SBIGer: A personal feedback consultant that helps you craft effective feedback using the SBI framework.">
+    <meta name="keywords" content="SBI feedback, Situation Behavior Impact, feedback framework, feedback coaching">
+    
+    <!-- Open Graph tags -->
+    <meta property="og:title" content="SBIGer: Personal Feedback Consultant - Summerfield Consulting">
+    <meta property="og:description" content="Your personal feedback coach that helps you craft effective feedback using the Situation-Behavior-Impact framework.">
+    <meta property="og:image" content="https://summerfield.consulting/assets/tools/SBIGer/SBIGerlogo.png">
+    <meta property="og:url" content="https://summerfield.consulting/tools/SBIGer">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="SBIGer: Personal Feedback Consultant">
+    <meta name="twitter:description" content="Your personal feedback coach that helps you craft effective feedback using the Situation-Behavior-Impact framework.">
+    <meta name="twitter:image" content="https://summerfield.consulting/assets/tools/SBIGer/SBIGerlogo.png">
+    <meta name="twitter:creator" content="@e2thex">
+    
+    <title>SBIGer: Personal Feedback Consultant - Summerfield Consulting</title>
+    {% endcapture %}
+    
+    {% include "head.html" %}
+</head>
+<body class="bg-off-white dark:bg-dark-bg text-off-black dark:text-off-white font-body transition-colors duration-200">
+    {% include "header.html" %}
+
+    <main class="max-w-7xl mx-auto p-6" role="main">
+        <h1 class="text-4xl font-heading font-normal mb-4">SBIGer, my personal feedback consultant</h1>
+        
+        <section class="prose dark:prose-invert max-w-none mb-12">
+            <h2 class="text-2xl font-heading font-normal mb-6">Giving Feedback is Hard — Iterating on Feedback is Even Harder</h2>
+            
+            <p class="text-lg text-gray-text dark:text-dark-gray-text mb-4">
+                Giving feedback at work is tough. Even when you want to help, it's hard to know what to say without making it awkward, 
+                hurting someone's feelings, or damaging the relationship. That's the first problem — and that's where the 
+                <strong>SBI framework</strong> comes in. It gives you a simple, clear way to structure feedback so it's easier for 
+                people to hear and act on.
+            </p>
+
+            <p class="text-lg text-gray-text dark:text-dark-gray-text mb-4">
+                But there's a second problem: <strong>actually getting to good SBI feedback</strong> is its own challenge. Even when 
+                you know the structure, finding the right words, sorting out your thoughts, and making sure you're being fair and 
+                respectful — that part is really hard too. And asking a coworker for help isn't always an option, because they might 
+                know the person you're giving feedback to, or have their own bias.
+            </p>
+
+            <p class="text-lg text-gray-text dark:text-dark-gray-text mb-8">
+                That's why I use <strong>SBIGer</strong> — my personal feedback coach. SBIGer helps me work through the process 
+                step-by-step, asking focused questions, helping me stay clear and respectful, and making it way easier to get to 
+                thoughtful, effective feedback without the stress.
+            </p>
+        </section>
+
+        <section class="bg-white dark:bg-dark-card rounded-lg border border-gray-200 dark:border-gray-700 p-8 mb-12">
+            <h2 class="text-2xl font-heading font-normal mb-6">What is SBI?</h2>
+            
+            <p class="text-lg text-gray-text dark:text-dark-gray-text mb-6">
+                The <strong>Situation-Behavior-Impact (SBI)</strong> framework is a simple but powerful method for delivering 
+                feedback in a way that is specific, respectful, and actionable.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="p-6 bg-gray-50 dark:bg-dark-hover rounded-lg">
+                    <h3 class="text-xl font-bold mb-4">Situation</h3>
+                    <p class="text-gray-text dark:text-dark-gray-text">
+                        Start by grounding the conversation in a specific time and place.<br>
+                        <em class="block mt-2 text-accent-1">Example: "During yesterday's team meeting..."</em>
+                    </p>
+                </div>
+
+                <div class="p-6 bg-gray-50 dark:bg-dark-hover rounded-lg">
+                    <h3 class="text-xl font-bold mb-4">Behavior</h3>
+                    <p class="text-gray-text dark:text-dark-gray-text">
+                        Describe exactly what the person did — what you saw or heard — without adding opinions or emotions.<br>
+                        <em class="block mt-2 text-accent-1">Example: "You interrupted Alex while they were presenting their idea."</em>
+                    </p>
+                </div>
+
+                <div class="p-6 bg-gray-50 dark:bg-dark-hover rounded-lg">
+                    <h3 class="text-xl font-bold mb-4">Impact</h3>
+                    <p class="text-gray-text dark:text-dark-gray-text">
+                        Explain the effect that behavior had.<br>
+                        <em class="block mt-2 text-accent-1">Example: "It made it harder for the team to stay focused and seemed to shake Alex's confidence."</em>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-white dark:bg-dark-card rounded-lg border border-gray-200 dark:border-gray-700 p-8 mb-12">
+            <h2 class="text-2xl font-heading font-normal mb-6">SBI in Action: Before and After</h2>
+            
+            <p class="text-lg text-gray-text dark:text-dark-gray-text mb-8">
+                Here's a quick example of how SBI can completely change the way feedback sounds:
+            </p>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <!-- Negative Feedback Example -->
+                <div class="space-y-6">
+                    <h3 class="text-xl font-bold">Negative Feedback Example</h3>
+                    
+                    <div class="space-y-4">
+                        <div class="p-6 bg-gray-50 dark:bg-dark-hover rounded-lg">
+                            <h4 class="font-bold mb-2">Without SBI (vague and emotional):</h4>
+                            <blockquote class="text-gray-text dark:text-dark-gray-text italic">
+                                "You were really disrespectful in the meeting yesterday. You need to be more professional."
+                            </blockquote>
+                        </div>
+
+                        <div class="p-6 bg-gray-50 dark:bg-dark-hover rounded-lg border-l-4 border-accent-1">
+                            <h4 class="font-bold mb-2">With SBI (clear and constructive):</h4>
+                            <blockquote class="text-gray-text dark:text-dark-gray-text italic">
+                                "During yesterday's project kickoff meeting, when you interrupted Alex while they were explaining their idea, it made it harder for the team to follow the conversation. It seemed to shake Alex's confidence and slowed down the discussion."
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Positive Feedback Example -->
+                <div class="space-y-6">
+                    <h3 class="text-xl font-bold">Positive Feedback Example</h3>
+                    
+                    <div class="space-y-4">
+                        <div class="p-6 bg-gray-50 dark:bg-dark-hover rounded-lg">
+                            <h4 class="font-bold mb-2">Without SBI (too vague):</h4>
+                            <blockquote class="text-gray-text dark:text-dark-gray-text italic">
+                                "You did a great job in the meeting!"
+                            </blockquote>
+                        </div>
+
+                        <div class="p-6 bg-gray-50 dark:bg-dark-hover rounded-lg border-l-4 border-accent-1">
+                            <h4 class="font-bold mb-2">With SBI (clear and reinforcing):</h4>
+                            <blockquote class="text-gray-text dark:text-dark-gray-text italic">
+                                "During yesterday's project kickoff meeting, when you summarized everyone's ideas before moving us to the next topic, it kept the conversation organized and made everyone feel heard. It really helped the meeting stay on track and boosted the team's energy."
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <p class="text-lg text-gray-text dark:text-dark-gray-text mt-8">
+                Using SBI makes both <strong>corrective</strong> and <strong>positive</strong> feedback much more impactful — helping people learn, grow, and keep doing great work.
+            </p>
+        </section>
+
+        <section class="bg-white dark:bg-dark-card rounded-lg border border-gray-200 dark:border-gray-700 p-8 mb-12">
+            <h2 class="text-2xl font-heading font-normal mb-6">Who is SBIGer?</h2>
+            
+            <p class="text-lg text-gray-text dark:text-dark-gray-text mb-6">
+                <strong>SBIGer</strong> is my personal coaching tool for making the SBI process even easier — especially when 
+                I'm stuck trying to find the right words or organize my thoughts.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="flex items-start space-x-4">
+                    <div class="flex-shrink-0 w-8 h-8 bg-accent-1 rounded-full flex items-center justify-center text-white">1</div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">Guided Questions, One at a Time</h3>
+                        <p class="text-gray-text dark:text-dark-gray-text">Helping me stay focused and not get overwhelmed.</p>
+                    </div>
+                </div>
+
+                <div class="flex items-start space-x-4">
+                    <div class="flex-shrink-0 w-8 h-8 bg-accent-1 rounded-full flex items-center justify-center text-white">2</div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">Helps Me Get Specific and Precise</h3>
+                        <p class="text-gray-text dark:text-dark-gray-text">So my feedback is grounded, not vague.</p>
+                    </div>
+                </div>
+
+                <div class="flex items-start space-x-4">
+                    <div class="flex-shrink-0 w-8 h-8 bg-accent-1 rounded-full flex items-center justify-center text-white">3</div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">Keeps the Tone Respectful and Constructive</h3>
+                        <p class="text-gray-text dark:text-dark-gray-text">Honest but supportive communication.</p>
+                    </div>
+                </div>
+
+                <div class="flex items-start space-x-4">
+                    <div class="flex-shrink-0 w-8 h-8 bg-accent-1 rounded-full flex items-center justify-center text-white">4</div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">Never Assumes Anything</h3>
+                        <p class="text-gray-text dark:text-dark-gray-text">Only works with the facts I provide.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-white dark:bg-dark-card rounded-lg border border-gray-200 dark:border-gray-700 p-8 text-center">
+            <h2 class="text-2xl font-heading font-normal mb-6">Ready to Create Better Feedback?</h2>
+            
+            <p class="text-lg text-gray-text dark:text-dark-gray-text mb-8 max-w-2xl mx-auto">
+                Stop struggling with feedback alone. Let SBIGer help you craft clear, constructive, and impactful feedback that helps your team grow and succeed.
+            </p>
+
+            <div class="inline-block relative group">
+                <div class="absolute -inset-0.5 bg-gradient-to-r from-accent-1 to-accent-2 rounded-lg blur opacity-50 group-hover:opacity-100 transition duration-200"></div>
+                <a href="https://chatgpt.com/g/g-4sYXg8MKh-sbiger" 
+                   class="relative inline-flex items-center px-8 py-4 bg-white dark:bg-dark-card rounded-lg font-bold text-lg text-accent-1 hover:text-accent-2 transition-colors"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    Try SBIGer Now
+                    <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                    </svg>
+                </a>
+            </div>
+
+            <p class="text-sm text-gray-text dark:text-dark-gray-text mt-4">
+                Powered by ChatGPT. Free to use with a ChatGPT Plus subscription.
+            </p>
+        </section>
+    </main>
+
+    {% include "footer.html" %}
+    <script src="/assets/js/theme-init.js"></script>
+</body>
+</html> 

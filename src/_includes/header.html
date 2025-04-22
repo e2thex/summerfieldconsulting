@@ -31,6 +31,13 @@ class="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 focus:z
                      <div class="absolute left-0 mt-2 w-48 rounded-lg bg-white dark:bg-dark-card border border-gray-200 dark:border-gray-700 shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all">
                          <ul class="py-2">
                              <li>
+                                 <a href="/tools/SBIGer" 
+                                    class="block px-4 py-2 {% if page.url == '/tools/SBIGer/' %}text-accent-1{% else %}text-gray-text dark:text-dark-gray-text{% endif %} hover:text-accent-1 dark:hover:text-accent-1 hover:bg-gray-50 dark:hover:bg-dark-hover transition-colors"
+                                    {% if page.url == '/tools/SBIGer/' %}aria-current="page"{% endif %}>
+                                     SBIGer
+                                 </a>
+                             </li>
+                             <li>
                                  <a href="/tools/ScrumRACI" 
                                     class="block px-4 py-2 {% if page.url == '/tools/ScrumRACI/' %}text-accent-1{% else %}text-gray-text dark:text-dark-gray-text{% endif %} hover:text-accent-1 dark:hover:text-accent-1 hover:bg-gray-50 dark:hover:bg-dark-hover transition-colors"
                                     {% if page.url == '/tools/ScrumRACI/' %}aria-current="page"{% endif %}>
@@ -232,6 +239,11 @@ class="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 focus:z
                     </svg>
                 </button>
                 <ul id="mobileToolsSubmenu" class="hidden mobile-submenu pl-8 py-2 space-y-2">
+                    <li>
+                        <a href="/tools/SBIGer" class="block px-4 py-2 text-gray-text dark:text-dark-gray-text hover:text-accent-1 dark:hover:text-accent-1">
+                            SBIGer
+                        </a>
+                    </li>
                     <li>
                         <a href="/tools/ScrumRACI" class="block px-4 py-2 text-gray-text dark:text-dark-gray-text hover:text-accent-1 dark:hover:text-accent-1">
                             Scrum RACI
