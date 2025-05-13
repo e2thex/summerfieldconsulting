@@ -439,8 +439,8 @@
                 const selectedTopics = Array.from(document.querySelectorAll('input[data-filter="topic"]:checked')).map(cb => cb.value);
 
                 spotlightCards.forEach(card => {
-                    const mediaType = card.dataset.mediaType;
-                    const topics = card.dataset.topics.split(' ');
+                    const mediaType = card.getAttribute('data-media-type');
+                    const topics = card.getAttribute('data-topics').split(' ');
 
                     const mediaTypeMatch = selectedMediaTypes.length === 0 || selectedMediaTypes.includes(mediaType);
                     const topicMatch = selectedTopics.length === 0 || selectedTopics.some(topic => topics.includes(topic));
@@ -449,7 +449,7 @@
                         card.style.display = 'block';
                     } else {
                         card.style.display = 'none';
-                    }t 
+                    }
                 });
             }
 
