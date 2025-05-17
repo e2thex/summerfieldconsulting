@@ -71,6 +71,17 @@
                                     </span>
                                 </label>
                             </li>
+                            <li>
+                                <label class="flex items-center gap-2">
+                                    <input type="checkbox" class="form-checkbox text-accent-1" data-filter="media-type" value="mention">
+                                    <span class="flex items-center gap-1">
+                                        <svg class="w-4 h-4 text-accent-1" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/>
+                                        </svg>
+                                        Mention
+                                    </span>
+                                </label>
+                            </li>
                         </ul>
                     </div>
 
@@ -116,6 +127,34 @@
             <!-- Content Grid -->
             <div class="md:col-span-3">
                 <div class="space-y-6" id="spotlight-grid">
+                    <!-- LinkedIn Mention -->
+                    <article class="spotlight-card" 
+                             data-media-type="mention" 
+                             data-topics="communication-innovation organizational-development">
+                        <a href="https://www.linkedin.com/feed/update/urn:li:activity:7329483360777482240/?commentUrn=urn%3Ali%3Acomment%3A(activity%3A7329483360777482240%2C7329498058721775618)&dashCommentUrn=urn%3Ali%3Afsd_comment%3A(7329498058721775618%2Curn%3Ali%3Aactivity%3A7329483360777482240)" 
+                           class="block p-6 bg-white dark:bg-dark-card rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                            <div class="flex items-start gap-4">
+                                <div class="flex-1">
+                                    <h3 class="text-xl font-heading font-normal mb-2">AI Innovation and Experimentation in Engineering Teams</h3>
+                                    <p class="text-gray-text dark:text-dark-gray-text mb-4">A LinkedIn post discussing the importance of treating failed AI experiments with the same seriousness as successful ones, featuring insights on enabling innovation at scale and the value of learning from failures.</p>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span class="px-3 py-1 bg-accent-1/10 text-accent-1 rounded-full text-sm flex items-center gap-1">
+                                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/>
+                                            </svg>
+                                            Mention
+                                        </span>
+                                        <span class="px-2 py-1 text-sm bg-gray-100 dark:bg-dark-bg rounded">Communication & Innovation</span>
+                                        <span class="px-2 py-1 text-sm bg-gray-100 dark:bg-dark-bg rounded">Organizational Development</span>
+                                    </div>
+                                </div>
+                                <div class="text-sm text-gray-text dark:text-dark-gray-text">
+                                    May 15, 2025
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+
                     <!-- Compelling Work Environments -->
                     <article class="spotlight-card" 
                              data-media-type="article" 
@@ -446,7 +485,7 @@
                     const topicMatch = selectedTopics.length === 0 || selectedTopics.some(topic => topics.includes(topic));
 
                     if (mediaTypeMatch && topicMatch) {
-                        card.style.display = 'block';
+                        card.style.display = '';
                     } else {
                         card.style.display = 'none';
                     }
