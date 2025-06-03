@@ -9,7 +9,7 @@
     "build": "npm run clean && npm run build:css && npm run build:pages",
     "serve2": "http-server ./dist -p 3000 -c-1",
     "watch:css": "tailwindcss -i ./src/assets/css/tailwind.css -o ./dist/assets/css/styles.css --watch",
-    "watch:eleventy": "eleventy --serve",
+    "watch:eleventy": "eleventy --serve --port 3854",
     "serve": "npm-run-all --parallel watch:*"
 
   },
